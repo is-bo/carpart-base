@@ -18,33 +18,33 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 <div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="users" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 24px 28px; background: #F8F7F4; display: flex; flex-direction: column; gap: 20px">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 18px 16px 16px; background: #E2E0DA; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 0 4px">
         <div style="display: flex; align-items: flex-end; gap: 28px">
           <div style="display: flex; flex-direction: column; gap: 6px">
             <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Users &amp; Roles</h1>
-            <span style="font-size: 13.5px; color: #5E5B55">8 people can sign in to this store. Drag a person to another column to change their role.</span>
+            <span style="font-size: 13.5px; color: #54514B">8 people can sign in to this store. Drag a person to another column to change their role.</span>
           </div>
           <div role="tablist" aria-label="View" style="display: flex; gap: 18px; padding-bottom: 2px">
             <button type="button" role="tab" aria-selected="true" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid #2F6F73; background: transparent; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">People by role</button>
-            <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #5E5B55; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Permissions table</button>
+            <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #54514B; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Permissions table</button>
           </div>
         </div>
         <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #1F5A5E; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add a person</button>
       </div>
 
-      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 0; border-top: 2px solid #1B1A17">
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
         <sc-for list="{{roles}}" as="r" hint-placeholder-count="5">
-          <section aria-label="{{r.name}}" style="min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 16px 18px; border-inline-start: {{r.sep}}; background: {{r.colBg}}">
-            <div style="display: flex; flex-direction: column; gap: 6px; min-height: 92px">
+          <section aria-label="{{r.name}}" style="min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 0 16px 16px; background: {{r.colBg}}; border: 1px {{r.sep}} #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
+            <div style="display: flex; flex-direction: column; gap: 6px; min-height: 96px; margin: 0 -16px; padding: 14px 16px 12px; background: {{r.headBg}}; border-bottom: 1px solid #DAD7D0">
               <div style="display: flex; align-items: center; gap: 8px">
                 <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 110%; font-size: 19px; font-weight: 700; color: #1B1A17">{{r.name}}</h2>
-                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #5E5B55">{{r.count}}</span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #54514B">{{r.count}}</span>
                 <sc-if value="{{r.optional}}" hint-placeholder-val="{{false}}">
-                  <span style="height: 20px; display: inline-flex; align-items: center; padding: 0 6px; border: 1px dashed #8B877F; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #5E5B55">OPTIONAL</span>
+                  <span style="height: 20px; display: inline-flex; align-items: center; padding: 0 6px; border: 1px dashed #6F6B64; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #54514B">OPTIONAL</span>
                 </sc-if>
               </div>
-              <span style="font-size: 13px; line-height: 1.45; color: #5E5B55">{{r.desc}}</span>
+              <span style="font-size: 13px; line-height: 1.45; color: #54514B">{{r.desc}}</span>
             </div>
 
             <sc-for list="{{r.people}}" as="p" hint-placeholder-count="2">
@@ -53,11 +53,11 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
                   <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 3px; background: {{p.avBg}}; color: {{p.avFg}}; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 800">{{p.initials}}</span>
                   <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                     <span style="font-size: 15px; font-weight: 600; color: {{p.nameFg}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{p.name}}{{p.you}}</span>
-                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">@{{p.username}} · {{p.signin}}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #54514B">@{{p.username}} · {{p.signin}}</span>
                   </span>
                 </div>
-                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: #5E5B55">
-                  <span style="display: inline-flex; align-items: center; height: 20px; padding: 0 7px 0 6px; border-radius: 2px; border-inline-start: 3px solid {{p.b.dot}}; background: {{p.b.bg}}; color: {{p.b.fg}}; font-size: 11.5px; font-weight: 600">{{p.b.label}}</span>
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: #54514B">
+                  <span style="display: inline-flex; align-items: center; height: 20px; padding: 0 7px 0 6px; border-radius: 2px; border-inline-start: 3px solid {{p.b.dot}}; background: {{p.b.bg}}; color: {{p.b.fg}}; font-size: 12.5px; font-weight: 600">{{p.b.label}}</span>
                   <span>{{p.last}}</span>
                 </div>
               </div>
@@ -67,13 +67,13 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
               <button type="button" style="height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1.5px dashed #B8B5AE; border-radius: 3px; background: transparent; color: #4C4944; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
                 No one has this role
-                <span style="font-size: 12.5px; font-weight: 400; color: #5E5B55">Assign someone, or leave it unused</span>
+                <span style="font-size: 13px; font-weight: 400; color: #54514B">Assign someone, or leave it unused</span>
               </button>
             </sc-if>
 
             <span style="flex-grow: 1"></span>
             <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid #D5D2CB">
-              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">CAN</span>
+              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #54514B">CAN</span>
               <span style="font-size: 13px; line-height: 1.5; color: #26241F">{{r.can}}</span>
               <a href="#" style="font-size: 13px; font-weight: 600">Edit permissions</a>
             </div>
@@ -90,22 +90,23 @@ class Component extends DCLogic {
   renderVals() {
     const S = {
       active: { label: 'Active', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
-      disabled: { label: 'Disabled', bg: '#E6E5E1', fg: '#4C4944', dot: '#8B877F' },
+      disabled: { label: 'Disabled', bg: '#E6E5E1', fg: '#4C4944', dot: '#6F6B64' },
       invited: { label: 'Set-up pending', bg: '#E3E8EE', fg: '#465770', dot: '#5A6B80' }
     };
     const person = (name, username, signin, status, last, owner, you) => ({
       name, username, signin, last, b: S[status], you: you ? ' (you)' : '',
       initials: name.split(' ').map((w) => w[0]).join('').slice(0, 2),
       avBg: status === 'disabled' ? '#E6E5E1' : (owner ? '#1B1A17' : '#EFEEEA'),
-      avFg: status === 'disabled' ? '#8B877F' : (owner ? '#F8F7F4' : '#1B1A17'),
-      nameFg: status === 'disabled' ? '#5E5B55' : '#1B1A17',
-      cardBg: status === 'disabled' ? 'transparent' : '#FFFFFF',
+      avFg: status === 'disabled' ? '#6F6B64' : (owner ? '#F8F7F4' : '#1B1A17'),
+      nameFg: status === 'disabled' ? '#54514B' : '#1B1A17',
+      cardBg: status === 'disabled' ? '#F3F2EE' : '#FFFFFF',
       stripe: you ? '#2F6F73' : (status === 'disabled' ? '#D5D2CB' : '#1B1A17')
     });
     const role = (name, count, desc, can, people, optional, i) => ({
       name, count, desc, can, people, optional: !!optional, empty: people.length === 0,
-      sep: i === 0 ? '0' : '1px solid #D5D2CB',
-      colBg: optional ? '#F2F1EE' : 'transparent'
+      sep: optional ? 'dashed' : 'solid',
+      colBg: optional ? '#F7F6F2' : '#FFFFFF',
+      headBg: optional ? '#EFEEEA' : '#F3F2EE'
     });
     return {
       roles: [

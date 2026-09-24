@@ -20,43 +20,43 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 <div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="reports" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 28px 48px 24px; background: #F8F7F4; display: flex; flex-direction: column; gap: 26px">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 18px 16px 16px; background: #E2E0DA; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 0 4px">
         <div style="display: flex; flex-direction: column; gap: 6px">
           <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Reports</h1>
-          <span style="font-size: 13.5px; color: #5E5B55">Index of every report. All figures are calculated from the data on this computer.</span>
+          <span style="font-size: 13.5px; color: #54514B">Index of every report. All figures are calculated from the data on this computer.</span>
         </div>
         <div style="display: flex; align-items: center; gap: 10px">
           <label style="position: relative; display: flex; align-items: center; width: 340px; height: 44px; box-sizing: border-box; padding: 0 14px 0 42px; background: #FFFFFF; border: 1px solid #D5D2CB; border-radius: 3px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5E5B55" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 12px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#54514B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 12px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Find a report</span>
             <input type="search" placeholder="Find a report…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
-          <button type="button" style="height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F8F7F4; color: #1B1A17; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer"><span style="font-weight: 400; color: #5E5B55">Period</span>September 2026<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <button type="button" style="height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F8F7F4; color: #1B1A17; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer"><span style="font-weight: 400; color: #54514B">Period</span>September 2026<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
       </div>
 
-      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); column-gap: 48px; row-gap: 30px">
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px">
         <sc-for list="{{sections}}" as="s" hint-placeholder-count="6">
-          <section style="min-height: 0; display: flex; flex-direction: column; border-top: 2px solid #1B1A17; padding-top: 14px">
-            <div style="display: flex; align-items: flex-start; gap: 16px">
-              <span style="font-family: Archivo, sans-serif; font-stretch: 100%; font-size: 48px; font-weight: 700; line-height: 0.85; letter-spacing: -0.03em; color: #2F6F73">{{s.n}}</span>
+          <section style="min-height: 0; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
+            <div style="display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: #F3F2EE; border-bottom: 1px solid #DAD7D0">
+              <span style="font-family: Archivo, sans-serif; font-stretch: 100%; font-size: 40px; font-weight: 700; line-height: 0.85; letter-spacing: -0.03em; color: #2F6F73">{{s.n}}</span>
               <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 5px">
                 <div style="display: flex; align-items: center; gap: 10px">
                   <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 24px; font-weight: 700; line-height: 1; color: #1B1A17">{{s.title}}</h2>
                   <sc-if value="{{s.restricted}}" hint-placeholder-val="{{false}}">
-                    <span style="display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 6px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #1B1A17"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>OWNER · MANAGER</span>
+                    <span style="display: inline-flex; align-items: center; gap: 5px; height: 20px; padding: 0 6px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: #1B1A17"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>OWNER · MANAGER</span>
                   </sc-if>
                 </div>
-                <span style="font-size: 13.5px; line-height: 1.4; color: #5E5B55">{{s.desc}}</span>
+                <span style="font-size: 13.5px; line-height: 1.4; color: #54514B">{{s.desc}}</span>
               </div>
             </div>
-            <div style="margin-top: 14px; display: flex; flex-direction: column">
+            <div style="padding: 6px 14px; display: flex; flex-direction: column">
               <sc-for list="{{s.reports}}" as="r" hint-placeholder-count="5">
                 <a href="#" data-report="1" style="display: flex; align-items: baseline; height: 40px; padding: 10px 6px 0; box-sizing: border-box; color: #26241F">
                   <span data-name="1" style="font-size: 15px; font-weight: 500; white-space: nowrap">{{r.name}}</span>
                   <span aria-hidden="true" style="flex-grow: 1; margin: 0 10px; border-bottom: 1px dotted #B8B5AE; transform: translateY(-4px)"></span>
-                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{r.hintFg}}; white-space: nowrap">{{r.hint}}</span>
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: {{r.hintFg}}; white-space: nowrap">{{r.hint}}</span>
                 </a>
               </sc-for>
             </div>
@@ -71,7 +71,7 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    const rp = (name, hint, hot) => ({ name, hint: hint || '→', hintFg: hot ? '#1F5A5E' : '#8B877F' });
+    const rp = (name, hint, hot) => ({ name, hint: hint || '→', hintFg: hot ? '#1F5A5E' : '#6F6B64' });
     return {
       sections: [
         { n: '01', title: 'Sales', desc: 'What was sold, when, by whom, and how it was paid.', restricted: false, reports: [

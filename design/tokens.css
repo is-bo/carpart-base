@@ -6,7 +6,15 @@
 
 :root {
   /* Ground & paper */
-  --ap-ground: #E6E5E1;        /* concrete: app background */
+  --ap-ground: #E2E0DA;        /* concrete: page ground between panels */
+  --ap-panel: #FFFFFF;         /* every page area is a panel */
+  --ap-panel-border: #CFCBC3;
+  --ap-panel-head: #F3F2EE;    /* panel title bars, column headers */
+  --ap-panel-rule: #DAD7D0;
+  --ap-panel-radius: 6px;
+  --ap-panel-gap: 16px;
+  --ap-panel-shadow: 0 1px 2px rgba(27,26,23,0.06);
+  --ap-nav-band: #2E2C29;      /* nav tabs sit on this band */
   --ap-paper: #F8F7F4;         /* stock paper: panels, tables */
   --ap-kraft: #EFEEEA;         /* headers, chips, nested groups */
   --ap-receipt: #FCFBF9;       /* POS cart, printed documents */
@@ -21,8 +29,8 @@
   --ap-rail-text: #B9B6AF;
   --ap-ink: #1B1A17;           /* headings, selected segment */
   --ap-text: #26241F;
-  --ap-text-2: #5E5B55;
-  --ap-text-muted: #8B877F;
+  --ap-text-2: #54514B;
+  --ap-text-muted: #6F6B64;
 
   /* Spruce — the only accent */
   --ap-accent: #2F6F73;         /* markers, active bar, current hour */
@@ -72,7 +80,7 @@
   --ap-shadow-popover: 0 10px 28px rgba(27, 26, 23, 0.14);
 
   /* Metrics */
-  --ap-topbar-h: 56px; --ap-tabs-h: 48px;     /* header = 104px */
+  --ap-topbar-h: 52px; --ap-tabs-h: 52px;     /* header = 104px */
   --ap-ticket-w: 96px;                        /* sale ticket strip */
   --ap-detail-w: 520px;                       /* list + detail pane (470–560) */
   --ap-button-h: 44px; --ap-button-pay-h: 58px;

@@ -19,11 +19,11 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 <div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="dashboard" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 26px 36px 24px; background: #F8F7F4; display: flex; flex-direction: column; gap: 22px">
+    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 16px; background: #E2E0DA; display: flex; flex-direction: column; gap: 16px">
 
-      <section aria-label="Today" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 48px; padding-bottom: 22px; border-bottom: 2px solid #1B1A17">
+      <section aria-label="Today" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 48px; padding: 22px 28px; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
         <div style="display: flex; flex-direction: column; gap: 10px">
-          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.05em; color: #5E5B55">TUESDAY 24 SEPTEMBER 2026 · DAY OPENED 08:02 · TILL 01</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.05em; color: #54514B">TUESDAY 24 SEPTEMBER 2026 · DAY OPENED 08:02 · TILL 01</span>
           <div style="display: flex; align-items: flex-end; gap: 28px">
             <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 100%; font-size: 76px; font-weight: 700; line-height: 0.9; letter-spacing: -0.035em; color: #1B1A17">184 250<span style="margin-inline-start: 12px; font-size: 28px; letter-spacing: 0; color: #1F5A5E">DA</span></h1>
             <div style="display: flex; flex-direction: column; gap: 8px; padding-bottom: 4px">
@@ -32,7 +32,7 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
                 <sc-for list="{{hours}}" as="h" hint-placeholder-count="10">
                   <span title="{{h.tip}}" style="width: 16px; height: {{h.px}}; background: {{h.fill}}"></span>
                 </sc-for>
-                <span style="margin-inline-start: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B877F">08→17h</span>
+                <span style="margin-inline-start: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6F6B64">08→17h</span>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
         <div style="display: grid; grid-template-columns: repeat(4, auto)">
           <sc-for list="{{figures}}" as="f" hint-placeholder-count="4">
             <div style="display: flex; flex-direction: column; gap: 8px; padding: 0 28px; border-inline-start: 1px solid #D5D2CB">
-              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55; white-space: nowrap">{{f.label}}</span>
+              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3F3C37; white-space: nowrap">{{f.label}}</span>
               <span style="font-family: Archivo, sans-serif; font-size: 30px; font-weight: 650; letter-spacing: -0.02em; line-height: 1; color: {{f.color}}; white-space: nowrap">{{f.value}}</span>
               <a href="{{f.href}}" style="font-size: 13px; font-weight: 600; white-space: nowrap">{{f.link}}</a>
             </div>
@@ -48,8 +48,8 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
         </div>
       </section>
 
-      <div style="display: flex; align-items: center; gap: 12px">
-        <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 18px; display: inline-flex; align-items: center; gap: 10px; border-radius: 3px; background: #1F5A5E; color: #FFFFFF; font-size: 15px; font-weight: 600">New sale <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 2px; padding: 0 5px">F1</kbd></a>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 0 4px">
+        <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 18px; display: inline-flex; align-items: center; gap: 10px; border-radius: 3px; background: #1F5A5E; color: #FFFFFF; font-size: 15px; font-weight: 600">New sale <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 2px; padding: 0 5px">F1</kbd></a>
         <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #1B1A17; background: #F8F7F4; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">New purchase</button>
         <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #D5D2CB; background: #EFEEEA; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">New customer</button>
         <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D6CBF3; background: #EFEAFB; color: #5634B8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
@@ -57,29 +57,29 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
           Import invoice with AI
         </button>
         <span style="flex-grow: 1"></span>
-        <span style="font-size: 13px; color: #5E5B55">Day opened by Yacine B. · <a href="#" style="font-weight: 600">Close the day…</a></span>
+        <span style="font-size: 13px; color: #54514B">Day opened by Yacine B. · <a href="#" style="font-weight: 600">Close the day…</a></span>
       </div>
 
-      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 560px">
-        <section aria-label="Till tape" style="min-width: 0; padding-inline-end: 32px; border-inline-end: 1px solid #D5D2CB; display: flex; flex-direction: column">
-          <div style="height: 40px; display: flex; align-items: center; justify-content: space-between">
-            <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Till tape · today</h2>
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 580px; gap: 16px">
+        <section aria-label="Till tape" style="min-width: 0; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
+          <div style="height: 50px; flex-shrink: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; background: #F3F2EE; border-bottom: 1px solid #DAD7D0">
+            <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Till tape · today</h2>
             <div role="radiogroup" aria-label="Show" style="display: flex; border: 1px solid #D5D2CB; border-radius: 3px; overflow: hidden">
               <sc-for list="{{tapeFilters}}" as="t" hint-placeholder-count="5">
                 <button type="button" role="radio" aria-checked="{{t.on}}" style="height: 30px; padding: 0 12px; border: 0; border-inline-start: 1px solid #D5D2CB; background: {{t.bg}}; color: {{t.fg}}; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">{{t.label}}</button>
               </sc-for>
             </div>
           </div>
-          <div role="table" aria-label="Today's transactions" style="flex-grow: 1; min-height: 0; overflow: hidden">
-            <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 34px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">
+          <div role="table" aria-label="Today's transactions" style="flex-grow: 1; min-height: 0; overflow: hidden; padding: 0 18px">
+            <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 34px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3F3C37">
               <span role="columnheader">Time</span><span role="columnheader">Type</span><span role="columnheader">Document</span><span role="columnheader">Who · what</span><span role="columnheader">Status</span><span role="columnheader" style="text-align: end">Amount DA</span>
             </div>
             <sc-for list="{{tape}}" as="r" hint-placeholder-count="12">
               <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; border-bottom: 1px solid #E4E2DD; font-size: 14px">
-                <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5E5B55">{{r.time}}</span>
-                <span role="cell"><span style="display: inline-flex; align-items: center; height: 20px; padding: 0 7px 0 6px; border-inline-start: 3px solid {{r.typeColor}}; background: #EFEEEA; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; color: #26241F">{{r.type}}</span></span>
+                <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #54514B">{{r.time}}</span>
+                <span role="cell"><span style="display: inline-flex; align-items: center; height: 20px; padding: 0 7px 0 6px; border-inline-start: 3px solid {{r.typeColor}}; background: #EFEEEA; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #26241F">{{r.type}}</span></span>
                 <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #1B1A17">{{r.doc}}</span>
-                <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.who}}</span><span style="color: #5E5B55"> · {{r.what}}</span></span>
+                <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.who}}</span><span style="color: #54514B"> · {{r.what}}</span></span>
                 <span role="cell" style="font-size: 13px; color: {{r.statusFg}}; white-space: nowrap">{{r.status}}</span>
                 <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: {{r.amountFg}}; white-space: nowrap">{{r.amount}}</span>
               </div>
@@ -87,32 +87,32 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
           </div>
         </section>
 
-        <section aria-label="Needs attention" style="min-width: 0; padding-inline-start: 32px; display: flex; flex-direction: column; gap: 22px">
-          <div style="display: flex; flex-direction: column">
-            <div style="height: 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B1A17">
-              <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Needs attention</h2>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">5 OPEN</span>
+        <section aria-label="Needs attention" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
+            <div style="height: 50px; flex-shrink: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; background: #F3F2EE; border-bottom: 1px solid #DAD7D0">
+              <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Needs attention</h2>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #54514B">5 OPEN</span>
             </div>
             <sc-for list="{{todo}}" as="t" hint-placeholder-count="5">
-              <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; column-gap: 12px; min-height: 64px; border-bottom: 1px solid #E4E2DD">
-                <span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 700; color: #C5C2BB">{{t.n}}</span>
+              <div style="display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; column-gap: 12px; min-height: 62px; padding: 0 18px; border-bottom: 1px solid #E4E2DD">
+                <span style="font-family: Archivo, sans-serif; font-size: 22px; font-weight: 700; color: #8F8B83">{{t.n}}</span>
                 <span style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
                   <span style="display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #1B1A17"><span style="width: 3px; height: 14px; flex-shrink: 0; background: {{t.color}}"></span>{{t.title}}</span>
-                  <span style="font-size: 13px; color: #5E5B55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.detail}}</span>
+                  <span style="font-size: 13px; color: #54514B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.detail}}</span>
                 </span>
                 <a href="{{t.href}}" style="height: 34px; box-sizing: border-box; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 3px; border: 1px solid {{t.btnBorder}}; background: {{t.btnBg}}; color: {{t.btnFg}}; font-size: 13.5px; font-weight: 600; white-space: nowrap">{{t.action}}</a>
               </div>
             </sc-for>
           </div>
 
-          <div style="display: flex; flex-direction: column">
-            <div style="height: 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1B1A17">
-              <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Moving fastest · 7 days</h2>
-              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">UNITS</span>
+          <div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
+            <div style="height: 50px; flex-shrink: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; background: #F3F2EE; border-bottom: 1px solid #DAD7D0">
+              <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>Moving fastest · 7 days</h2>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #54514B">UNITS</span>
             </div>
             <sc-for list="{{movers}}" as="m" hint-placeholder-count="5">
-              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 36px; align-items: center; column-gap: 12px; height: 38px; border-bottom: 1px solid #E4E2DD; font-size: 14px">
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{m.name}}</span> <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">{{m.ref}}</span></span>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 150px 36px; align-items: center; column-gap: 12px; height: 40px; padding: 0 18px; border-bottom: 1px solid #E4E2DD; font-size: 14px">
+                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{m.name}}</span> <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #54514B">{{m.ref}}</span></span>
                 <span style="height: 8px; background: #EFEEEA"><span style="display: block; height: 8px; width: {{m.w}}; background: #4C4944"></span></span>
                 <span style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600">{{m.units}}</span>
               </div>
@@ -129,7 +129,7 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 class Component extends DCLogic {
   renderVals() {
     const hourVals = [6, 14, 22, 18, 25, 12, 9, 21, 27, 30];
-    const T = { SALE: '#1B1A17', PAYMENT: '#2D5B86', PURCHASE: '#5A6B80', RETURN: '#8B877F' };
+    const T = { SALE: '#1B1A17', PAYMENT: '#2D5B86', PURCHASE: '#5A6B80', RETURN: '#6F6B64' };
     const r = (time, type, doc, who, what, status, statusFg, amount, amountFg) => ({ time, type, typeColor: T[type], doc, who, what, status, statusFg, amount, amountFg });
     const btn = (kind) => kind === 'ai'
       ? { btnBg: '#EFEAFB', btnFg: '#5634B8', btnBorder: '#D6CBF3' }
@@ -156,17 +156,17 @@ class Component extends DCLogic {
       ],
       tape: [
         r('17:04', 'SALE', 'S-24091', 'Garage Benali', '5 items', 'On account', '#2D5B86', '+16 500', '#1B1A17'),
-        r('16:58', 'PAYMENT', 'PAY-0311', 'Taxi Chiffa', 'balance payment', 'Cash', '#5E5B55', '+10 000', '#2D5B86'),
-        r('16:51', 'SALE', 'S-24090', 'Walk-in customer', '2 items', 'Paid · cash', '#5E5B55', '+3 400', '#1B1A17'),
-        r('16:40', 'PURCHASE', 'P-1183', 'Atlas Pièces Auto', '27 lines, read by AI', 'Needs review', '#7F6000', '211 350', '#8B877F'),
-        r('16:38', 'SALE', 'S-24089', 'Karim Hadj-Ahmed', '3 items', 'Paid · card', '#5E5B55', '+9 850', '#1B1A17'),
+        r('16:58', 'PAYMENT', 'PAY-0311', 'Taxi Chiffa', 'balance payment', 'Cash', '#54514B', '+10 000', '#2D5B86'),
+        r('16:51', 'SALE', 'S-24090', 'Walk-in customer', '2 items', 'Paid · cash', '#54514B', '+3 400', '#1B1A17'),
+        r('16:40', 'PURCHASE', 'P-1183', 'Atlas Pièces Auto', '27 lines, read by AI', 'Needs review', '#7F6000', '211 350', '#6F6B64'),
+        r('16:38', 'SALE', 'S-24089', 'Karim Hadj-Ahmed', '3 items', 'Paid · card', '#54514B', '+9 850', '#1B1A17'),
         r('16:20', 'SALE', 'S-24088', 'Transport Meziane SARL', '8 items', 'Partly paid', '#7F6000', '+42 300', '#1B1A17'),
-        r('16:05', 'RETURN', 'R-0418', 'Karim Hadj-Ahmed', 'Air Filter C 2201', 'Refunded · cash', '#5E5B55', '−1 450', '#5E5B55'),
-        r('16:02', 'SALE', 'S-24087', 'Walk-in customer', '1 item', 'Paid · cash', '#5E5B55', '+1 250', '#1B1A17'),
-        r('15:47', 'SALE', 'S-24086', 'Nadia Boukhalfa', '4 items', 'Paid · cash', '#5E5B55', '+7 600', '#1B1A17'),
-        r('15:31', 'SALE', 'S-24085', 'Auto-École El Amel', '2 items', 'Paid · cash', '#5E5B55', '+5 900', '#1B1A17'),
-        r('15:10', 'PURCHASE', 'P-1182', 'Numidia Parts', '42 lines', 'Received', '#226B40', '−386 400', '#5E5B55'),
-        r('15:02', 'SALE', 'S-24084', 'Walk-in customer', '1 item', 'Paid · cash', '#5E5B55', '+2 150', '#1B1A17')
+        r('16:05', 'RETURN', 'R-0418', 'Karim Hadj-Ahmed', 'Air Filter C 2201', 'Refunded · cash', '#54514B', '−1 450', '#54514B'),
+        r('16:02', 'SALE', 'S-24087', 'Walk-in customer', '1 item', 'Paid · cash', '#54514B', '+1 250', '#1B1A17'),
+        r('15:47', 'SALE', 'S-24086', 'Nadia Boukhalfa', '4 items', 'Paid · cash', '#54514B', '+7 600', '#1B1A17'),
+        r('15:31', 'SALE', 'S-24085', 'Auto-École El Amel', '2 items', 'Paid · cash', '#54514B', '+5 900', '#1B1A17'),
+        r('15:10', 'PURCHASE', 'P-1182', 'Numidia Parts', '42 lines', 'Received', '#226B40', '−386 400', '#54514B'),
+        r('15:02', 'SALE', 'S-24084', 'Walk-in customer', '1 item', 'Paid · cash', '#54514B', '+2 150', '#1B1A17')
       ],
       todo: [
         { n: '1', title: '2 invoices read by AI need review', detail: 'Atlas Pièces Auto · P-1181, P-1183 · 45 lines, 3 uncertain', action: 'Review', href: 'Purchases.dc.html', color: '#6A45D1', ...btn('ai') },

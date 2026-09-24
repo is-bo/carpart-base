@@ -20,32 +20,32 @@ a{color:#1F5A5E}a:hover{color:#174649}
     <div style="display: flex; align-items: center; gap: 16px">
       <svg width="48" height="48" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 1.5 26.7 8.25v13.5L15 28.5 3.3 21.75V8.25Z" fill="#2F6F73"></path><circle cx="15" cy="15" r="5.2" fill="none" stroke="#1B1A17" stroke-width="2.6"></circle></svg>
       <div style="display: flex; flex-direction: column; gap: 4px">
-        <div style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">AutoPartsOS · Design system v0.3</div>
+        <div style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3F3C37">AutoPartsOS · Design system v0.3</div>
         <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Design Tokens</h1>
       </div>
     </div>
-    <p style="margin: 0; max-width: 720px; font-size: 15px; line-height: 1.55; color: #5E5B55">“Parts Counter”: warm stock-paper surfaces on concrete, a graphite rail, one quiet spruce for action. Part numbers are stamped in mono, totals read like a till, corners stay square. Nothing here is a framework default.</p>
+    <p style="margin: 0; max-width: 720px; font-size: 15px; line-height: 1.55; color: #54514B">“Parts Counter”: warm stock-paper surfaces on concrete, a graphite rail, one quiet spruce for action. Part numbers are stamped in mono, totals read like a till, corners stay square. Nothing here is a framework default.</p>
   </header>
 
   <!-- COLOR -->
   <section style="display: flex; flex-direction: column; gap: 16px">
     <div style="display: flex; align-items: baseline; gap: 12px">
       <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 21px; font-weight: 700; letter-spacing: -0.005em; color: #1B1A17">Color</h2>
-      <span style="font-size: 13px; color: #5E5B55">Exact hex values · semantic text shades are darkened for 4.5:1 on light surfaces</span>
+      <span style="font-size: 13px; color: #54514B">Exact hex values · semantic text shades are darkened for 4.5:1 on light surfaces</span>
     </div>
     <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
       <sc-for list="{{colorGroups}}" as="g" hint-placeholder-count="5">
         <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-size: 12px; font-weight: 600; color: #5E5B55; letter-spacing: 0.04em">{{g.name}}</div>
+          <div style="font-size: 13px; font-weight: 600; color: #54514B; letter-spacing: 0.04em">{{g.name}}</div>
           <sc-for list="{{g.items}}" as="c" hint-placeholder-count="4">
             <div style="display: flex; align-items: center; gap: 12px">
               <div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 3px; background: {{c.hex}}; border: 1px solid rgba(27,26,23,0.10)"></div>
               <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                 <div style="display: flex; gap: 8px; align-items: baseline">
                   <span style="font-size: 14px; font-weight: 600; color: #26241F">{{c.label}}</span>
-                  <span style="font-size: 12px; font-weight: 500; color: #5E5B55; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{c.hex}}</span>
+                  <span style="font-size: 13px; font-weight: 500; color: #54514B; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{c.hex}}</span>
                 </div>
-                <span style="font-size: 12px; color: #5E5B55; line-height: 1.35">{{c.use}}</span>
+                <span style="font-size: 13px; color: #54514B; line-height: 1.35">{{c.use}}</span>
               </div>
             </div>
           </sc-for>
@@ -59,12 +59,12 @@ a{color:#1F5A5E}a:hover{color:#174649}
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; overflow: hidden">
       <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #D5D2CB">
         <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 21px; font-weight: 700; letter-spacing: -0.005em; color: #1B1A17">Typography</h2>
-        <span style="font-size: 13px; color: #5E5B55">Archivo (display, wide) · IBM Plex Sans + Plex Sans Arabic (UI) · IBM Plex Mono (references, money on receipts)</span>
+        <span style="font-size: 13px; color: #54514B">Archivo (display, wide) · IBM Plex Sans + Plex Sans Arabic (UI) · IBM Plex Mono (references, money on receipts)</span>
       </div>
       <sc-for list="{{typeScale}}" as="t" hint-placeholder-count="9">
         <div style="display: grid; grid-template-columns: 170px 250px minmax(0, 1fr); align-items: center; gap: 16px; padding: 0 24px; min-height: 52px; border-bottom: 1px solid #E4E2DD">
           <span style="font-size: 13px; font-weight: 500; color: #26241F">{{t.name}}</span>
-          <span style="font-size: 12px; color: #5E5B55; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{t.spec}}</span>
+          <span style="font-size: 13px; color: #54514B; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{t.spec}}</span>
           <span style="font-family: {{t.family}}; font-stretch: {{t.stretch}}; text-transform: {{t.tt}}; letter-spacing: {{t.ls}}; font-size: {{t.size}}; font-weight: {{t.weight}}; color: {{t.color}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.sample}}</span>
         </div>
       </sc-for>
@@ -73,47 +73,47 @@ a{color:#1F5A5E}a:hover{color:#174649}
     <div style="display: flex; flex-direction: column; gap: 16px">
       <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
         <div style="display: flex; align-items: baseline; justify-content: space-between">
-          <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Three languages, two directions</h3>
-          <span style="font-size: 12px; font-weight: 500; color: #5E5B55">Layouts use logical start / end</span>
+          <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Three languages, two directions</h3>
+          <span style="font-size: 13px; font-weight: 500; color: #54514B">Layouts use logical start / end</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px">
           <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #EFEEEA; border: 1px solid #D5D2CB; border-radius: 3px">
-            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #5E5B55">EN</span>
+            <span style="width: 34px; font-size: 13px; font-weight: 600; color: #54514B">EN</span>
             <span style="flex-grow: 1; font-size: 15px">Front brake pad set — in stock</span>
             <span style="font-size: 15px; font-weight: 600">4 850 DA</span>
           </div>
           <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #EFEEEA; border: 1px solid #D5D2CB; border-radius: 3px">
-            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #5E5B55">FR</span>
+            <span style="width: 34px; font-size: 13px; font-weight: 600; color: #54514B">FR</span>
             <span style="flex-grow: 1; font-size: 15px">Jeu de plaquettes de frein avant — en stock</span>
             <span style="font-size: 15px; font-weight: 600">4 850 DA</span>
           </div>
           <div dir="rtl" lang="ar" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #EFEEEA; border: 1px solid #D5D2CB; border-radius: 3px; font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif">
-            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #5E5B55; font-family: 'IBM Plex Sans', sans-serif">AR</span>
+            <span style="width: 34px; font-size: 13px; font-weight: 600; color: #54514B; font-family: 'IBM Plex Sans', sans-serif">AR</span>
             <span style="flex-grow: 1; font-size: 15px">طقم وسادات الفرامل الأمامية — متوفر</span>
             <span style="font-size: 15px; font-weight: 600"><bdi dir="ltr">4 850</bdi> دج</span>
           </div>
           <div dir="rtl" lang="ar" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #EFEEEA; border: 1px solid #D5D2CB; border-radius: 3px; font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif">
-            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #5E5B55; font-family: 'IBM Plex Sans', sans-serif">AR</span>
+            <span style="width: 34px; font-size: 13px; font-weight: 600; color: #54514B; font-family: 'IBM Plex Sans', sans-serif">AR</span>
             <span style="flex-grow: 1; font-size: 15px">المرجع <bdi dir="ltr" style="font-family: 'IBM Plex Sans', sans-serif">Bosch 0 986 494 186</bdi> · الكمية <bdi dir="ltr">14</bdi></span>
             <span style="font-size: 15px; font-weight: 600; color: #2D5B86">الرصيد <bdi dir="ltr">48 500</bdi> دج</span>
           </div>
         </div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5E5B55">Arabic mirrors the shell: sidebar on the right, money columns stay end-aligned. Amounts and part references are isolated LTR runs (<span style="color: #26241F; font-weight: 500">bdi dir=ltr</span>), so 4 850 never reads as 850 4.</p>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #54514B">Arabic mirrors the shell: sidebar on the right, money columns stay end-aligned. Amounts and part references are isolated LTR runs (<span style="color: #26241F; font-weight: 500">bdi dir=ltr</span>), so 4 850 never reads as 850 4.</p>
       </div>
 
       <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
-        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Numbers</h3>
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Numbers</h3>
         <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
           <div style="display: flex; flex-direction: column; gap: 4px; padding: 14px; background: #EFEEEA; border-radius: 3px">
-            <span style="font-size: 12px; font-weight: 500; color: #5E5B55">POS till total · Plex Mono 40 / 600</span>
+            <span style="font-size: 13px; font-weight: 500; color: #54514B">POS till total · Plex Mono 40 / 600</span>
             <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 34px; font-weight: 600; color: #1B1A17; letter-spacing: -0.02em">16 500 DA</span>
           </div>
           <div style="display: flex; flex-direction: column; gap: 4px; padding: 14px; background: #EFEEEA; border-radius: 3px">
-            <span style="font-size: 12px; font-weight: 500; color: #5E5B55">Ledger figure · Archivo 32 / 650</span>
+            <span style="font-size: 13px; font-weight: 500; color: #54514B">Ledger figure · Archivo 32 / 650</span>
             <span style="font-family: Archivo, sans-serif; font-size: 32px; font-weight: 650; letter-spacing: -0.02em; color: #1B1A17">184 250 DA</span>
           </div>
         </div>
-        <div style="font-size: 13px; color: #5E5B55; line-height: 1.5">Money: narrow no-break space (U+202F) as thousands separator — a plain space splits the number in Arabic —<span style="color: #26241F; font-weight: 500">DA</span> suffix, right-aligned in grids. Customer debt uses Ledger blue, never red: <span style="color: #2D5B86; font-weight: 600">48 500 DA</span></div>
+        <div style="font-size: 13px; color: #54514B; line-height: 1.5">Money: narrow no-break space (U+202F) as thousands separator — a plain space splits the number in Arabic —<span style="color: #26241F; font-weight: 500">DA</span> suffix, right-aligned in grids. Customer debt uses Ledger blue, never red: <span style="color: #2D5B86; font-weight: 600">48 500 DA</span></div>
       </div>
     </div>
   </section>
@@ -121,45 +121,45 @@ a{color:#1F5A5E}a:hover{color:#174649}
   <!-- SPACING / RADIUS / ELEVATION / MOTION -->
   <section style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
-      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Spacing · 4 / 8 system</h3>
+      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Spacing · 4 / 8 system</h3>
       <sc-for list="{{spacing}}" as="s" hint-placeholder-count="6">
         <div style="display: flex; align-items: center; gap: 12px; height: 22px">
-          <span style="width: 40px; font-size: 12px; font-weight: 600; color: #26241F">{{s.px}}</span>
+          <span style="width: 40px; font-size: 13px; font-weight: 600; color: #26241F">{{s.px}}</span>
           <div style="height: 10px; width: {{s.w}}; background: #1F5A5E; border-radius: 2px"></div>
-          <span style="font-size: 12px; color: #5E5B55">{{s.name}}</span>
+          <span style="font-size: 13px; color: #54514B">{{s.name}}</span>
         </div>
       </sc-for>
-      <div style="font-size: 12px; color: #5E5B55; padding-top: 4px; border-top: 1px solid #E4E2DD">Page padding 24 · POS internal 16</div>
+      <div style="font-size: 13px; color: #54514B; padding-top: 4px; border-top: 1px solid #E4E2DD">Page padding 24 · POS internal 16</div>
     </div>
 
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
-      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Radius</h3>
+      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Radius</h3>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 2px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">2</span><span style="font-size: 12px; color: #5E5B55">Tags, chips</span></div></div>
-        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 3px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">3</span><span style="font-size: 12px; color: #5E5B55">Buttons, inputs, search</span></div></div>
-        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 4px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">4</span><span style="font-size: 12px; color: #5E5B55">Panels, till display</span></div></div>
-        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 0; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">0</span><span style="font-size: 12px; color: #5E5B55">Nav rows, table rows</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 2px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">2</span><span style="font-size: 13px; color: #54514B">Tags, chips</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 3px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">3</span><span style="font-size: 13px; color: #54514B">Buttons, inputs, search</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 4px; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">4</span><span style="font-size: 13px; color: #54514B">Panels, till display</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #1F5A5E; border-radius: 0; background: #E1ECEB"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">0</span><span style="font-size: 13px; color: #54514B">Nav rows, table rows</span></div></div>
       </div>
     </div>
 
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
-      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Elevation · minimal</h3>
+      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Elevation · minimal</h3>
       <div style="display: flex; flex-direction: column; gap: 10px">
-        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px"></div><span style="font-size: 12px; color: #5E5B55">Flat · border only (default)</span></div>
-        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px; box-shadow: 0 1px 2px rgba(27,26,23,0.06)"></div><span style="font-size: 12px; color: #5E5B55">Panel · 0 1 2 / 6%</span></div>
-        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px; box-shadow: 0 10px 28px rgba(27,26,23,0.14)"></div><span style="font-size: 12px; color: #5E5B55">Popover, dialog · 0 10 28 / 14%</span></div>
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px"></div><span style="font-size: 13px; color: #54514B">Flat · border only (default)</span></div>
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px; box-shadow: 0 1px 2px rgba(27,26,23,0.06)"></div><span style="font-size: 13px; color: #54514B">Panel · 0 1 2 / 6%</span></div>
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 3px; box-shadow: 0 10px 28px rgba(27,26,23,0.14)"></div><span style="font-size: 13px; color: #54514B">Popover, dialog · 0 10 28 / 14%</span></div>
       </div>
     </div>
 
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
-      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Motion</h3>
+      <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Motion</h3>
       <sc-for list="{{motion}}" as="m" hint-placeholder-count="5">
         <div style="display: flex; justify-content: space-between; align-items: center; height: 24px; border-bottom: 1px solid #E4E2DD">
           <span style="font-size: 13px; color: #26241F">{{m.name}}</span>
-          <span style="font-size: 12px; font-weight: 600; color: #5E5B55; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{m.value}}</span>
+          <span style="font-size: 13px; font-weight: 600; color: #54514B; font-family: 'IBM Plex Mono', ui-monospace, monospace">{{m.value}}</span>
         </div>
       </sc-for>
-      <div style="font-size: 12px; color: #5E5B55">If animation does not improve understanding, do not animate it.</div>
+      <div style="font-size: 13px; color: #54514B">If animation does not improve understanding, do not animate it.</div>
     </div>
   </section>
 
@@ -167,34 +167,34 @@ a{color:#1F5A5E}a:hover{color:#174649}
   <section style="display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 16px; flex-grow: 1">
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
       <div style="display: flex; align-items: baseline; justify-content: space-between">
-        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Iconography · outline, 1.75 stroke, 20 px</h3>
-        <span style="font-size: 12px; color: #5E5B55">For recognition, never decoration · AI uses a restrained sparkle</span>
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Iconography · outline, 1.75 stroke, 20 px</h3>
+        <span style="font-size: 13px; color: #54514B">For recognition, never decoration · AI uses a restrained sparkle</span>
       </div>
       <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; color: #26241F">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span style="font-size: 12px; color: #5E5B55">Dashboard</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg><span style="font-size: 12px; color: #5E5B55">POS</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg><span style="font-size: 12px; color: #5E5B55">Sales</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg><span style="font-size: 12px; color: #5E5B55">Products</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg><span style="font-size: 12px; color: #5E5B55">Stock</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg><span style="font-size: 12px; color: #5E5B55">Purchases</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span style="font-size: 12px; color: #5E5B55">Customers</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg><span style="font-size: 12px; color: #5E5B55">Suppliers</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg><span style="font-size: 12px; color: #5E5B55">Returns</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg><span style="font-size: 12px; color: #5E5B55">Reports</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-size: 12px; color: #5E5B55">Users &amp; Roles</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg><span style="font-size: 12px; color: #5E5B55">Settings</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span style="font-size: 12px; color: #5E5B55">Search</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span style="font-size: 12px; color: #5E5B55">Notifications</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg><span style="font-size: 12px; color: #5E5B55">Vehicle</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg><span style="font-size: 12px; color: #5E5B55">Catalog</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><span style="font-size: 12px; color: #5E5B55">Local data</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span style="font-size: 12px; color: #5E5B55">Locked record</span></div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEAFB; border-radius: 3px; color: #6A45D1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg><span style="font-size: 12px; color: #5634B8; font-weight: 500">AI</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span style="font-size: 13px; color: #54514B">Dashboard</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg><span style="font-size: 13px; color: #54514B">POS</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg><span style="font-size: 13px; color: #54514B">Sales</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg><span style="font-size: 13px; color: #54514B">Products</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg><span style="font-size: 13px; color: #54514B">Stock</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg><span style="font-size: 13px; color: #54514B">Purchases</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span style="font-size: 13px; color: #54514B">Customers</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg><span style="font-size: 13px; color: #54514B">Suppliers</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg><span style="font-size: 13px; color: #54514B">Returns</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg><span style="font-size: 13px; color: #54514B">Reports</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-size: 13px; color: #54514B">Users &amp; Roles</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg><span style="font-size: 13px; color: #54514B">Settings</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span style="font-size: 13px; color: #54514B">Search</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span style="font-size: 13px; color: #54514B">Notifications</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg><span style="font-size: 13px; color: #54514B">Vehicle</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg><span style="font-size: 13px; color: #54514B">Catalog</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><span style="font-size: 13px; color: #54514B">Local data</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEEEA; border-radius: 3px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span style="font-size: 13px; color: #54514B">Locked record</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #EFEAFB; border-radius: 3px; color: #6A45D1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg><span style="font-size: 13px; color: #5634B8; font-weight: 500">AI</span></div>
       </div>
     </div>
 
     <div style="background: #F8F7F4; border: 1px solid #D5D2CB; border-radius: 4px; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px">
-      <h3 style="margin: 0 0 4px; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Shell &amp; layout metrics</h3>
+      <h3 style="margin: 0 0 4px; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73; flex-shrink: 0"></span>Shell &amp; layout metrics</h3>
       <sc-for list="{{metrics}}" as="m" hint-placeholder-count="8">
         <div style="display: flex; justify-content: space-between; align-items: center; height: 28px; border-bottom: 1px solid #E4E2DD">
           <span style="font-size: 13px; color: #26241F">{{m.name}}</span>
@@ -211,18 +211,18 @@ class Component extends DCLogic {
     return {
       colorGroups: [
         { name: 'GROUND & PAPER', items: [
-          { label: 'Concrete', hex: '#E6E5E1', use: 'App ground behind everything' },
-          { label: 'Stock paper', hex: '#F8F7F4', use: 'Panels, tables, working areas' },
+          { label: 'Concrete', hex: '#E2E0DA', use: 'Page ground between panels' },
+          { label: 'Panel', hex: '#FFFFFF', use: 'Every section is a panel · border #CFCBC3' },
           { label: 'Kraft', hex: '#EFEEEA', use: 'Headers, chips, nested groups' },
           { label: 'Receipt', hex: '#FCFBF9', use: 'POS cart, printed documents' },
-          { label: 'Rule', hex: '#D5D2CB', use: 'Borders · soft rule #E4E2DD' }
+          { label: 'Panel header', hex: '#F3F2EE', use: 'Title bar & column headers · rule #DAD7D0' }
         ]},
         { name: 'GRAPHITE', items: [
           { label: 'Rail', hex: '#1E1D1A', use: 'Top bar, till display, ticket header' },
           { label: 'Rail raised', hex: '#2B2A27', use: 'Search field on the top bar' },
           { label: 'Ink', hex: '#1B1A17', use: 'Headings, selected segment' },
           { label: 'Text', hex: '#26241F', use: 'Body and table text' },
-          { label: 'Text 2 · Muted', hex: '#5E5B55', use: 'Supporting · muted #8B877F' }
+          { label: 'Text 2 · Muted', hex: '#54514B', use: 'Supporting 7.4:1 · muted #6F6B64 5:1' }
         ]},
         { name: 'SPRUCE — THE ONLY ACCENT', items: [
           { label: 'Spruce', hex: '#2F6F73', use: 'Markers, active bar · on graphite #86BDB8' },
@@ -246,11 +246,11 @@ class Component extends DCLogic {
       typeScale: [
         { name: 'Page title', spec: 'Archivo 115% · 30 / 700', size: '30px', weight: 700, color: '#1B1A17', sample: 'Products', family: 'Archivo, sans-serif', stretch: '115%', tt: 'none', ls: '-0.015em' },
         { name: 'Section heading', spec: 'Archivo 112% · 21 / 700', size: '21px', weight: 700, color: '#1B1A17', sample: 'Buttons', family: 'Archivo, sans-serif', stretch: '112%', tt: 'none', ls: '0' },
-        { name: 'Panel label', spec: 'Archivo 112% · 13 / 700 caps', size: '13px', weight: 700, color: '#1B1A17', sample: 'Recent purchases', family: 'Archivo, sans-serif', stretch: '112%', tt: 'uppercase', ls: '0.09em' },
+        { name: 'Panel title', spec: 'Archivo 112% · 14 / 700 caps', size: '14px', weight: 700, color: '#1B1A17', sample: 'Recent purchases', family: 'Archivo, sans-serif', stretch: '112%', tt: 'uppercase', ls: '0.07em' },
         { name: 'UI text', spec: 'Plex Sans · 15 / 400', size: '15px', weight: 400, color: '#26241F', sample: 'Front brake pad set, Renault Symbol II 1.2 16V', family: "'IBM Plex Sans', sans-serif", stretch: '100%', tt: 'none', ls: '0' },
         { name: 'Table text', spec: 'Plex Sans · 14 / 400', size: '14px', weight: 400, color: '#26241F', sample: 'Bosch · 14 in stock · 4 850 DA', family: "'IBM Plex Sans', sans-serif", stretch: '100%', tt: 'none', ls: '0' },
-        { name: 'Supporting', spec: 'Plex Sans · 13 / 400', size: '13px', weight: 400, color: '#5E5B55', sample: 'Last purchased from Numidia Parts on 18 Sep 2026', family: "'IBM Plex Sans', sans-serif", stretch: '100%', tt: 'none', ls: '0' },
-        { name: 'Column header', spec: 'Archivo 108% · 11.5 / 700 caps', size: '11.5px', weight: 700, color: '#5E5B55', sample: 'Reference · Brand · Stock', family: 'Archivo, sans-serif', stretch: '108%', tt: 'uppercase', ls: '0.08em' },
+        { name: 'Supporting', spec: 'Plex Sans · 13 / 400', size: '13px', weight: 400, color: '#54514B', sample: 'Last purchased from Numidia Parts on 18 Sep 2026', family: "'IBM Plex Sans', sans-serif", stretch: '100%', tt: 'none', ls: '0' },
+        { name: 'Column header', spec: 'Archivo 108% · 12.5 / 700 caps', size: '12.5px', weight: 700, color: '#3F3C37', sample: 'Reference · Brand · Stock', family: 'Archivo, sans-serif', stretch: '108%', tt: 'uppercase', ls: '0.06em' },
         { name: 'Part number', spec: 'Plex Mono · 12.5 / 500', size: '12.5px', weight: 500, color: '#26241F', sample: '0 986 494 186   GDB1550   W 75/3', family: "'IBM Plex Mono', ui-monospace, monospace", stretch: '100%', tt: 'none', ls: '0.02em' },
         { name: 'Till total', spec: 'Plex Mono · 40 / 600', size: '34px', weight: 600, color: '#1B1A17', sample: '16 500 DA', family: "'IBM Plex Mono', ui-monospace, monospace", stretch: '100%', tt: 'none', ls: '-0.02em' }
       ],
@@ -270,7 +270,8 @@ class Component extends DCLogic {
         { name: 'Search results', value: 'instant' }
       ],
       metrics: [
-        { name: 'Top bar · index tabs', value: '56 + 48 px' },
+        { name: 'Top bar · nav band', value: '52 + 52 px' },
+        { name: 'Panel gap · radius', value: '16 px · 6 px' },
         { name: 'Ticket strip · detail pane', value: '96 · 470–560 px' },
         { name: 'Button height · Take payment', value: '44 · 58 px' },
         { name: 'Input · Smart Search height', value: '42 · 48 px (POS 52)' },

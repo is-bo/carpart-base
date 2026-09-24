@@ -19,13 +19,13 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
 <div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="purchases" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 520px; background: #F8F7F4">
+    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr) 520px; gap: 16px; padding: 16px; background: #E2E0DA">
 
-      <section aria-label="Purchases" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
-        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
+      <section aria-label="Purchases" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 2px 4px 0">
           <div style="display: flex; flex-direction: column; gap: 6px">
             <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Purchases</h1>
-            <span style="font-size: 13.5px; color: #5E5B55">Goods received from suppliers. Stock only changes when a purchase is received.</span>
+            <span style="font-size: 13.5px; color: #54514B">Goods received from suppliers. Stock only changes when a purchase is received.</span>
           </div>
           <div style="display: flex; gap: 10px">
             <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D6CBF3; background: #EFEAFB; color: #5634B8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
@@ -36,63 +36,65 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 14px">
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06)">
           <div role="radiogroup" aria-label="Status" style="display: flex; border: 1px solid #1B1A17; border-radius: 3px; overflow: hidden">
             <sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
-              <button type="button" role="radio" aria-checked="{{t.checked}}" style="height: 40px; padding: 0 14px; border: 0; border-inline-start: {{t.sep}}; background: {{t.bg}}; color: {{t.fg}}; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">{{t.label}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{t.countFg}}">{{t.count}}</span></button>
+              <button type="button" role="radio" aria-checked="{{t.checked}}" style="height: 40px; padding: 0 14px; border: 0; border-inline-start: {{t.sep}}; background: {{t.bg}}; color: {{t.fg}}; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">{{t.label}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: {{t.countFg}}">{{t.count}}</span></button>
             </sc-for>
           </div>
           <label style="position: relative; display: flex; align-items: center; width: 380px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D5D2CB; border-radius: 3px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5E5B55" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#54514B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search purchases</span>
             <input type="search" placeholder="Purchase, supplier invoice, part…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
-          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #5E5B55">Supplier</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #54514B">Supplier</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
 
+        <div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden">
         <div role="table" aria-label="Purchases" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 42px; padding: 0 16px; background: #F3F2EE; border-bottom: 1px solid #CFCBC3; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3F3C37">
             <span role="columnheader">Purchase</span><span role="columnheader" aria-sort="descending" style="color: #1F5A5E">Date ↓</span><span role="columnheader">Supplier</span><span role="columnheader">Their invoice</span><span role="columnheader" style="text-align: end">Lines</span><span role="columnheader" style="text-align: end">Total DA</span><span role="columnheader">Status</span><span role="columnheader">Entered</span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="13">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px; border-bottom: 1px solid #E4E2DD; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 16px; border-bottom: 1px solid #E4E2DD; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
               <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; font-weight: 600; color: #1B1A17">{{r.id}}</span>
               <span role="cell" style="color: #4C4944">{{r.date}}</span>
               <span role="cell" style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.supplier}}</span>
-              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #4C4944">{{r.inv}}</span>
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4C4944">{{r.inv}}</span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 13.5px">{{r.items}}</span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1B1A17">{{r.total}}</span>
-              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600; white-space: nowrap">{{r.b.label}}</span></span>
+              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 13px; font-weight: 600; white-space: nowrap">{{r.b.label}}</span></span>
               <span role="cell" style="display: inline-flex; align-items: center; gap: 5px; font-size: 13px; color: {{r.srcFg}}; font-weight: {{r.srcWt}}"><sc-if value="{{r.ai}}" hint-placeholder-val="{{false}}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6A45D1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg></sc-if>{{r.src}}</span>
             </div>
           </sc-for>
         </div>
-        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D5D2CB; font-size: 13px; color: #5E5B55">
+        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #FAFAF8; border-top: 1px solid #DAD7D0; font-size: 13.5px; color: #54514B">
           <span>1–13 of 186 · 4 318 600 DA in 90 days</span>
-          <span style="display: flex; gap: 6px"><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #8B877F; font-family: inherit; font-size: 13px">Newer</button><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #1B1A17; background: transparent; color: #1B1A17; font-family: inherit; font-size: 13px; font-weight: 600">Older</button></span>
+          <span style="display: flex; gap: 6px"><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #6F6B64; font-family: inherit; font-size: 13px">Newer</button><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #1B1A17; background: transparent; color: #1B1A17; font-family: inherit; font-size: 13px; font-weight: 600">Older</button></span>
+        </div>
         </div>
       </section>
 
-      <aside aria-label="Selected purchase" style="min-height: 0; background: #FCFBF9; border-inline-start: 1px solid #D5D2CB; padding: 24px 26px; display: flex; flex-direction: column; gap: 16px">
-        <div style="display: flex; align-items: center; justify-content: space-between">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #5E5B55">PURCHASE P-1183</span>
-          <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid #C99A0A; background: #F5EBC9; color: #7F6000; font-size: 12px; font-weight: 600">Needs review</span>
+      <aside aria-label="Selected purchase" style="min-height: 0; background: #FFFFFF; border: 1px solid #CFCBC3; border-radius: 6px; box-shadow: 0 1px 2px rgba(27,26,23,0.06); overflow: hidden; padding: 24px 26px; display: flex; flex-direction: column; gap: 16px">
+        <div style="align-self: stretch; margin: -24px -26px 0; height: 50px; flex-shrink: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; background: #F3F2EE; border-bottom: 1px solid #DAD7D0">
+          <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 14px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #2F6F73"></span>PURCHASE P-1183</h2>
+          <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid #C99A0A; background: #F5EBC9; color: #7F6000; font-size: 13px; font-weight: 600">Needs review</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 4px">
           <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 22px; font-weight: 700; color: #1B1A17">Atlas Pièces Auto</span>
           <span style="font-size: 13.5px; color: #4C4944">Invoice <span style="font-family: 'IBM Plex Mono', monospace">FA-2026-0918</span> · 24 Sep 2026 · imported 16:40</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #1B1A17; border-bottom: 1px solid #D5D2CB">
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0"><span style="font-size: 12px; color: #5E5B55">Lines read</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650">27</span></div>
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 12px; color: #5E5B55">To check</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #5634B8">3</span></div>
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 12px; color: #5E5B55">Invoice total</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650">211 350</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0"><span style="font-size: 13px; color: #54514B">Lines read</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650">27</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 13px; color: #54514B">To check</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #5634B8">3</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 13px; color: #54514B">Invoice total</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650">211 350</span></div>
         </div>
 
         <div style="display: flex; flex-direction: column">
-          <span style="padding-bottom: 6px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">WHAT THE AI READ · FIRST 7 LINES</span>
+          <span style="padding-bottom: 6px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #54514B">WHAT THE AI READ · FIRST 7 LINES</span>
           <sc-for list="{{lines}}" as="l" hint-placeholder-count="7">
             <div style="display: grid; grid-template-columns: minmax(0, 1fr) 36px 72px; column-gap: 10px; align-items: center; min-height: 42px; padding: 4px 0 4px 10px; border-bottom: 1px dashed #DEDBD5; border-inline-start: 3px solid {{l.mark}}; background: {{l.bg}}; font-size: 13.5px">
-              <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4C4944">{{l.ref}}</span> {{l.name}}</span><sc-if value="{{l.flag}}" hint-placeholder-val="{{false}}"><span style="font-size: 12px; font-weight: 600; color: #5634B8">{{l.note}}</span></sc-if></span>
+              <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4C4944">{{l.ref}}</span> {{l.name}}</span><sc-if value="{{l.flag}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; font-weight: 600; color: #5634B8">{{l.note}}</span></sc-if></span>
               <span style="text-align: end; font-family: 'IBM Plex Mono', monospace">×{{l.qty}}</span>
               <span style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; padding-inline-end: 8px">{{l.price}}</span>
             </div>
@@ -100,7 +102,7 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
         </div>
 
         <span style="flex-grow: 1"></span>
-        <span style="font-size: 13px; color: #5E5B55">Nothing is added to stock until each line is confirmed.</span>
+        <span style="font-size: 13px; color: #54514B">Nothing is added to stock until each line is confirmed.</span>
         <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px">
           <button type="button" style="height: 46px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 3px; border: 1px solid #6A45D1; background: #6A45D1; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg>
@@ -120,10 +122,10 @@ class Component extends DCLogic {
     const B = {
       received: { label: 'Received', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
       review: { label: 'Needs review', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' },
-      draft: { label: 'Draft', bg: '#E6E5E1', fg: '#4C4944', dot: '#8B877F' },
+      draft: { label: 'Draft', bg: '#E6E5E1', fg: '#4C4944', dot: '#6F6B64' },
       partial: { label: 'Part received', bg: '#E3E8EE', fg: '#465770', dot: '#5A6B80' }
     };
-    const r = (id, date, supplier, inv, items, total, b, ai) => ({ id, date, supplier, inv, items, total, b, ai, src: ai ? 'AI import' : 'Manual', srcFg: ai ? '#5634B8' : '#5E5B55', srcWt: ai ? 600 : 400, bg: '', ring: 'none' });
+    const r = (id, date, supplier, inv, items, total, b, ai) => ({ id, date, supplier, inv, items, total, b, ai, src: ai ? 'AI import' : 'Manual', srcFg: ai ? '#5634B8' : '#54514B', srcWt: ai ? 600 : 400, bg: '', ring: 'none' });
     const rows = [
       r('P-1183', '24 Sep 2026', 'Atlas Pièces Auto', 'FA-2026-0918', 27, '211 350', B.review, true),
       r('P-1182', '24 Sep 2026', 'Numidia Parts', 'NP/24/3312', 42, '386 400', B.received, false),
@@ -141,7 +143,7 @@ class Component extends DCLogic {
     ];
     rows[0].bg = '#E1ECEB';
     rows[0].ring = 'inset 3px 0 0 #2F6F73';
-    const tab = (label, count, on, first) => ({ label, count, checked: on ? 'true' : 'false', bg: on ? '#1B1A17' : '#F8F7F4', fg: on ? '#F8F7F4' : '#26241F', countFg: on ? '#B9B6AF' : '#5E5B55', sep: first ? '0' : '1px solid #1B1A17' });
+    const tab = (label, count, on, first) => ({ label, count, checked: on ? 'true' : 'false', bg: on ? '#1B1A17' : '#F8F7F4', fg: on ? '#F8F7F4' : '#26241F', countFg: on ? '#B9B6AF' : '#54514B', sep: first ? '0' : '1px solid #1B1A17' });
     const line = (ref, name, qty, price, note) => ({ ref, name, qty, price, note: note || '', flag: !!note, mark: note ? '#6A45D1' : 'transparent', bg: note ? '#F4F0FC' : 'transparent' });
     return {
       cols: '80px 100px minmax(0, 1fr) 128px 46px 92px 118px 96px',
