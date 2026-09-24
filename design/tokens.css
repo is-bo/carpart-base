@@ -1,0 +1,111 @@
+/* AutoPartsOS design tokens — v0.1 (first pass).
+   Source of truth for colours, type, spacing and component metrics.
+   Mirrors the "Design Tokens" and "Core Components" boards in design/project/. */
+
+:root {
+  /* Surfaces */
+  --ap-bg-app: #EEF1F4;
+  --ap-surface: #F4F8FF;
+  --ap-surface-2: #F7F8FA;
+  --ap-border: #D7DCE3;
+  --ap-border-subtle: #E3E7ED;
+
+  /* Sidebar & selection */
+  --ap-sidebar-bg: #18365A;
+  --ap-sidebar-fg: #C9D6E8;
+  --ap-active: #1D4ED8;
+  --ap-selected: #E8F0FE;
+
+  /* Brand & action */
+  --ap-navy: #14213D;
+  --ap-primary: #2563EB;
+  --ap-primary-hover: #1D4ED8;
+  --ap-ai: #7C3AED;
+
+  /* Text */
+  --ap-text: #172033;
+  --ap-text-2: #667085;
+  --ap-text-muted: #8A94A6;
+
+  /* Semantic: base (dots, icons, fills) */
+  --ap-success: #16A344;
+  --ap-warning: #D97706;
+  --ap-danger: #DC2626;
+  --ap-info: #0284C7;
+  --ap-balance: #B45309;
+
+  /* Semantic: text on light surfaces (>= 4.5:1) */
+  --ap-success-text: #0F7A33;
+  --ap-warning-text: #A15A06;
+  --ap-danger-text: #B91C1C;
+  --ap-info-text: #0369A1;
+  --ap-ai-text: #6D28D9;
+
+  /* Semantic: badge backgrounds */
+  --ap-success-soft: #E7F6EC;
+  --ap-warning-soft: #FDF1E1;
+  --ap-danger-soft: #FDECEC;
+  --ap-info-soft: #E3F2FB;
+  --ap-balance-soft: #FBF0E4;
+  --ap-ai-soft: #F3EEFF;
+  --ap-neutral-soft: #EEF1F4;
+
+  /* Typography */
+  --ap-font-latin: 'Inter', system-ui, sans-serif;
+  --ap-font-arabic: 'Noto Sans Arabic', 'Inter', sans-serif;
+  --ap-fs-page-title: 26px;   /* 600 */
+  --ap-fs-section: 20px;      /* 600 */
+  --ap-fs-panel: 17px;        /* 600 */
+  --ap-fs-ui: 15px;           /* 400 */
+  --ap-fs-table: 14px;        /* 400 */
+  --ap-fs-support: 13px;      /* 400 */
+  --ap-fs-label: 12px;        /* 500 */
+  --ap-fs-pos-total: 32px;    /* 700 */
+  --ap-fs-kpi: 28px;          /* 600 */
+
+  /* Spacing (4 / 8 system) */
+  --ap-space-1: 4px;
+  --ap-space-2: 8px;
+  --ap-space-3: 12px;
+  --ap-space-4: 16px;
+  --ap-space-6: 24px;
+  --ap-space-8: 32px;
+  --ap-page-padding: 24px;
+  --ap-pos-padding: 16px;
+
+  /* Radius */
+  --ap-radius-badge: 6px;
+  --ap-radius-control: 8px;
+  --ap-radius-search: 10px;
+  --ap-radius-panel: 12px;
+
+  /* Elevation */
+  --ap-shadow-panel: 0 1px 2px rgba(20, 33, 61, 0.06);
+  --ap-shadow-popover: 0 10px 28px rgba(20, 33, 61, 0.14);
+  --ap-focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  --ap-focus-ring-search: 0 0 0 4px rgba(37, 99, 235, 0.12);
+
+  /* Component metrics */
+  --ap-sidebar-w: 232px;
+  --ap-sidebar-w-collapsed: 68px;
+  --ap-topbar-h: 60px;
+  --ap-button-h: 44px;
+  --ap-button-pos-h: 56px;
+  --ap-input-h: 42px;
+  --ap-search-h: 48px;
+  --ap-grid-header-h: 44px;
+  --ap-grid-row-h: 50px;
+  --ap-grid-row-compact-h: 44px;
+
+  /* Motion */
+  --ap-dur-hover: 120ms;
+  --ap-dur-dialog: 150ms;
+  --ap-dur-drawer: 180ms;
+}
+
+:lang(ar) { font-family: var(--ap-font-arabic); }
+
+/* Numbers: group thousands with U+202F (narrow no-break space), never a plain
+   space. In RTL text also isolate amounts and part references:
+   <bdi dir="ltr">4 850</bdi> دج — otherwise Arabic renders "850 4". */
+.ap-num { font-variant-numeric: tabular-nums; unicode-bidi: isolate; direction: ltr; }

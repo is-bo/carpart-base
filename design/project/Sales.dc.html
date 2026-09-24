@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sales — AutoPartsOS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEF1F4}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{transition:background-color .12s,border-color .12s,color .12s}
+[data-row]:hover{background:#EDF3FD}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+  <dc-import name="Sidebar" active="sales" hint-size="232px,1080px"></dc-import>
+  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
+    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
+    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Sales</h1>
+            <span style="display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 6px; background: #EEF1F4; border: 1px solid #D7DCE3; color: #475467; font-size: 12px; font-weight: 500">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              History · read-only
+            </span>
+          </div>
+          <span style="font-size: 13px; color: #667085">Completed sales are locked records. Corrections are made through Returns, never by editing a sale.</span>
+        </div>
+        <div style="display: flex; gap: 12px">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
+            Export
+          </button>
+          <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-size: 15px; font-weight: 600">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            Open POS
+          </a>
+        </div>
+      </div>
+
+      <section style="flex-grow: 1; min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
+        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D7DCE3">
+          <label style="position: relative; display: flex; align-items: center; width: 520px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search sales</span>
+            <input type="search" placeholder="Sale number, customer, product or reference…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #172033">
+          </label>
+          <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid {{f.border}}; background: {{f.bg}}; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer">
+              <span style="color: #667085">{{f.label}}</span>{{f.value}}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+          </sc-for>
+          <span style="flex-grow: 1"></span>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
+            <span style="font-size: 15px; font-weight: 600; color: #14213D">6 412 900 DA</span>
+            <span style="font-size: 12px; color: #667085">1 284 sales in the last 30 days</span>
+          </div>
+        </div>
+
+        <div style="flex-grow: 1; min-height: 0; overflow: hidden">
+          <div role="table" aria-label="Completed sales">
+            <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 44px; padding: 0 16px 0 24px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+              <span role="columnheader">Sale</span>
+              <span role="columnheader" aria-sort="descending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #1D4ED8">Date <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
+              <span role="columnheader">Customer</span>
+              <span role="columnheader" style="text-align: end">Items</span>
+              <span role="columnheader">Payment</span>
+              <span role="columnheader">Cashier</span>
+              <span role="columnheader" style="text-align: end">Total</span>
+              <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
+            </div>
+            <sc-for list="{{rows}}" as="r" hint-placeholder-count="14">
+              <sc-if value="{{r.isGroup}}" hint-placeholder-val="{{false}}">
+                <div role="row" style="display: flex; align-items: center; justify-content: space-between; height: 36px; padding: 0 72px 0 24px; background: #F7F8FA; border-bottom: 1px solid #E3E7ED; font-size: 12px; font-weight: 600; color: #475467">
+                  <span role="cell">{{r.label}}</span>
+                  <span role="cell">{{r.sum}}</span>
+                </div>
+              </sc-if>
+              <sc-if value="{{r.isRow}}" hint-placeholder-val="{{true}}">
+                <div role="row" data-row="1" style="display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 50px; padding: 0 16px 0 24px; border-bottom: 1px solid #E3E7ED; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+                  <span role="cell" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #14213D">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    {{r.id}}
+                  </span>
+                  <span role="cell" style="color: #475467">{{r.date}}</span>
+                  <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.customer}}</span>
+                  <span role="cell" style="text-align: end">{{r.items}}</span>
+                  <span role="cell" style="white-space: nowrap"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span><span style="font-size: 13px; color: #667085; margin-inline-start: 8px">{{r.method}}</span></span>
+                  <span role="cell" style="color: #475467">{{r.cashier}}</span>
+                  <span role="cell" style="text-align: end; font-weight: 600">{{r.total}}</span>
+                  <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions for {{r.id}}" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #667085; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+                </div>
+              </sc-if>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #F7F8FA; border-top: 1px solid #D7DCE3; font-size: 13px; color: #667085">
+          <span>Showing 1–14 of 1 284 · sorted by newest</span>
+          <div style="display: flex; align-items: center; gap: 6px">
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #8A94A6; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #2563EB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">3</button>
+            <span style="padding: 0 4px">…</span>
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const B = {
+      paid: { label: 'Paid', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
+      partial: { label: 'Partial', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      account: { label: 'On account', bg: '#FBF0E4', fg: '#B45309', dot: '#B45309' },
+      returned: { label: 'Partly returned', bg: '#E3F2FB', fg: '#0369A1', dot: '#0284C7' }
+    };
+    const sale = (id, date, customer, items, b, method, cashier, total) => ({ isRow: true, isGroup: false, id, date, customer, items, b, method, cashier, total });
+    const list = [
+      { isGroup: true, isRow: false, label: 'Today · Tuesday 24 September 2026 · 37 sales', sum: '184 250 DA' },
+      sale('S-24091', '24 Sep 2026 · 17:04', 'Garage Benali', 5, B.account, '', 'Yacine B.', '16 500 DA'),
+      sale('S-24090', '24 Sep 2026 · 16:51', 'Walk-in customer', 2, B.paid, 'Cash', 'Sofiane M.', '3 400 DA'),
+      sale('S-24089', '24 Sep 2026 · 16:38', 'Karim Hadj-Ahmed', 3, B.paid, 'Card', 'Sofiane M.', '9 850 DA'),
+      sale('S-24088', '24 Sep 2026 · 16:20', 'Transport Meziane SARL', 8, B.partial, '30 000 DA paid · Cash', 'Yacine B.', '42 300 DA'),
+      sale('S-24087', '24 Sep 2026 · 16:02', 'Walk-in customer', 1, B.paid, 'Cash', 'Sofiane M.', '1 250 DA'),
+      sale('S-24086', '24 Sep 2026 · 15:47', 'Nadia Boukhalfa', 4, B.paid, 'Cash', 'Sofiane M.', '7 600 DA'),
+      sale('S-24085', '24 Sep 2026 · 15:31', 'Auto-École El Amel', 2, B.paid, 'Cash', 'Amina B.', '5 900 DA'),
+      sale('S-24084', '24 Sep 2026 · 15:12', 'Walk-in customer', 1, B.paid, 'Cash', 'Amina B.', '2 150 DA'),
+      sale('S-24083', '24 Sep 2026 · 14:55', 'Garage Ouled Yaïch', 6, B.account, '', 'Amina B.', '21 700 DA'),
+      { isGroup: true, isRow: false, label: 'Yesterday · Monday 23 September 2026 · 41 sales', sum: '207 800 DA' },
+      sale('S-24054', '23 Sep 2026 · 18:41', 'Walk-in customer', 3, B.paid, 'Cash', 'Sofiane M.', '4 600 DA'),
+      sale('S-24053', '23 Sep 2026 · 18:22', 'Rachid Zerrouki', 2, B.returned, 'Paid · Cash', 'Sofiane M.', '11 200 DA'),
+      sale('S-24052', '23 Sep 2026 · 18:03', 'Taxi Chiffa', 4, B.paid, 'Card', 'Amina B.', '13 450 DA'),
+      sale('S-24051', '23 Sep 2026 · 17:40', 'Walk-in customer', 1, B.paid, 'Cash', 'Amina B.', '900 DA'),
+      sale('S-24050', '23 Sep 2026 · 17:26', 'Garage Benali', 7, B.account, '', 'Yacine B.', '28 900 DA')
+    ];
+    return {
+      rows: list.map((r) => ({ ...r, bg: r.id === 'S-24088' ? '#E8F0FE' : '', ring: r.id === 'S-24088' ? 'inset 3px 0 0 #2563EB' : 'none' })),
+      filters: [
+        { label: 'Date', value: 'Last 30 days', bg: '#E8F0FE', border: '#BFD3FB' },
+        { label: 'Payment', value: 'All', bg: '#F4F8FF', border: '#D7DCE3' },
+        { label: 'Customer', value: 'All', bg: '#F4F8FF', border: '#D7DCE3' },
+        { label: 'Cashier', value: 'All staff', bg: '#F4F8FF', border: '#D7DCE3' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

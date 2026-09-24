@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard — AutoPartsOS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEF1F4}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{transition:background-color .12s,border-color .12s,color .12s}
+[data-row]:hover{background:#EDF3FD}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+  <dc-import name="Sidebar" active="dashboard" hint-size="232px,1080px"></dc-import>
+  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
+    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
+    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 24px">
+
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Dashboard</h1>
+          <span style="font-size: 13px; color: #667085">Tuesday, 24 September 2026 · Business day opened 08:02</span>
+        </div>
+        <div style="display: flex; gap: 12px">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D9C8FB; background: #F3EEFF; color: #6D28D9; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg>
+            Import Invoice with AI
+          </button>
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6"></path><path d="M22 11h-6"></path></svg>
+            New Customer
+          </button>
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+            New Purchase
+          </button>
+          <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #2563EB; background: #2563EB; color: #FFFFFF; font-size: 15px; font-weight: 600">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            New Sale
+            <span style="font-size: 12px; font-weight: 500; color: #C7D7FB">F1</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px">
+        <sc-for list="{{kpis}}" as="k" hint-placeholder-count="6">
+          <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 8px">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: {{k.dot}}"></span>
+              <span style="font-size: 13px; font-weight: 500; color: #667085">{{k.label}}</span>
+            </div>
+            <span style="font-size: 28px; font-weight: 600; color: {{k.color}}; letter-spacing: -0.01em; white-space: nowrap">{{k.value}}</span>
+            <span style="font-size: 13px; color: #667085; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{k.meta}}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 540px; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 24px; min-height: 0">
+          <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden">
+            <div style="height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #D7DCE3">
+              <h2 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Recent Sales</h2>
+              <a href="Sales.dc.html" style="font-size: 14px; font-weight: 500">View all sales</a>
+            </div>
+            <div role="table" aria-label="Recent sales">
+              <div role="row" style="display: grid; grid-template-columns: 110px 80px minmax(0, 1fr) 60px 250px 130px; align-items: center; column-gap: 16px; height: 40px; padding: 0 20px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+                <span role="columnheader">Sale</span><span role="columnheader">Time</span><span role="columnheader">Customer</span><span role="columnheader" style="text-align: end">Items</span><span role="columnheader">Payment</span><span role="columnheader" style="text-align: end">Total</span>
+              </div>
+              <sc-for list="{{sales}}" as="r" hint-placeholder-count="7">
+                <div role="row" data-row="1" style="display: grid; grid-template-columns: 110px 80px minmax(0, 1fr) 60px 250px 130px; align-items: center; column-gap: 16px; height: 46px; padding: 0 20px; border-bottom: 1px solid #E3E7ED; font-size: 14px">
+                  <span role="cell" style="font-weight: 600; color: #14213D">{{r.id}}</span>
+                  <span role="cell" style="color: #667085">{{r.time}}</span>
+                  <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.customer}}</span>
+                  <span role="cell" style="text-align: end">{{r.items}}</span>
+                  <span role="cell" style="white-space: nowrap"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span><span style="font-size: 13px; color: #667085; margin-inline-start: 8px">{{r.method}}</span></span>
+                  <span role="cell" style="text-align: end; font-weight: 600">{{r.total}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+
+          <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden">
+            <div style="height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #D7DCE3">
+              <h2 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Recent Purchases</h2>
+              <a href="Purchases.dc.html" style="font-size: 14px; font-weight: 500">View all purchases</a>
+            </div>
+            <div role="table" aria-label="Recent purchases">
+              <div role="row" style="display: grid; grid-template-columns: 110px 120px minmax(0, 1fr) 60px 170px 130px; align-items: center; column-gap: 16px; height: 40px; padding: 0 20px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+                <span role="columnheader">Purchase</span><span role="columnheader">Date</span><span role="columnheader">Supplier</span><span role="columnheader" style="text-align: end">Items</span><span role="columnheader">Status</span><span role="columnheader" style="text-align: end">Total</span>
+              </div>
+              <sc-for list="{{purchases}}" as="r" hint-placeholder-count="4">
+                <div role="row" data-row="1" style="display: grid; grid-template-columns: 110px 120px minmax(0, 1fr) 60px 170px 130px; align-items: center; column-gap: 16px; height: 46px; padding: 0 20px; border-bottom: 1px solid #E3E7ED; font-size: 14px">
+                  <span role="cell" style="font-weight: 600; color: #14213D">{{r.id}}</span>
+                  <span role="cell" style="color: #667085">{{r.date}}</span>
+                  <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.supplier}}</span>
+                  <span role="cell" style="text-align: end">{{r.items}}</span>
+                  <span role="cell"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span></span>
+                  <span role="cell" style="text-align: end; font-weight: 600">{{r.total}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 24px; min-height: 0">
+          <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden">
+            <div style="height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #D7DCE3">
+              <h2 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Stock alerts</h2>
+              <a href="Stock.dc.html" style="font-size: 14px; font-weight: 500">Open Stock</a>
+            </div>
+            <sc-for list="{{alerts}}" as="a" hint-placeholder-count="6">
+              <div style="height: 52px; display: flex; align-items: center; gap: 12px; padding: 0 20px; border-bottom: 1px solid #E3E7ED">
+                <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+                  <span style="font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{a.name}}</span>
+                  <span style="font-size: 12px; color: #667085">{{a.ref}}</span>
+                </div>
+                <span style="font-size: 13px; color: #667085; white-space: nowrap">{{a.qty}}</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{a.b.bg}}; color: {{a.b.fg}}; font-size: 12px; font-weight: 500; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{a.b.dot}}"></span>{{a.b.label}}</span>
+              </div>
+            </sc-for>
+          </section>
+
+          <section style="flex-grow: 1; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
+            <div style="height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #D7DCE3">
+              <h2 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Sales by hour</h2>
+              <span style="font-size: 13px; color: #667085">Today · thousands DA</span>
+            </div>
+            <div style="flex-grow: 1; padding: 16px 20px 14px; display: flex; flex-direction: column; gap: 8px">
+              <div style="position: relative; flex-grow: 1; display: flex; align-items: flex-end; gap: 10px; padding-inline-start: 28px; border-bottom: 1px solid #C9D0DA">
+                <div style="position: absolute; inset-inline-start: 0; inset-inline-end: 0; bottom: 60px; border-top: 1px dashed #E3E7ED"></div>
+                <div style="position: absolute; inset-inline-start: 0; inset-inline-end: 0; bottom: 120px; border-top: 1px dashed #E3E7ED"></div>
+                <div style="position: absolute; inset-inline-start: 0; inset-inline-end: 0; bottom: 180px; border-top: 1px dashed #E3E7ED"></div>
+                <span style="position: absolute; inset-inline-start: 0; bottom: 52px; font-size: 12px; color: #8A94A6">10</span>
+                <span style="position: absolute; inset-inline-start: 0; bottom: 112px; font-size: 12px; color: #8A94A6">20</span>
+                <span style="position: absolute; inset-inline-start: 0; bottom: 172px; font-size: 12px; color: #8A94A6">30</span>
+                <sc-for list="{{hours}}" as="h" hint-placeholder-count="10">
+                  <div title="{{h.tip}}" style="position: relative; flex-grow: 1; height: {{h.px}}; background: {{h.fill}}; border-radius: 4px 4px 0 0"></div>
+                </sc-for>
+              </div>
+              <div style="display: flex; gap: 10px; padding-inline-start: 28px">
+                <sc-for list="{{hours}}" as="h" hint-placeholder-count="10">
+                  <span style="flex-grow: 1; flex-basis: 0; text-align: center; font-size: 12px; color: #667085">{{h.label}}</span>
+                </sc-for>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const B = {
+      paid: { label: 'Paid', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
+      partial: { label: 'Partial', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      account: { label: 'On account', bg: '#FBF0E4', fg: '#B45309', dot: '#B45309' },
+      received: { label: 'Received', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
+      review: { label: 'Needs Review', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      low: { label: 'Low Stock', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      out: { label: 'Out of Stock', bg: '#FDECEC', fg: '#B91C1C', dot: '#DC2626' }
+    };
+    const hourVals = [6, 14, 22, 18, 25, 12, 9, 21, 27, 30];
+    return {
+      kpis: [
+        { label: 'Today’s Sales', value: '184 250 DA', meta: '37 sales · avg. 4 980 DA', dot: '#2563EB', color: '#14213D' },
+        { label: 'Transactions', value: '37', meta: '31 paid · 4 partial · 2 on account', dot: '#2563EB', color: '#14213D' },
+        { label: 'Cash Received', value: '142 600 DA', meta: 'Cash drawer since 08:02', dot: '#16A344', color: '#14213D' },
+        { label: 'Outstanding Balance', value: '1 284 900 DA', meta: 'Owed by 86 customers', dot: '#B45309', color: '#B45309' },
+        { label: 'Low Stock', value: '23', meta: 'Below minimum quantity', dot: '#D97706', color: '#14213D' },
+        { label: 'Out of Stock', value: '6', meta: 'Including 2 fast movers', dot: '#DC2626', color: '#14213D' }
+      ],
+      sales: [
+        { id: 'S-24091', time: '17:04', customer: 'Garage Benali', items: 5, b: B.account, method: '', total: '16 500 DA' },
+        { id: 'S-24090', time: '16:51', customer: 'Walk-in customer', items: 2, b: B.paid, method: 'Cash', total: '3 400 DA' },
+        { id: 'S-24089', time: '16:38', customer: 'Karim Hadj-Ahmed', items: 3, b: B.paid, method: 'Card', total: '9 850 DA' },
+        { id: 'S-24088', time: '16:20', customer: 'Transport Meziane SARL', items: 8, b: B.partial, method: '30 000 DA paid', total: '42 300 DA' },
+        { id: 'S-24087', time: '16:02', customer: 'Walk-in customer', items: 1, b: B.paid, method: 'Cash', total: '1 250 DA' },
+        { id: 'S-24086', time: '15:47', customer: 'Nadia Boukhalfa', items: 4, b: B.paid, method: 'Cash', total: '7 600 DA' },
+        { id: 'S-24085', time: '15:31', customer: 'Auto-École El Amel', items: 2, b: B.paid, method: 'Cash', total: '5 900 DA' }
+      ],
+      purchases: [
+        { id: 'P-1182', date: '24 Sep 2026', supplier: 'Numidia Parts', items: 42, b: B.received, total: '386 400 DA' },
+        { id: 'P-1181', date: '23 Sep 2026', supplier: 'Atlas Pièces Auto', items: 18, b: B.review, total: '154 900 DA' },
+        { id: 'P-1180', date: '21 Sep 2026', supplier: 'Sarl Auto Distribution Est', items: 65, b: B.received, total: '612 250 DA' },
+        { id: 'P-1179', date: '19 Sep 2026', supplier: 'Tassili Lubrifiants', items: 24, b: B.received, total: '118 800 DA' }
+      ],
+      alerts: [
+        { name: 'Spark Plug', ref: 'NGK · BKR6E', qty: '0 of min. 20', b: B.out },
+        { name: 'Front Shock Absorber', ref: 'Sachs · 314 876', qty: '0 of min. 4', b: B.out },
+        { name: 'Oil Filter', ref: 'Mann-Filter · W 75/3', qty: '2 of min. 10', b: B.low },
+        { name: 'Timing Belt Kit', ref: 'Gates · K015603XS', qty: '1 of min. 3', b: B.low },
+        { name: 'Brake Disc (pair)', ref: 'Brembo · 09.A727.11', qty: '2 of min. 4', b: B.low },
+        { name: 'Wiper Blade 600 mm', ref: 'Valeo · 574 283', qty: '3 of min. 12', b: B.low }
+      ],
+      hours: hourVals.map((v, i) => ({
+        px: (v / 30 * 180) + 'px',
+        fill: i === hourVals.length - 1 ? '#93B4F5' : '#2563EB',
+        label: String(8 + i).padStart(2, '0'),
+        tip: String(8 + i).padStart(2, '0') + ':00 — ' + v + ' 000 DA' + (i === hourVals.length - 1 ? ' (in progress)' : '')
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

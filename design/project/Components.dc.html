@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AutoPartsOS — Core Components</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEF1F4}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1760px; box-sizing: border-box; padding: 56px 64px; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 32px">
+
+  <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <div style="font-size: 13px; font-weight: 500; color: #667085">AutoPartsOS · Design system v0.1</div>
+      <h1 style="margin: 0; font-size: 34px; font-weight: 600; color: #14213D; letter-spacing: -0.01em">Core Components</h1>
+    </div>
+    <p style="margin: 0; max-width: 720px; font-size: 15px; line-height: 1.55; color: #667085">The controls every page is built from. One button scale, one input scale, one grid, one badge style. Pages never invent their own.</p>
+  </header>
+
+  <div style="flex-grow: 1; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 24px">
+
+      <!-- BUTTONS -->
+      <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; align-items: baseline; justify-content: space-between">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Buttons</h2>
+          <span style="font-size: 13px; color: #667085">44 px · radius 8 · 15 / 600 · POS checkout 54 px</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">Primary</span>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #2563EB; background: #2563EB; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600">New Sale</button>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #1D4ED8; background: #1D4ED8; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600">Hover</button>
+            <button type="button" disabled style="height: 44px; border-radius: 8px; border: 1px solid #C9D4E5; background: #DCE4F0; color: #8A94A6; font-family: inherit; font-size: 15px; font-weight: 600">Disabled</button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">Secondary</span>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600">New Purchase</button>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #93B4F5; background: #DBE7FD; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600">Hover</button>
+            <button type="button" disabled style="height: 44px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F1F4F9; color: #8A94A6; font-family: inherit; font-size: 15px; font-weight: 600">Disabled</button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">Neutral</span>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600">Export</button>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #C3CAD4; background: #EEF1F4; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600">Hover</button>
+            <button type="button" disabled style="height: 44px; border-radius: 8px; border: 1px solid #E3E7ED; background: #F7F8FA; color: #8A94A6; font-family: inherit; font-size: 15px; font-weight: 600">Disabled</button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">Danger</span>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #DC2626; background: #DC2626; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600">Delete Product</button>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #B91C1C; background: #B91C1C; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600">Hover</button>
+            <button type="button" disabled style="height: 44px; border-radius: 8px; border: 1px solid #F1C7C7; background: #F8E1E1; color: #B98A8A; font-family: inherit; font-size: 15px; font-weight: 600">Disabled</button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">AI · only for AI features</span>
+            <button type="button" style="height: 44px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; border: 1px solid #D9C8FB; background: #F3EEFF; color: #6D28D9; font-family: inherit; font-size: 15px; font-weight: 600">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg>
+              Import Invoice with AI
+            </button>
+            <button type="button" style="height: 44px; border-radius: 8px; border: 1px solid #C4AAF8; background: #EAE0FE; color: #6D28D9; font-family: inherit; font-size: 15px; font-weight: 600">Hover</button>
+            <button type="button" disabled style="height: 44px; border-radius: 8px; border: 1px solid #E9E1FB; background: #F7F4FE; color: #A99BC8; font-family: inherit; font-size: 15px; font-weight: 600">Disabled</button>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 24px">
+          <button type="button" style="width: 520px; height: 56px; display: flex; align-items: center; justify-content: center; gap: 12px; border-radius: 10px; border: 0; background: #2563EB; color: #FFFFFF; font-family: inherit; font-size: 18px; font-weight: 700">Pay 16 500 DA <kbd style="font-family: inherit; font-size: 12px; font-weight: 600; color: #FFFFFF; background: rgba(255,255,255,0.18); border-radius: 5px; padding: 2px 7px">F12</kbd></button>
+          <span style="font-size: 13px; color: #667085; line-height: 1.5">POS checkout: 54–56 px, full width of the cart, amount inside the label,<br>shortcut shown. The only 18 / 700 button in the product.</span>
+        </div>
+      </section>
+
+      <!-- INPUTS + SMART SEARCH -->
+      <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 18px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between">
+            <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Inputs</h2>
+            <span style="font-size: 13px; color: #667085">42 px · radius 8 · label above</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="c-name" style="font-size: 13px; font-weight: 600">Product name</label>
+            <input id="c-name" type="text" placeholder="e.g. Front brake pad set" style="height: 42px; box-sizing: border-box; padding: 0 12px; border: 1px solid #D7DCE3; border-radius: 8px; background: #F4F8FF; font-family: inherit; font-size: 15px; color: #172033">
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="c-ref" style="font-size: 13px; font-weight: 600">Reference · focused</label>
+            <input id="c-ref" type="text" value="0 986 494 186" style="height: 42px; box-sizing: border-box; padding: 0 12px; border: 1.5px solid #2563EB; border-radius: 8px; background: #F4F8FF; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); outline: none; font-family: inherit; font-size: 15px; color: #172033">
+            <span style="font-size: 13px; color: #667085">Spaces and dashes are ignored when searching.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="c-price" style="font-size: 13px; font-weight: 600">Selling price</label>
+              <span style="display: flex; align-items: center; height: 42px; box-sizing: border-box; border: 1px solid #D7DCE3; border-radius: 8px; background: #F4F8FF; overflow: hidden">
+                <input id="c-price" type="text" value="4 850" style="flex-grow: 1; min-width: 0; height: 100%; padding: 0 12px; border: 0; background: transparent; text-align: end; font-family: inherit; font-size: 15px; color: #172033">
+                <span style="padding: 0 12px; height: 100%; display: flex; align-items: center; background: #F7F8FA; border-inline-start: 1px solid #D7DCE3; font-size: 14px; color: #667085">DA</span>
+              </span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="c-min" style="font-size: 13px; font-weight: 600">Minimum stock</label>
+              <input id="c-min" type="text" value="-2" aria-invalid="true" style="height: 42px; box-sizing: border-box; padding: 0 12px; border: 1.5px solid #DC2626; border-radius: 8px; background: #F4F8FF; text-align: end; font-family: inherit; font-size: 15px; color: #172033">
+              <span style="font-size: 13px; color: #B91C1C">Must be 0 or more.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: baseline; justify-content: space-between">
+            <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Smart Search</h2>
+            <span style="font-size: 13px; color: #667085">48 px · radius 10 · grouped results</span>
+          </div>
+          <label style="position: relative; display: flex; align-items: center; height: 48px; box-sizing: border-box; padding: 0 14px 0 46px; background: #F4F8FF; border: 1.5px solid #2563EB; border-radius: 10px; box-shadow: 0 0 0 4px rgba(37,99,235,0.12)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 15px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Smart Search</span>
+            <input type="search" value="logan filtre" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 16px; font-weight: 500; color: #172033">
+            <span style="font-size: 12px; color: #8A94A6">↑↓ to move · ↵ to open</span>
+          </label>
+          <div role="listbox" aria-label="Suggestions" style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px; box-shadow: 0 10px 28px rgba(20,33,61,0.14); overflow: hidden; padding: 6px 0">
+            <sc-for list="{{groups}}" as="g" hint-placeholder-count="5">
+              <div style="display: flex; flex-direction: column">
+                <div style="display: flex; justify-content: space-between; padding: 8px 14px 4px; font-size: 12px; font-weight: 600; color: #667085"><span>{{g.name}}</span><span style="font-weight: 500; color: #8A94A6">{{g.count}}</span></div>
+                <sc-for list="{{g.items}}" as="i" hint-placeholder-count="2">
+                  <div role="option" aria-selected="{{i.sel}}" style="display: flex; align-items: center; gap: 12px; height: 40px; margin: 0 6px; padding: 0 8px; border-radius: 6px; background: {{i.bg}}">
+                    <span style="flex-grow: 1; min-width: 0; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: {{i.fg}}">{{i.title}}</span><span style="color: #667085"> · {{i.sub}}</span></span>
+                    <span style="font-size: 13px; font-weight: 500; color: {{i.metaFg}}; white-space: nowrap">{{i.meta}}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+
+      <!-- BADGES -->
+      <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 4px; width: 200px; flex-shrink: 0">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Status badges</h2>
+          <span style="font-size: 13px; color: #667085">24 px · radius 6 · dot + label</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px">
+          <sc-for list="{{badges}}" as="b" hint-placeholder-count="10">
+            <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{b.bg}}; color: {{b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{b.dot}}"></span>{{b.label}}</span>
+          </sc-for>
+        </div>
+      </section>
+
+      <!-- DATA GRID -->
+      <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 20px 24px 16px">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Data grid</h2>
+          <span style="font-size: 13px; color: #667085">Header 44 · rows 50 · compact 44 · money and quantities end-aligned · ⋯ for row actions</span>
+        </div>
+        <div role="table" aria-label="Data grid example">
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #F7F8FA; border-top: 1px solid #D7DCE3; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+            <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #1D4ED8">Product <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
+            <span role="columnheader">Reference</span>
+            <span role="columnheader">Brand</span>
+            <span role="columnheader" style="text-align: end">Stock</span>
+            <span role="columnheader" style="text-align: end">Price</span>
+            <span role="columnheader">Status</span>
+            <span role="columnheader"></span>
+          </div>
+          <sc-for list="{{grid}}" as="r" hint-placeholder-count="5">
+            <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: {{r.h}}; padding: 0 12px 0 24px; border-bottom: 1px solid #E3E7ED; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+              <span role="cell" style="font-weight: 600; color: #14213D">{{r.name}}<span style="font-weight: 400; color: #667085">{{r.note}}</span></span>
+              <span role="cell" style="font-weight: 500">{{r.ref}}</span>
+              <span role="cell">{{r.brand}}</span>
+              <span role="cell" style="text-align: end; font-weight: 600; color: {{r.stockFg}}">{{r.stock}}</span>
+              <span role="cell" style="text-align: end; font-weight: 600">{{r.price}}</span>
+              <span role="cell"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span></span>
+              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #667085; font-size: 18px; line-height: 1">⋯</button></span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+
+      <!-- KPI + PANEL + RTL -->
+      <div style="flex-grow: 1; display: grid; grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr); gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 12px; font-weight: 600; color: #667085">KPI CARD · summaries only</span>
+          <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #B45309"></span><span style="font-size: 13px; font-weight: 500; color: #667085">Outstanding Balance</span></div>
+            <span style="font-size: 28px; font-weight: 600; color: #B45309">1 284 900 DA</span>
+            <span style="font-size: 13px; color: #667085">Owed by 86 customers</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 12px; font-weight: 600; color: #667085">PANEL · structured working area</span>
+          <div style="flex-grow: 1; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
+            <div style="height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid #D7DCE3">
+              <span style="font-size: 17px; font-weight: 600; color: #14213D">Panel heading</span>
+              <a href="#" style="font-size: 14px; font-weight: 500">Secondary link</a>
+            </div>
+            <div style="flex-grow: 1; padding: 16px 18px; font-size: 14px; color: #475467; line-height: 1.5">Panels hold tables, forms and lists. Radius 12, 1 px border, no shadow. Nested groups use the secondary surface.</div>
+            <div style="display: flex; justify-content: space-between; padding: 14px 18px; background: #F7F8FA; border-top: 1px solid #D7DCE3; font-size: 15px"><span style="color: #667085">Totals area</span><span style="font-weight: 600">16 500 DA</span></div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 12px; font-weight: 600; color: #667085">RTL · Arabic cart, numbers isolated</span>
+          <div dir="rtl" lang="ar" style="flex-grow: 1; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; font-family: 'Noto Sans Arabic', Inter, sans-serif">
+            <div style="height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid #D7DCE3">
+              <span style="font-size: 17px; font-weight: 600; color: #14213D">البيع الحالي</span>
+              <span style="font-size: 13px; color: #667085"><bdi dir="ltr">8</bdi> قطع</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 18px; border-bottom: 1px solid #E3E7ED; font-size: 14px">
+              <span style="flex-grow: 1">وسادات فرامل أمامية · <bdi dir="ltr" style="font-family: Inter, sans-serif; color: #667085">Bosch 0 986 494 186</bdi></span>
+              <span style="font-weight: 600"><bdi dir="ltr">4 850</bdi> دج</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 18px; border-bottom: 1px solid #E3E7ED; font-size: 14px">
+              <span style="flex-grow: 1">شمعة إشعال · <bdi dir="ltr" style="font-family: Inter, sans-serif; color: #667085">NGK BKR6E</bdi> × <bdi dir="ltr">4</bdi></span>
+              <span style="font-weight: 600"><bdi dir="ltr">2 600</bdi> دج</span>
+            </div>
+            <div style="flex-grow: 1"></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 14px 18px; background: #F7F8FA; border-top: 1px solid #D7DCE3">
+              <span style="font-size: 17px; font-weight: 600; color: #14213D">المجموع</span>
+              <span style="font-size: 28px; font-weight: 700; color: #14213D"><bdi dir="ltr">16 500</bdi> دج</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHELL -->
+    <section style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Sidebar</h2>
+        <span style="font-size: 13px; color: #667085">232 px expanded · 68 px collapsed · active: soft blue, blue bar, blue text</span>
+      </div>
+      <div style="flex-grow: 1; display: flex; gap: 16px; align-items: flex-start; min-height: 0">
+        <div style="height: 1080px; border-radius: 10px; overflow: hidden; flex-shrink: 0">
+          <dc-import name="Sidebar" active="pos" hint-size="232px,1080px"></dc-import>
+        </div>
+        <div style="height: 1080px; border-radius: 10px; overflow: hidden; flex-shrink: 0">
+          <dc-import name="Sidebar" active="pos" collapsed="{{yes}}" hint-size="68px,1080px"></dc-import>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const B = {
+      paid: { label: 'Paid', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
+      completed: { label: 'Completed', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
+      partial: { label: 'Partial', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      account: { label: 'On account', bg: '#FBF0E4', fg: '#B45309', dot: '#B45309' },
+      low: { label: 'Low Stock', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      out: { label: 'Out of Stock', bg: '#FDECEC', fg: '#B91C1C', dot: '#DC2626' },
+      review: { label: 'Needs Review', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
+      ai: { label: 'AI Suggestion', bg: '#F3EEFF', fg: '#6D28D9', dot: '#7C3AED' },
+      info: { label: 'Partly returned', bg: '#E3F2FB', fg: '#0369A1', dot: '#0284C7' },
+      draft: { label: 'Draft', bg: '#EEF1F4', fg: '#475467', dot: '#8A94A6' },
+      ok: { label: 'In stock', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' }
+    };
+    const item = (title, sub, meta, opts) => ({ title, sub, meta, sel: 'false', bg: 'transparent', fg: '#14213D', metaFg: '#475467', ...(opts || {}) });
+    return {
+      yes: true,
+      cols: 'minmax(0, 1fr) 170px 140px 90px 130px 140px 40px',
+      badges: [B.paid, B.completed, B.partial, B.account, B.low, B.out, B.review, B.ai, B.info, B.draft],
+      groups: [
+        { name: 'Products', count: '14', items: [
+          item('Oil Filter', 'Mann-Filter W 75/3 · fits Logan I 1.4 / 1.6', '2 in stock · 950 DA', { sel: 'true', bg: '#E8F0FE', fg: '#1D4ED8' }),
+          item('Air Filter', 'Mann-Filter C 2201 · fits Logan I, Sandero I', '8 in stock · 1 450 DA')
+        ]},
+        { name: 'Vehicles', count: '3', items: [
+          item('Dacia Logan I', '1.4 MPI / 1.6 MPI · 2004–2012', '212 parts')
+        ]},
+        { name: 'Customers', count: '1', items: [
+          item('Taxi Chiffa', 'Fleet · 4 Dacia Logan', 'Balance 37 800 DA', { metaFg: '#B45309' })
+        ]},
+        { name: 'Suppliers', count: '1', items: [
+          item('Mitidja Filtres', 'Filters · Blida', 'Catalog 15 Sep')
+        ]},
+        { name: 'Supplier Listings · not store stock', count: '6', items: [
+          item('Oil Filter W 75/3', 'Numidia Parts · catalog 18 Sep', 'Available · 880 DA', { metaFg: '#0369A1' })
+        ]}
+      ],
+      grid: [
+        { name: 'Front Brake Pad Set', note: '', ref: '0 986 494 186', brand: 'Bosch', stock: '14', price: '4 850 DA', b: B.ok, stockFg: '#172033', h: '50px', bg: '', ring: 'none' },
+        { name: 'Front Brake Pad Set', note: ' · selected row', ref: 'GDB1550', brand: 'TRW', stock: '6', price: '4 200 DA', b: B.ok, stockFg: '#172033', h: '50px', bg: '#E8F0FE', ring: 'inset 3px 0 0 #2563EB' },
+        { name: 'Front Brake Pad Set', note: '', ref: '301 474', brand: 'Valeo', stock: '3', price: '3 950 DA', b: B.low, stockFg: '#A15A06', h: '50px', bg: '', ring: 'none' },
+        { name: 'Brake Disc (pair)', note: ' · compact row', ref: '09.A727.11', brand: 'Brembo', stock: '0', price: '9 800 DA', b: B.out, stockFg: '#B91C1C', h: '44px', bg: '', ring: 'none' },
+        { name: 'Brake Fluid DOT 4, 1 L', note: ' · compact row', ref: 'HBF 4', brand: 'Total', stock: '38', price: '1 100 DA', b: B.ok, stockFg: '#172033', h: '44px', bg: '', ring: 'none' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

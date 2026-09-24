@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AutoPartsOS — Design Tokens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEF1F4}
+a{color:#2563EB}a:hover{color:#1D4ED8}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1840px; box-sizing: border-box; padding: 56px 64px; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 32px">
+
+  <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+    <div style="display: flex; align-items: center; gap: 16px">
+      <div style="width: 48px; height: 48px; border-radius: 12px; background: #18365A; display: flex; align-items: center; justify-content: center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="M4.93 4.93l2.12 2.12"></path><path d="M16.95 16.95l2.12 2.12"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="M4.93 19.07l2.12-2.12"></path><path d="M16.95 7.05l2.12-2.12"></path></svg>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <div style="font-size: 13px; font-weight: 500; color: #667085">AutoPartsOS · Design system v0.1</div>
+        <h1 style="margin: 0; font-size: 34px; font-weight: 600; color: #14213D; letter-spacing: -0.01em">Design Tokens</h1>
+      </div>
+    </div>
+    <p style="margin: 0; max-width: 720px; font-size: 15px; line-height: 1.55; color: #667085">Locked tokens for the desktop app. Calm surfaces, one strong blue for action, violet reserved for AI, amber for customer balances. Every page on this canvas is built only from these values.</p>
+  </header>
+
+  <!-- COLOR -->
+  <section style="display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; align-items: baseline; gap: 12px">
+      <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Color</h2>
+      <span style="font-size: 13px; color: #667085">Exact hex values · semantic text shades are darkened for 4.5:1 on light surfaces</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{colorGroups}}" as="g" hint-placeholder-count="5">
+        <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+          <div style="font-size: 12px; font-weight: 600; color: #667085; letter-spacing: 0.04em">{{g.name}}</div>
+          <sc-for list="{{g.items}}" as="c" hint-placeholder-count="4">
+            <div style="display: flex; align-items: center; gap: 12px">
+              <div style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; background: {{c.hex}}; border: 1px solid rgba(20,33,61,0.10)"></div>
+              <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+                <div style="display: flex; gap: 8px; align-items: baseline">
+                  <span style="font-size: 14px; font-weight: 600; color: #172033">{{c.label}}</span>
+                  <span style="font-size: 12px; font-weight: 500; color: #667085; font-family: 'JetBrains Mono', ui-monospace, monospace">{{c.hex}}</span>
+                </div>
+                <span style="font-size: 12px; color: #667085; line-height: 1.35">{{c.use}}</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section style="display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 16px">
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #D7DCE3">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">Typography</h2>
+        <span style="font-size: 13px; color: #667085">Inter (EN/FR) · Noto Sans Arabic (AR) · tabular numbers for prices and quantities</span>
+      </div>
+      <sc-for list="{{typeScale}}" as="t" hint-placeholder-count="9">
+        <div style="display: grid; grid-template-columns: 200px 150px minmax(0, 1fr); align-items: center; gap: 16px; padding: 0 24px; min-height: 52px; border-bottom: 1px solid #E3E7ED">
+          <span style="font-size: 13px; font-weight: 500; color: #172033">{{t.name}}</span>
+          <span style="font-size: 12px; color: #667085; font-family: 'JetBrains Mono', ui-monospace, monospace">{{t.spec}}</span>
+          <span style="font-size: {{t.size}}; font-weight: {{t.weight}}; color: {{t.color}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{t.sample}}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: baseline; justify-content: space-between">
+          <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Three languages, two directions</h3>
+          <span style="font-size: 12px; font-weight: 500; color: #667085">Layouts use logical start / end</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #F7F8FA; border: 1px solid #D7DCE3; border-radius: 8px">
+            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #667085">EN</span>
+            <span style="flex-grow: 1; font-size: 15px">Front brake pad set — in stock</span>
+            <span style="font-size: 15px; font-weight: 600">4 850 DA</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #F7F8FA; border: 1px solid #D7DCE3; border-radius: 8px">
+            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #667085">FR</span>
+            <span style="flex-grow: 1; font-size: 15px">Jeu de plaquettes de frein avant — en stock</span>
+            <span style="font-size: 15px; font-weight: 600">4 850 DA</span>
+          </div>
+          <div dir="rtl" lang="ar" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #F7F8FA; border: 1px solid #D7DCE3; border-radius: 8px; font-family: 'Noto Sans Arabic', Inter, sans-serif">
+            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #667085; font-family: Inter, sans-serif">AR</span>
+            <span style="flex-grow: 1; font-size: 15px">طقم وسادات الفرامل الأمامية — متوفر</span>
+            <span style="font-size: 15px; font-weight: 600"><bdi dir="ltr">4 850</bdi> دج</span>
+          </div>
+          <div dir="rtl" lang="ar" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #F7F8FA; border: 1px solid #D7DCE3; border-radius: 8px; font-family: 'Noto Sans Arabic', Inter, sans-serif">
+            <span style="width: 34px; font-size: 12px; font-weight: 600; color: #667085; font-family: Inter, sans-serif">AR</span>
+            <span style="flex-grow: 1; font-size: 15px">المرجع <bdi dir="ltr" style="font-family: Inter, sans-serif">Bosch 0 986 494 186</bdi> · الكمية <bdi dir="ltr">14</bdi></span>
+            <span style="font-size: 15px; font-weight: 600; color: #B45309">الرصيد <bdi dir="ltr">48 500</bdi> دج</span>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #667085">Arabic mirrors the shell: sidebar on the right, money columns stay end-aligned. Amounts and part references are isolated LTR runs (<span style="color: #172033; font-weight: 500">bdi dir=ltr</span>), so 4 850 never reads as 850 4.</p>
+      </div>
+
+      <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+        <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Numbers</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 14px; background: #F7F8FA; border-radius: 8px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">POS total · 32 / 700</span>
+            <span style="font-size: 32px; font-weight: 700; color: #14213D; letter-spacing: -0.01em">16 500 DA</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 14px; background: #F7F8FA; border-radius: 8px">
+            <span style="font-size: 12px; font-weight: 500; color: #667085">Dashboard KPI · 28 / 600</span>
+            <span style="font-size: 28px; font-weight: 600; color: #14213D">184 250 DA</span>
+          </div>
+        </div>
+        <div style="font-size: 13px; color: #667085; line-height: 1.5">Money: narrow no-break space (U+202F) as thousands separator — a plain space splits the number in Arabic —<span style="color: #172033; font-weight: 500">DA</span> suffix, right-aligned in grids. Customer debt uses Balance amber: <span style="color: #B45309; font-weight: 600">48 500 DA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPACING / RADIUS / ELEVATION / MOTION -->
+  <section style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+      <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Spacing · 4 / 8 system</h3>
+      <sc-for list="{{spacing}}" as="s" hint-placeholder-count="6">
+        <div style="display: flex; align-items: center; gap: 12px; height: 22px">
+          <span style="width: 40px; font-size: 12px; font-weight: 600; color: #172033">{{s.px}}</span>
+          <div style="height: 10px; width: {{s.w}}; background: #2563EB; border-radius: 2px"></div>
+          <span style="font-size: 12px; color: #667085">{{s.name}}</span>
+        </div>
+      </sc-for>
+      <div style="font-size: 12px; color: #667085; padding-top: 4px; border-top: 1px solid #E3E7ED">Page padding 24 · POS internal 16</div>
+    </div>
+
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+      <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Radius</h3>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #2563EB; border-radius: 6px; background: #E8F0FE"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">6</span><span style="font-size: 12px; color: #667085">Badges</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #2563EB; border-radius: 8px; background: #E8F0FE"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">8</span><span style="font-size: 12px; color: #667085">Buttons, inputs</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #2563EB; border-radius: 10px; background: #E8F0FE"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">10</span><span style="font-size: 12px; color: #667085">Smart Search</span></div></div>
+        <div style="display: flex; align-items: center; gap: 10px"><div style="width: 44px; height: 44px; border: 2px solid #2563EB; border-radius: 12px; background: #E8F0FE"></div><div style="display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 600">12</span><span style="font-size: 12px; color: #667085">Panels, cards</span></div></div>
+      </div>
+    </div>
+
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+      <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Elevation · minimal</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 8px"></div><span style="font-size: 12px; color: #667085">Flat · border only (default)</span></div>
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 8px; box-shadow: 0 1px 2px rgba(20,33,61,0.06)"></div><span style="font-size: 12px; color: #667085">Panel · 0 1 2 / 6%</span></div>
+        <div style="display: flex; align-items: center; gap: 12px"><div style="width: 64px; height: 36px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 8px; box-shadow: 0 10px 28px rgba(20,33,61,0.14)"></div><span style="font-size: 12px; color: #667085">Popover, dialog · 0 10 28 / 14%</span></div>
+      </div>
+    </div>
+
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+      <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Motion</h3>
+      <sc-for list="{{motion}}" as="m" hint-placeholder-count="5">
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 24px; border-bottom: 1px solid #E3E7ED">
+          <span style="font-size: 13px; color: #172033">{{m.name}}</span>
+          <span style="font-size: 12px; font-weight: 600; color: #667085; font-family: 'JetBrains Mono', ui-monospace, monospace">{{m.value}}</span>
+        </div>
+      </sc-for>
+      <div style="font-size: 12px; color: #667085">If animation does not improve understanding, do not animate it.</div>
+    </div>
+  </section>
+
+  <!-- ICONS + SHELL METRICS -->
+  <section style="display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 16px; flex-grow: 1">
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between">
+        <h3 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Iconography · outline, 1.75 stroke, 20 px</h3>
+        <span style="font-size: 12px; color: #667085">For recognition, never decoration · AI uses a restrained sparkle</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; color: #172033">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span style="font-size: 12px; color: #667085">Dashboard</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg><span style="font-size: 12px; color: #667085">POS</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg><span style="font-size: 12px; color: #667085">Sales</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg><span style="font-size: 12px; color: #667085">Products</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg><span style="font-size: 12px; color: #667085">Stock</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg><span style="font-size: 12px; color: #667085">Purchases</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span style="font-size: 12px; color: #667085">Customers</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg><span style="font-size: 12px; color: #667085">Suppliers</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg><span style="font-size: 12px; color: #667085">Returns</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg><span style="font-size: 12px; color: #667085">Reports</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-size: 12px; color: #667085">Users &amp; Roles</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg><span style="font-size: 12px; color: #667085">Settings</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span style="font-size: 12px; color: #667085">Search</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg><span style="font-size: 12px; color: #667085">Notifications</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg><span style="font-size: 12px; color: #667085">Vehicle</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg><span style="font-size: 12px; color: #667085">Catalog</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><span style="font-size: 12px; color: #667085">Local data</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F7F8FA; border-radius: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span style="font-size: 12px; color: #667085">Locked record</span></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 4px; background: #F3EEFF; border-radius: 8px; color: #7C3AED"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg><span style="font-size: 12px; color: #6D28D9; font-weight: 500">AI</span></div>
+      </div>
+    </div>
+
+    <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px">
+      <h3 style="margin: 0 0 4px; font-size: 17px; font-weight: 600; color: #14213D">Shell &amp; layout metrics</h3>
+      <sc-for list="{{metrics}}" as="m" hint-placeholder-count="8">
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 28px; border-bottom: 1px solid #E3E7ED">
+          <span style="font-size: 13px; color: #172033">{{m.name}}</span>
+          <span style="font-size: 13px; font-weight: 600; color: #14213D">{{m.value}}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1840}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      colorGroups: [
+        { name: 'SURFACES', items: [
+          { label: 'App Background', hex: '#EEF1F4', use: 'Shell workspace, around content' },
+          { label: 'Main Surface', hex: '#F4F8FF', use: 'Panels, tables, working areas' },
+          { label: 'Secondary Surface', hex: '#F7F8FA', use: 'Table headers, totals, nested' },
+          { label: 'Border / Divider', hex: '#D7DCE3', use: 'Panel edges, row dividers' }
+        ]},
+        { name: 'SIDEBAR & SELECTION', items: [
+          { label: 'Sidebar', hex: '#18365A', use: 'Navigation background' },
+          { label: 'Active / Hover Blue', hex: '#1D4ED8', use: 'Active nav text, hover' },
+          { label: 'Soft Selected', hex: '#E8F0FE', use: 'Active nav, selected row, suggestion' }
+        ]},
+        { name: 'BRAND & ACTION', items: [
+          { label: 'Brand Navy', hex: '#14213D', use: 'Headings, high-emphasis text' },
+          { label: 'Primary Action', hex: '#2563EB', use: 'Main buttons, indicators' },
+          { label: 'Primary Hover', hex: '#1D4ED8', use: 'Pressed and hover state' },
+          { label: 'AI Accent', hex: '#7C3AED', use: 'AI features only — sparingly' }
+        ]},
+        { name: 'TEXT', items: [
+          { label: 'Primary Text', hex: '#172033', use: 'Body and table text' },
+          { label: 'Secondary Text', hex: '#667085', use: 'Supporting, labels, meta' },
+          { label: 'Muted / Placeholder', hex: '#8A94A6', use: 'Placeholders, disabled' }
+        ]},
+        { name: 'SEMANTIC', items: [
+          { label: 'Success', hex: '#16A344', use: 'Paid, completed · text #0F7A33' },
+          { label: 'Warning', hex: '#D97706', use: 'Low stock, needs review · text #A15A06' },
+          { label: 'Danger', hex: '#DC2626', use: 'Out of stock, errors · text #B91C1C' },
+          { label: 'Information', hex: '#0284C7', use: 'Neutral notices · text #0369A1' },
+          { label: 'Customer Balance', hex: '#B45309', use: 'Amount owed — never red' },
+          { label: 'AI', hex: '#7C3AED', use: 'AI suggestion · text #6D28D9' }
+        ]}
+      ],
+      typeScale: [
+        { name: 'Page title', spec: '26 / 600', size: '26px', weight: 600, color: '#14213D', sample: 'Products' },
+        { name: 'Major section heading', spec: '20 / 600', size: '20px', weight: 600, color: '#14213D', sample: 'Recent purchases' },
+        { name: 'Panel heading', spec: '17 / 600', size: '17px', weight: 600, color: '#14213D', sample: 'Current Sale' },
+        { name: 'Normal UI text', spec: '15 / 400', size: '15px', weight: 400, color: '#172033', sample: 'Front brake pad set, Renault Symbol II 1.2 16V' },
+        { name: 'Table text', spec: '14 / 400', size: '14px', weight: 400, color: '#172033', sample: 'Bosch · 0 986 494 186 · 14 in stock · 4 850 DA' },
+        { name: 'Supporting text', spec: '13 / 400', size: '13px', weight: 400, color: '#667085', sample: 'Last purchased from Numidia Parts on 18 Sep 2026' },
+        { name: 'Small label', spec: '12 / 500', size: '12px', weight: 500, color: '#667085', sample: 'REFERENCE · BRAND · STOCK' },
+        { name: 'POS total', spec: '32 / 700', size: '32px', weight: 700, color: '#14213D', sample: '16 500 DA' },
+        { name: 'Dashboard KPI', spec: '28 / 600', size: '28px', weight: 600, color: '#14213D', sample: '184 250 DA' }
+      ],
+      spacing: [
+        { px: '4', w: '4px', name: 'tiny' },
+        { px: '8', w: '8px', name: 'small' },
+        { px: '12', w: '12px', name: 'compact' },
+        { px: '16', w: '16px', name: 'normal' },
+        { px: '24', w: '24px', name: 'section · page padding' },
+        { px: '32', w: '32px', name: 'large' }
+      ],
+      motion: [
+        { name: 'Hover feedback', value: '120 ms' },
+        { name: 'Dialog', value: '150 ms' },
+        { name: 'Drawer', value: '180 ms' },
+        { name: 'Table selection', value: 'instant' },
+        { name: 'Search results', value: 'instant' }
+      ],
+      metrics: [
+        { name: 'Sidebar expanded / collapsed', value: '232 / 68 px' },
+        { name: 'Top bar height', value: '60 px' },
+        { name: 'Button height · POS checkout', value: '44 · 54 px' },
+        { name: 'Input · Smart Search height', value: '42 · 48 px' },
+        { name: 'Grid row · compact row', value: '50 · 44 px' },
+        { name: 'Grid header height', value: '44 px' },
+        { name: 'Primary target', value: '1920 × 1080' },
+        { name: 'Comfortable · minimum', value: '1366 × 768 · 1280 × 720' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

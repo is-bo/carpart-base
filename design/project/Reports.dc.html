@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reports — AutoPartsOS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEF1F4}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+a[data-report]:hover{background:#EDF3FD}
+button{transition:background-color .12s,border-color .12s,color .12s}
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+  <dc-import name="Sidebar" active="reports" hint-size="232px,1080px"></dc-import>
+  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
+    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
+    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 24px">
+
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Reports</h1>
+          <span style="font-size: 13px; color: #667085">Pick a category, then a report. Everything is calculated from data stored on this computer.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px">
+          <label style="position: relative; display: flex; align-items: center; width: 360px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Find a report</span>
+            <input type="search" placeholder="Find a report…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #172033">
+          </label>
+          <button type="button" style="height: 44px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+            Default period: This month
+          </button>
+        </div>
+      </div>
+
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px">
+        <sc-for list="{{cats}}" as="c" hint-placeholder-count="6">
+          <section style="min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
+            <div style="display: flex; align-items: flex-start; gap: 14px; padding: 20px 20px 16px">
+              <span style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 10px; background: #E8F0FE; color: #1D4ED8; display: flex; align-items: center; justify-content: center">
+                <sc-if value="{{c.isSales}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg></sc-if>
+                <sc-if value="{{c.isPurchases}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg></sc-if>
+                <sc-if value="{{c.isInventory}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></sc-if>
+                <sc-if value="{{c.isCustomers}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></sc-if>
+                <sc-if value="{{c.isProfit}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"></path><path d="M16 7h6v6"></path></svg></sc-if>
+                <sc-if value="{{c.isActivity}}" hint-placeholder-val="{{false}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></sc-if>
+              </span>
+              <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px">
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #14213D">{{c.title}}</h2>
+                  <sc-if value="{{c.restricted}}" hint-placeholder-val="{{false}}">
+                    <span style="display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 7px; border-radius: 6px; background: #EEF1F4; color: #475467; font-size: 12px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Owner &amp; Manager</span>
+                  </sc-if>
+                </div>
+                <span style="font-size: 13px; line-height: 1.45; color: #667085">{{c.desc}}</span>
+              </div>
+            </div>
+            <div style="flex-grow: 1; display: flex; flex-direction: column; border-top: 1px solid #E3E7ED">
+              <sc-for list="{{c.reports}}" as="r" hint-placeholder-count="4">
+                <a href="#" data-report="1" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 20px; border-bottom: 1px solid #E3E7ED; color: #172033">
+                  <span style="flex-grow: 1; font-size: 15px; font-weight: 500">{{r.name}}</span>
+                  <span style="font-size: 13px; color: #667085">{{r.hint}}</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </a>
+              </sc-for>
+            </div>
+          </section>
+        </sc-for>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const cat = (key, title, desc, reports, restricted) => ({
+      title, desc, reports, restricted: !!restricted,
+      isSales: key === 'sales', isPurchases: key === 'purchases', isInventory: key === 'inventory',
+      isCustomers: key === 'customers', isProfit: key === 'profit', isActivity: key === 'activity'
+    });
+    return {
+      cats: [
+        cat('sales', 'Sales', 'What was sold, when, by whom and how it was paid.', [
+          { name: 'Sales by day', hint: 'Opened today' },
+          { name: 'Sales by product', hint: '' },
+          { name: 'Sales by payment method', hint: '' },
+          { name: 'Sales by employee', hint: '' },
+          { name: 'Cash drawer summary', hint: '' }
+        ]),
+        cat('purchases', 'Purchases', 'What was bought from each supplier and at what cost.', [
+          { name: 'Purchases by supplier', hint: '' },
+          { name: 'Purchases by product', hint: '' },
+          { name: 'Cost price changes', hint: '' },
+          { name: 'AI-imported invoices', hint: '' }
+        ]),
+        cat('inventory', 'Inventory', 'Stock levels, value and movements in this store.', [
+          { name: 'Stock valuation', hint: '' },
+          { name: 'Low and out of stock', hint: '29 items' },
+          { name: 'Stock movements', hint: '' },
+          { name: 'Slow-moving products', hint: '' },
+          { name: 'Stock count differences', hint: '' }
+        ]),
+        cat('customers', 'Customers', 'Balances, payment history and best customers.', [
+          { name: 'Customer balances', hint: '86 open' },
+          { name: 'Balance ageing', hint: '' },
+          { name: 'Customer statement', hint: '' },
+          { name: 'Top customers', hint: '' }
+        ]),
+        cat('profit', 'Profit', 'Margins based on cost price at the time of each sale.', [
+          { name: 'Gross profit by period', hint: '' },
+          { name: 'Margin by product', hint: '' },
+          { name: 'Margin by brand', hint: '' },
+          { name: 'Discounts given', hint: '' }
+        ], true),
+        cat('activity', 'Activity', 'Who did what: logins, price changes, voids and returns.', [
+          { name: 'Activity log', hint: '' },
+          { name: 'Price changes', hint: '' },
+          { name: 'Cancelled sales and returns', hint: '' },
+          { name: 'User sessions', hint: '' }
+        ], true)
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "v": 3,
+  "attachments": {},
+  "createdOnFiles": { "at": "2026-09-24T20:30:46.669Z", "v": 1 },
+  "title": "AutoPartsOS Main Pages",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1920, "h": 1840, "title": "Design Tokens" },
+    "Components.dc.html": { "x": 2000, "y": 0, "w": 1920, "h": 1760, "title": "Core Components" },
+    "Sidebar.dc.html": { "x": 4000, "y": 0, "w": 232, "h": 1080, "title": "Shell · Sidebar" },
+    "TopBar.dc.html": { "x": 4312, "y": 0, "w": 1688, "h": 60, "title": "Shell · Top Bar" },
+    "Dashboard.dc.html": { "x": 0, "y": 2200, "w": 1920, "h": 1080, "title": "01 · Dashboard", "is_interactive": true },
+    "Pos.dc.html": { "x": 2000, "y": 2200, "w": 1920, "h": 1080, "title": "02 · POS", "is_interactive": true },
+    "Sales.dc.html": { "x": 4000, "y": 2200, "w": 1920, "h": 1080, "title": "03 · Sales", "is_interactive": true },
+    "Products.dc.html": { "x": 0, "y": 3400, "w": 1920, "h": 1080, "title": "04 · Products", "is_interactive": true },
+    "Stock.dc.html": { "x": 2000, "y": 3400, "w": 1920, "h": 1080, "title": "05 · Stock", "is_interactive": true },
+    "Purchases.dc.html": { "x": 4000, "y": 3400, "w": 1920, "h": 1080, "title": "06 · Purchases", "is_interactive": true },
+    "Customers.dc.html": { "x": 0, "y": 4600, "w": 1920, "h": 1080, "title": "07 · Customers", "is_interactive": true },
+    "Suppliers.dc.html": { "x": 2000, "y": 4600, "w": 1920, "h": 1080, "title": "08 · Suppliers", "is_interactive": true },
+    "Returns.dc.html": { "x": 4000, "y": 4600, "w": 1920, "h": 1080, "title": "09 · Returns", "is_interactive": true },
+    "Reports.dc.html": { "x": 0, "y": 5800, "w": 1920, "h": 1080, "title": "10 · Reports", "is_interactive": true },
+    "Users.dc.html": { "x": 2000, "y": 5800, "w": 1920, "h": 1080, "title": "11 · Users & Roles", "is_interactive": true },
+    "Settings.dc.html": { "x": 4000, "y": 5800, "w": 1920, "h": 1080, "title": "12 · Settings", "is_interactive": true }
+  },
+  "order": [
+    "Main.dc.html",
+    "Components.dc.html",
+    "Sidebar.dc.html",
+    "TopBar.dc.html",
+    "Dashboard.dc.html",
+    "Pos.dc.html",
+    "Sales.dc.html",
+    "Products.dc.html",
+    "Stock.dc.html",
+    "Purchases.dc.html",
+    "Customers.dc.html",
+    "Suppliers.dc.html",
+    "Returns.dc.html",
+    "Reports.dc.html",
+    "Users.dc.html",
+    "Settings.dc.html"
+  ],
+  "notes": {
+    "foundations": { "x": 0, "y": -300, "text": "Foundations — tokens, components, shell", "kind": "title1", "maxW": 6000 },
+    "pages": { "x": 0, "y": 1940, "text": "Main pages — 1920 × 1080", "kind": "title1", "maxW": 5920 }
+  },
+  "designSystems": []
+}
