@@ -24,7 +24,7 @@ a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
     <p style="margin: 0; max-width: 720px; font-size: 15px; line-height: 1.55; color: #625D54">The controls every page is built from. One button scale, one input scale, one grid, one badge style. Pages never invent their own.</p>
   </header>
 
-  <div style="flex-grow: 1; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 24px">
+  <div style="flex-grow: 1; display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 24px">
     <div style="display: flex; flex-direction: column; gap: 24px">
 
       <!-- BUTTONS -->
@@ -225,17 +225,27 @@ a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
     </div>
 
     <!-- SHELL -->
-    <section style="background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+    <section style="background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; padding: 20px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
       <div style="display: flex; flex-direction: column; gap: 4px">
-        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 21px; font-weight: 700; letter-spacing: -0.005em; color: #1B1A17">Sidebar</h2>
-        <span style="font-size: 13px; color: #625D54">232 px expanded · 68 px collapsed · graphite rail · active row: lifted graphite, signal bar and icon</span>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 21px; font-weight: 700; letter-spacing: -0.005em; color: #1B1A17">Shell</h2>
+        <span style="font-size: 13px; line-height: 1.5; color: #625D54">Graphite top bar with global search · binder index tabs, always labelled, numbered 01–10, admin tabs set apart · a ticket strip on the right edge of every page except POS.</span>
       </div>
-      <div style="flex-grow: 1; display: flex; gap: 16px; align-items: flex-start; min-height: 0">
-        <div style="height: 1080px; border-radius: 4px; overflow: hidden; flex-shrink: 0">
-          <dc-import name="Sidebar" active="pos" hint-size="232px,1080px"></dc-import>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">INDEX TAB · ACTIVE / IDLE</span>
+        <div style="display: flex; align-items: flex-end; gap: 2px; height: 48px; padding: 0 8px; background: #E7E4DD; border-bottom: 1px solid #D3CEC4">
+          <span style="display: flex; align-items: center; gap: 8px; height: 44px; box-sizing: border-box; margin-bottom: -1px; padding: 0 14px; border: 1px solid #D3CEC4; border-bottom-color: #F7F5F0; border-top: 3px solid #E8622C; border-radius: 3px 3px 0 0; background: #F7F5F0; font-size: 14.5px; font-weight: 600; color: #1B1A17"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C8471B">05</span>Stock<span style="padding: 0 5px; border-radius: 2px; background: #F5EBC9; color: #7F6000; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; line-height: 18px">29</span></span>
+          <span style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; font-size: 14.5px; font-weight: 500; color: #4F4A42"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8F897E">06</span>Purchases</span>
         </div>
-        <div style="height: 1080px; border-radius: 4px; overflow: hidden; flex-shrink: 0">
-          <dc-import name="Sidebar" active="pos" collapsed="{{yes}}" hint-size="68px,1080px"></dc-import>
+      </div>
+      <div style="flex-grow: 1; min-height: 0; display: flex; gap: 16px">
+        <div style="height: 976px; flex-shrink: 0; border: 1px solid #D3CEC4">
+          <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13px; line-height: 1.5; color: #4F4A42">
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">TICKET STRIP · 96 PX</span>
+          <span>The sale in progress follows the employee everywhere: lines, units, total and customer stay visible while they check Stock or a customer’s balance.</span>
+          <span>F1 or the orange block opens it in POS, where it expands into the full receipt.</span>
+          <span>Record pages pair a list with a detail pane: receipt, part sheet, stock card, statement, return slip.</span>
         </div>
       </div>
     </section>

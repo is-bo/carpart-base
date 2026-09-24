@@ -12,145 +12,120 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#F1EDE5}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="users" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
-
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="users" hint-size="1920px,104px"></dc-import>
+  <div style="flex-grow: 1; min-height: 0; display: flex">
+    <main style="flex-grow: 1; min-width: 0; box-sizing: border-box; padding: 24px 28px; background: #F7F5F0; display: flex; flex-direction: column; gap: 20px">
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Users &amp; Roles</h1>
-          <span style="font-size: 13px; color: #625D54">Who can sign in to this store, and what each role is allowed to do.</span>
-        </div>
-        <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
-          Add User
-        </button>
-      </div>
-
-      <div role="tablist" aria-label="Users and roles" style="display: flex; gap: 4px; border-bottom: 1px solid #D3CEC4">
-        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #C8471B; margin-bottom: -1px; background: transparent; color: #A93C15; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Users <span style="font-size: 12px; font-weight: 500; color: #625D54">8</span></button>
-        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Roles &amp; Permissions <span style="font-size: 12px; color: #8F897E">5</span></button>
-      </div>
-
-      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; gap: 16px">
-        <section style="min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
-            <label style="position: relative; display: flex; align-items: center; width: 420px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-              <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search users</span>
-              <input type="search" placeholder="Name or username…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
-            </label>
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Role</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Status</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+        <div style="display: flex; align-items: flex-end; gap: 28px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Users &amp; Roles</h1>
+            <span style="font-size: 13.5px; color: #625D54">8 people can sign in to this store. Drag a person to another column to change their role.</span>
           </div>
+          <div role="tablist" aria-label="View" style="display: flex; gap: 18px; padding-bottom: 2px">
+            <button type="button" role="tab" aria-selected="true" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid #E8622C; background: transparent; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">People by role</button>
+            <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Permissions table</button>
+          </div>
+        </div>
+        <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add a person</button>
+      </div>
 
-          <div role="table" aria-label="Users" style="flex-grow: 1; min-height: 0; overflow: hidden">
-            <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-              <span role="columnheader">Name</span>
-              <span role="columnheader">Role</span>
-              <span role="columnheader">Status</span>
-              <span role="columnheader">Sign-in</span>
-              <span role="columnheader">Last active</span>
-              <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
+      <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); column-gap: 0; border-top: 2px solid #1B1A17">
+        <sc-for list="{{roles}}" as="r" hint-placeholder-count="5">
+          <section aria-label="{{r.name}}" style="min-height: 0; display: flex; flex-direction: column; gap: 12px; padding: 16px 18px; border-inline-start: {{r.sep}}; background: {{r.colBg}}">
+            <div style="display: flex; flex-direction: column; gap: 6px; min-height: 92px">
+              <div style="display: flex; align-items: center; gap: 8px">
+                <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 110%; font-size: 19px; font-weight: 700; color: #1B1A17">{{r.name}}</h2>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #625D54">{{r.count}}</span>
+                <sc-if value="{{r.optional}}" hint-placeholder-val="{{false}}">
+                  <span style="height: 20px; display: inline-flex; align-items: center; padding: 0 6px; border: 1px dashed #8F897E; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: #625D54">OPTIONAL</span>
+                </sc-if>
+              </div>
+              <span style="font-size: 13px; line-height: 1.45; color: #625D54">{{r.desc}}</span>
             </div>
-            <sc-for list="{{users}}" as="u" hint-placeholder-count="8">
-              <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 60px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{u.bg}}">
-                <span role="cell" style="display: flex; align-items: center; gap: 12px; min-width: 0">
-                  <span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 3px; background: {{u.avBg}}; color: {{u.avFg}}; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">{{u.initials}}</span>
+
+            <sc-for list="{{r.people}}" as="p" hint-placeholder-count="2">
+              <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: {{p.cardBg}}; border: 1px solid #D3CEC4; border-inline-start: 3px solid {{p.stripe}}; border-radius: 3px">
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 3px; background: {{p.avBg}}; color: {{p.avFg}}; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 800">{{p.initials}}</span>
                   <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                    <span style="font-weight: 600; color: {{u.nameFg}}">{{u.name}}{{u.you}}</span>
-                    <span style="font-size: 12px; color: #625D54">{{u.username}}</span>
+                    <span style="font-size: 15px; font-weight: 600; color: {{p.nameFg}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{p.name}}{{p.you}}</span>
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">@{{p.username}} · {{p.signin}}</span>
                   </span>
-                </span>
-                <span role="cell"><span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 2px; background: {{u.roleBg}}; color: {{u.roleFg}}; border: 1px solid {{u.roleBorder}}; font-size: 12px; font-weight: 600">{{u.role}}</span></span>
-                <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{u.b.dot}}; background: {{u.b.bg}}; color: {{u.b.fg}}; font-size: 12px; font-weight: 600">{{u.b.label}}</span></span>
-                <span role="cell" style="color: #4F4A42">{{u.signin}}</span>
-                <span role="cell" style="color: #4F4A42">{{u.last}}</span>
-                <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: #625D54">
+                  <span style="display: inline-flex; align-items: center; height: 20px; padding: 0 7px 0 6px; border-radius: 2px; border-inline-start: 3px solid {{p.b.dot}}; background: {{p.b.bg}}; color: {{p.b.fg}}; font-size: 11.5px; font-weight: 600">{{p.b.label}}</span>
+                  <span>{{p.last}}</span>
+                </div>
               </div>
             </sc-for>
-          </div>
-        </section>
 
-        <aside style="min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #D3CEC4">
-            <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #E8622C; flex-shrink: 0"></span>Roles in this store</h2>
-            <a href="#" style="font-size: 14px; font-weight: 500">Edit permissions</a>
-          </div>
-          <sc-for list="{{roles}}" as="r" hint-placeholder-count="5">
-            <div style="display: flex; gap: 14px; padding: 16px 20px; border-bottom: 1px solid #E2DED6">
-              <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px">
-                <div style="display: flex; align-items: center; gap: 8px">
-                  <span style="font-size: 15px; font-weight: 600; color: #1B1A17">{{r.name}}</span>
-                  <sc-if value="{{r.optional}}" hint-placeholder-val="{{false}}">
-                    <span style="height: 20px; display: inline-flex; align-items: center; padding: 0 6px; border-radius: 2px; background: #E7E4DD; color: #4F4A42; font-size: 12px; font-weight: 500">Optional</span>
-                  </sc-if>
-                </div>
-                <span style="font-size: 13px; line-height: 1.45; color: #625D54">{{r.desc}}</span>
-              </div>
-              <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0">
-                <span style="font-size: 20px; font-weight: 600; color: {{r.countFg}}">{{r.count}}</span>
-                <span style="font-size: 12px; color: #625D54">{{r.unit}}</span>
-              </div>
+            <sc-if value="{{r.empty}}" hint-placeholder-val="{{false}}">
+              <button type="button" style="height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1.5px dashed #B9B2A5; border-radius: 3px; background: transparent; color: #4F4A42; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                No one has this role
+                <span style="font-size: 12.5px; font-weight: 400; color: #625D54">Assign someone, or leave it unused</span>
+              </button>
+            </sc-if>
+
+            <span style="flex-grow: 1"></span>
+            <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 12px; border-top: 1px solid #D3CEC4">
+              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">CAN</span>
+              <span style="font-size: 13px; line-height: 1.5; color: #26241F">{{r.can}}</span>
+              <a href="#" style="font-size: 13px; font-weight: 600">Edit permissions</a>
             </div>
-          </sc-for>
-          <div style="margin: 16px 20px; display: flex; gap: 10px; padding: 12px 14px; background: #EFECE5; border: 1px solid #D3CEC4; border-radius: 3px; font-size: 13px; line-height: 1.45; color: #4F4A42">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D7470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-            A store can have several Owners. The last active Owner cannot be removed or disabled.
-          </div>
-        </aside>
+          </section>
+        </sc-for>
       </div>
     </main>
+    <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
   </div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    const R = {
-      owner: { roleBg: '#1B1A17', roleFg: '#FFFFFF', roleBorder: '#1B1A17' },
-      manager: { roleBg: '#DEE7F1', roleFg: '#2D5B86', roleBorder: '#C3D3E4' },
-      employee: { roleBg: '#EFECE5', roleFg: '#3A362F', roleBorder: '#D3CEC4' },
-      cashier: { roleBg: '#EFECE5', roleFg: '#3A362F', roleBorder: '#D3CEC4' },
-      clerk: { roleBg: '#EFECE5', roleFg: '#3A362F', roleBorder: '#D3CEC4' }
-    };
     const S = {
       active: { label: 'Active', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
       disabled: { label: 'Disabled', bg: '#E7E4DD', fg: '#4F4A42', dot: '#8F897E' },
       invited: { label: 'Set-up pending', bg: '#DDEBE9', fg: '#2F625E', dot: '#3D7470' }
     };
-    const u = (name, username, role, rk, status, signin, last, you) => ({
-      name, username, role, ...R[rk], b: S[status], signin, last, you: you ? ' (you)' : '',
+    const person = (name, username, signin, status, last, owner, you) => ({
+      name, username, signin, last, b: S[status], you: you ? ' (you)' : '',
       initials: name.split(' ').map((w) => w[0]).join('').slice(0, 2),
-      avBg: status === 'disabled' ? '#E7E4DD' : (rk === 'owner' ? '#1B1A17' : '#EFECE5'),
-      avFg: status === 'disabled' ? '#8F897E' : (rk === 'owner' ? '#FFFFFF' : '#3A362F'),
+      avBg: status === 'disabled' ? '#E7E4DD' : (owner ? '#1B1A17' : '#EFECE5'),
+      avFg: status === 'disabled' ? '#8F897E' : (owner ? '#F7F5F0' : '#1B1A17'),
       nameFg: status === 'disabled' ? '#625D54' : '#1B1A17',
-      bg: you ? '#FCF3EC' : ''
+      cardBg: status === 'disabled' ? 'transparent' : '#FFFFFF',
+      stripe: you ? '#E8622C' : (status === 'disabled' ? '#D3CEC4' : '#1B1A17')
+    });
+    const role = (name, count, desc, can, people, optional, i) => ({
+      name, count, desc, can, people, optional: !!optional, empty: people.length === 0,
+      sep: i === 0 ? '0' : '1px solid #D3CEC4',
+      colBg: optional ? '#F2EFE8' : 'transparent'
     });
     return {
-      cols: 'minmax(0, 1fr) 190px 170px 160px 200px 40px',
-      users: [
-        u('Yacine Benali', 'yacine', 'Owner', 'owner', 'active', 'Password', 'Now', true),
-        u('Amina Benali', 'amina', 'Owner', 'owner', 'active', 'Password', 'Today, 15:12'),
-        u('Mehdi Larbi', 'mehdi', 'Manager', 'manager', 'active', 'Password', 'Yesterday, 18:40'),
-        u('Sofiane Mokrani', 'sofiane', 'Cashier', 'cashier', 'active', 'PIN', 'Today, 16:51'),
-        u('Hichem Saadi', 'hichem', 'General Employee', 'employee', 'active', 'PIN', 'Today, 12:05'),
-        u('Rym Touati', 'rym', 'General Employee', 'employee', 'active', 'PIN', '22 Sep 2026'),
-        u('Anis Ferhat', 'anis', 'General Employee', 'employee', 'invited', 'PIN', 'Never'),
-        u('Walid Guerfi', 'walid', 'General Employee', 'employee', 'disabled', 'PIN', '02 Aug 2026')
-      ],
       roles: [
-        { name: 'Owner', optional: false, desc: 'Full access, including users, backup, profit and settings.', count: '2', unit: 'users', countFg: '#1B1A17' },
-        { name: 'Manager', optional: false, desc: 'Runs daily operations: prices, purchases, returns, most reports.', count: '1', unit: 'user', countFg: '#1B1A17' },
-        { name: 'General Employee', optional: false, desc: 'Sells, looks up products and customers, receives goods.', count: '4', unit: 'users', countFg: '#1B1A17' },
-        { name: 'Cashier', optional: true, desc: 'POS and customer payments only.', count: '1', unit: 'user', countFg: '#1B1A17' },
-        { name: 'Inventory Clerk', optional: true, desc: 'Stock counts, adjustments and purchase receiving.', count: '0', unit: 'Not used', countFg: '#8F897E' }
+        role('Owner', '2', 'Full access. A store can have several owners; the last active owner can’t be removed.', 'Everything, including users, backups, profit and settings.', [
+          person('Yacine Benali', 'yacine', 'password', 'active', 'Now', true, true),
+          person('Amina Benali', 'amina', 'password', 'active', 'Today 15:12', true)
+        ], false, 0),
+        role('Manager', '1', 'Runs the day: prices, purchases, returns and most reports.', 'Sell, change prices, receive purchases, approve returns, see sales and stock reports.', [
+          person('Mehdi Larbi', 'mehdi', 'password', 'active', 'Yesterday')
+        ], false, 1),
+        role('General Employee', '4', 'Sells, looks up parts and customers, receives goods.', 'Sell, search, add customers, receive purchases. No prices, no profit.', [
+          person('Hichem Saadi', 'hichem', 'PIN', 'active', 'Today 12:05'),
+          person('Rym Touati', 'rym', 'PIN', 'active', '22 Sep'),
+          person('Anis Ferhat', 'anis', 'PIN', 'invited', 'Never'),
+          person('Walid Guerfi', 'walid', 'PIN', 'disabled', '02 Aug')
+        ], false, 2),
+        role('Cashier', '1', 'POS and customer payments only.', 'Sell at the POS and take customer payments.', [
+          person('Sofiane Mokrani', 'sofiane', 'PIN', 'active', 'Today 16:51')
+        ], true, 3),
+        role('Inventory Clerk', '0', 'Stock counts, adjustments and receiving.', 'Count stock, adjust quantities, receive purchases.', [], true, 4)
       ]
     };
   }

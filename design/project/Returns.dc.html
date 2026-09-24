@@ -12,92 +12,95 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
 [data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="returns" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="returns" hint-size="1920px,104px"></dc-import>
+  <div style="flex-grow: 1; min-height: 0; display: flex">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; background: #F7F5F0">
 
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Returns</h1>
-          <span style="font-size: 13px; color: #625D54">Items brought back by customers, always linked to the original sale.</span>
+      <section aria-label="Customer returns" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Returns</h1>
+            <span style="font-size: 13.5px; color: #625D54">Parts brought back by customers. Every return starts from the original sale.</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 24px">
+            <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px"><span style="font-family: Archivo, sans-serif; font-size: 22px; font-weight: 650; color: #1B1A17">48 · 162 300 DA</span><span style="font-size: 12.5px; color: #625D54">last 30 days · 1.4% of sales</span></span>
+            <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg>New return</button>
+          </div>
         </div>
-        <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg>
-          New Return
-        </button>
-      </div>
 
-      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
-          <label style="position: relative; display: flex; align-items: center; width: 520px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 14px">
+          <label style="position: relative; display: flex; align-items: center; width: 460px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D3CEC4; border-radius: 3px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search returns</span>
-            <input type="search" placeholder="Return no., sale no., customer or product…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
+            <input type="search" placeholder="Return or sale number, customer, part…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
           <sc-for list="{{filters}}" as="f" hint-placeholder-count="3">
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer">
-              <span style="color: #625D54">{{f.label}}</span>{{f.value}}
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
-            </button>
+            <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #625D54">{{f.label}}</span>{{f.value}}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
           </sc-for>
-          <span style="flex-grow: 1"></span>
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
-            <span style="font-size: 15px; font-weight: 600; color: #1B1A17">48 returns · 162 300 DA</span>
-            <span style="font-size: 12px; color: #625D54">Last 30 days · 1.4% of sales value</span>
-          </div>
         </div>
 
         <div role="table" aria-label="Customer returns" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-            <span role="columnheader">Return</span>
-            <span role="columnheader" aria-sort="descending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #A93C15">Date <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
-            <span role="columnheader">Customer</span>
-            <span role="columnheader">Items</span>
-            <span role="columnheader">Original Sale</span>
-            <span role="columnheader">Reason</span>
-            <span role="columnheader" style="text-align: end">Refund</span>
-            <span role="columnheader">Returned items</span>
-            <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+            <span role="columnheader">Return</span><span role="columnheader" aria-sort="descending" style="color: #C8471B">Date ↓</span><span role="columnheader">Customer</span><span role="columnheader">Items</span><span role="columnheader">Original sale</span><span role="columnheader">Reason</span><span role="columnheader" style="text-align: end">Refund DA</span><span role="columnheader">Stock</span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="14">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 54px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px">
-              <span role="cell" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13.5px; font-weight: 600; color: #1B1A17">{{r.id}}</span>
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 54px; padding: 0 12px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; font-weight: 600; color: #1B1A17">{{r.id}}</span>
               <span role="cell" style="color: #4F4A42">{{r.date}}</span>
-              <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.customer}}</span>
-              <span role="cell" style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.item}}</span>
-                <span style="font-size: 12px; color: #625D54">{{r.qty}}</span>
-              </span>
-              <span role="cell"><a href="Sales.dc.html" style="font-weight: 500">{{r.sale}}</a><span style="font-size: 12px; color: #625D54; margin-inline-start: 6px">{{r.saleDate}}</span></span>
-              <span role="cell" style="color: #4F4A42">{{r.reason}}</span>
-              <span role="cell" style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
-                <span style="font-weight: 600">{{r.refund}}</span>
-                <span style="font-size: 12px; color: #625D54">{{r.method}}</span>
-              </span>
-              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600">{{r.b.label}}</span></span>
-              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+              <span role="cell" style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.customer}}</span>
+              <span role="cell" style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.item}}</span><span style="font-size: 12.5px; color: #625D54">{{r.qty}}</span></span>
+              <span role="cell"><a href="Sales.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">{{r.sale}}</a> <span style="font-size: 12.5px; color: #625D54">{{r.saleDate}}</span></span>
+              <span role="cell" style="color: #4F4A42; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.reason}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1B1A17">{{r.refund}}</span>
+              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600; white-space: nowrap">{{r.b.label}}</span></span>
             </div>
           </sc-for>
         </div>
-
-        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
-          <span>Showing 1–14 of 48</span>
-          <div style="display: flex; align-items: center; gap: 6px">
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #8F897E; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #C8471B; background: #FBE9DE; color: #A93C15; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">3</button>
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
-          </div>
-        </div>
       </section>
+
+      <aside aria-label="Return slip" style="min-height: 0; background: #EFECE5; border-inline-start: 1px solid #D3CEC4; padding: 24px 28px; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #625D54">RETURN SLIP R-0417</span>
+          <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid #2E7D4F; background: #E1EEE4; color: #226B40; font-size: 12px; font-weight: 600">Back in stock</span>
+        </div>
+
+        <a href="Sales.dc.html" style="display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 3px; color: #26241F">
+          <span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><span style="font-size: 12px; color: #625D54">From sale</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: #1B1A17">S-24053</span><span style="font-size: 13px; color: #4F4A42">23 Sep 2026 · 18:22 · Rachid Zerrouki</span></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8471B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+        </a>
+
+        <div style="display: flex; flex-direction: column; padding: 18px 20px; background: #FFFFFF; box-shadow: 0 1px 0 #D3CEC4, 0 10px 24px rgba(27,26,23,0.07); font-family: 'IBM Plex Mono', monospace; font-size: 13px">
+          <span style="padding-bottom: 10px; border-bottom: 1px dashed #B9B2A5; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">LINES ON THE ORIGINAL SALE</span>
+          <div style="display: flex; flex-direction: column; gap: 3px; padding: 12px 0; border-bottom: 1px dashed #B9B2A5">
+            <span style="display: flex; justify-content: space-between; font-weight: 600; color: #1B1A17"><span>Brake Disc (pair) · Brembo</span><span>9 800</span></span>
+            <span style="display: flex; justify-content: space-between; color: #4F4A42"><span>09.A727.11 × 1</span><span style="color: #226B40; font-weight: 600">RETURNED</span></span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 3px; padding: 12px 0; border-bottom: 1px dashed #B9B2A5; color: #8F897E">
+            <span style="display: flex; justify-content: space-between"><span>Brake Pad Wear Sensor · Febi</span><span>1 400</span></span>
+            <span style="display: flex; justify-content: space-between"><span>176 45 × 2</span><span>KEPT</span></span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding-top: 12px; font-size: 16px; font-weight: 600; color: #1B1A17"><span>REFUND · CASH</span><span>9 800 DA</span></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column">
+          <sc-for list="{{facts}}" as="f" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #D3CEC4; font-size: 14px"><span style="color: #625D54">{{f.k}}</span><span style="font-weight: 500; text-align: end">{{f.v}}</span></div>
+          </sc-for>
+        </div>
+
+        <span style="flex-grow: 1"></span>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <button type="button" style="height: 44px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Print slip</button>
+          <a href="Sales.dc.html" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-size: 15px; font-weight: 600">Open sale S-24053</a>
+        </div>
+      </aside>
     </main>
+    <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
   </div>
 </div>
 </x-dc>
@@ -106,32 +109,41 @@ class Component extends DCLogic {
   renderVals() {
     const B = {
       restocked: { label: 'Back in stock', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
-      damaged: { label: 'Damaged · not restocked', bg: '#E7E4DD', fg: '#4F4A42', dot: '#8F897E' },
+      damaged: { label: 'Damaged, kept aside', bg: '#E7E4DD', fg: '#4F4A42', dot: '#8F897E' },
       partial: { label: 'Partly restocked', bg: '#DDEBE9', fg: '#2F625E', dot: '#3D7470' }
     };
-    const r = (id, date, customer, item, qty, sale, saleDate, reason, refund, method, b) => ({ id, date, customer, item, qty, sale, saleDate, reason, refund, method, b });
+    const r = (id, date, customer, item, qty, sale, saleDate, reason, refund, b) => ({ id, date, customer, item, qty, sale, saleDate, reason, refund, b, bg: '', ring: 'none' });
+    const rows = [
+      r('R-0418', '24 Sep', 'Karim Hadj-Ahmed', 'Air Filter · Mann-Filter C 2201', '1 unit · cash', 'S-24012', '22 Sep', 'Wrong part for vehicle', '1 450', B.restocked),
+      r('R-0417', '23 Sep', 'Rachid Zerrouki', 'Brake Disc (pair) · Brembo', '1 of 2 lines · cash', 'S-24053', '23 Sep', 'Not needed', '9 800', B.restocked),
+      r('R-0416', '23 Sep', 'Garage Benali', 'Ignition Coil · Bosch', '1 unit · to balance', 'S-23951', '19 Sep', 'Defective', '6 200', B.damaged),
+      r('R-0415', '22 Sep', 'Walk-in customer', 'Wiper Blade 600 mm · Valeo', '2 units · cash', 'S-24006', '22 Sep', 'Wrong size', '2 600', B.restocked),
+      r('R-0414', '22 Sep', 'Transport Meziane SARL', 'Oil Filter · Mann-Filter W 75/3', '6 units · to balance', 'S-23990', '21 Sep', 'Ordered too many', '5 700', B.restocked),
+      r('R-0413', '22 Sep', 'Samir Oukaci', 'Water Pump · SKF', '1 unit · replaced', 'S-23902', '17 Sep', 'Defective', '8 400', B.damaged),
+      r('R-0412', '22 Sep', 'Taxi Chiffa', 'Handbrake Cable · Cofle', '1 unit · card', 'S-23977', '20 Sep', 'Wrong part for vehicle', '2 300', B.restocked),
+      r('R-0411', '21 Sep', 'Walk-in customer', 'Headlight Bulb H4 · Osram', '2 units · cash', 'S-23964', '20 Sep', 'Not needed', '1 100', B.restocked),
+      r('R-0410', '20 Sep', 'Mécanique Hamdi', 'Clutch Kit · Valeo', '1 unit · to balance', 'S-23855', '14 Sep', 'Box opened, parts missing', '18 900', B.partial),
+      r('R-0409', '19 Sep', 'Nadia Boukhalfa', 'Cabin Filter · Bosch', '1 unit · cash', 'S-23918', '18 Sep', 'Wrong part for vehicle', '1 250', B.restocked),
+      r('R-0408', '18 Sep', 'Garage Ouled Yaïch', 'Front Shock Absorber · Sachs', '1 unit · replaced', 'S-23840', '13 Sep', 'Defective', '11 600', B.damaged),
+      r('R-0407', '17 Sep', 'Walk-in customer', 'Spark Plug · NGK BKR6E', '4 units · cash', 'S-23871', '16 Sep', 'Ordered too many', '2 600', B.restocked),
+      r('R-0406', '16 Sep', 'Auto-École El Amel', 'Brake Pad Wear Sensor · Febi', '1 unit · cash', 'S-23809', '12 Sep', 'Not needed', '650', B.restocked),
+      r('R-0405', '15 Sep', 'Lynda Mansouri', 'Engine Oil 5W-40, 4 L · Total', '1 unit · cash', 'S-23790', '11 Sep', 'Wrong viscosity', '6 900', B.restocked)
+    ];
+    rows[1].bg = '#FBE9DE';
+    rows[1].ring = 'inset 3px 0 0 #E8622C';
     return {
-      cols: '100px 120px 220px minmax(0, 1fr) 190px 190px 130px 210px 40px',
+      cols: '76px 64px 170px minmax(0, 1fr) 140px 170px 84px 150px',
+      rows,
       filters: [
         { label: 'Date', value: 'Last 30 days' },
         { label: 'Reason', value: 'All' },
         { label: 'Refund', value: 'All methods' }
       ],
-      rows: [
-        r('R-0418', '24 Sep 2026', 'Karim Hadj-Ahmed', 'Air Filter · Mann-Filter C 2201', '1 unit', 'S-24012', '22 Sep', 'Wrong part for vehicle', '1 450 DA', 'Cash', B.restocked),
-        r('R-0417', '23 Sep 2026', 'Rachid Zerrouki', 'Front Brake Disc (pair) · Brembo', '1 of 2 lines', 'S-24053', '23 Sep', 'Not needed', '9 800 DA', 'Cash', B.restocked),
-        r('R-0416', '23 Sep 2026', 'Garage Benali', 'Ignition Coil · Bosch 0 221 504 470', '1 unit', 'S-23951', '19 Sep', 'Defective', '6 200 DA', 'Credit to balance', B.damaged),
-        r('R-0415', '22 Sep 2026', 'Walk-in customer', 'Wiper Blade 600 mm · Valeo', '2 units', 'S-24006', '22 Sep', 'Wrong size', '2 600 DA', 'Cash', B.restocked),
-        r('R-0414', '22 Sep 2026', 'Transport Meziane SARL', 'Oil Filter · Mann-Filter W 75/3', '6 units', 'S-23990', '21 Sep', 'Ordered too many', '5 700 DA', 'Credit to balance', B.restocked),
-        r('R-0413', '22 Sep 2026', 'Samir Oukaci', 'Water Pump · SKF VKPC 86416', '1 unit', 'S-23902', '17 Sep', 'Defective', '8 400 DA', 'Replacement', B.damaged),
-        r('R-0412', '22 Sep 2026', 'Taxi Chiffa', 'Handbrake Cable · Cofle 10.6863', '1 unit', 'S-23977', '20 Sep', 'Wrong part for vehicle', '2 300 DA', 'Card', B.restocked),
-        r('R-0411', '21 Sep 2026', 'Walk-in customer', 'Headlight Bulb H4 · Osram', '2 units', 'S-23964', '20 Sep', 'Not needed', '1 100 DA', 'Cash', B.restocked),
-        r('R-0410', '20 Sep 2026', 'Mécanique Hamdi', 'Clutch Kit · Valeo 826 818', '1 unit', 'S-23855', '14 Sep', 'Box opened, parts missing', '18 900 DA', 'Credit to balance', B.partial),
-        r('R-0409', '19 Sep 2026', 'Nadia Boukhalfa', 'Cabin Filter · Bosch 1 987 432 120', '1 unit', 'S-23918', '18 Sep', 'Wrong part for vehicle', '1 250 DA', 'Cash', B.restocked),
-        r('R-0408', '18 Sep 2026', 'Garage Ouled Yaïch', 'Front Shock Absorber · Sachs 314 876', '1 unit', 'S-23840', '13 Sep', 'Defective', '11 600 DA', 'Replacement', B.damaged),
-        r('R-0407', '17 Sep 2026', 'Walk-in customer', 'Spark Plug · NGK BKR6E', '4 units', 'S-23871', '16 Sep', 'Ordered too many', '2 600 DA', 'Cash', B.restocked),
-        r('R-0406', '16 Sep 2026', 'Auto-École El Amel', 'Brake Pad Wear Sensor · Febi', '1 unit', 'S-23809', '12 Sep', 'Not needed', '650 DA', 'Cash', B.restocked),
-        r('R-0405', '15 Sep 2026', 'Lynda Mansouri', 'Engine Oil 5W-40, 4 L · Total', '1 unit', 'S-23790', '11 Sep', 'Wrong viscosity', '6 900 DA', 'Cash', B.restocked)
+      facts: [
+        { k: 'Reason', v: 'Not needed · box unopened' },
+        { k: 'Refunded', v: '9 800 DA cash · Sofiane M. · 23 Sep 18:40' },
+        { k: 'Stock', v: '+1 on shelf B-05' },
+        { k: 'Customer balance', v: 'No change' }
       ]
     };
   }

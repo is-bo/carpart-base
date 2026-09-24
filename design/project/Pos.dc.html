@@ -12,208 +12,234 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
+[data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="pos" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 16px; display: grid; grid-template-columns: minmax(0, 58fr) minmax(0, 42fr); gap: 16px">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="pos" hint-size="1920px,104px"></dc-import>
+  <main style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: 300px minmax(0, 1fr) 560px; background: #F7F5F0">
 
-      <!-- LEFT: search + results -->
-      <section aria-label="Product search" style="min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #D3CEC4">
-          <label style="position: relative; display: flex; align-items: center; height: 52px; box-sizing: border-box; padding: 0 14px 0 48px; background: #F7F5F0; border: 1.5px solid #C8471B; border-radius: 4px; box-shadow: 0 0 0 4px rgba(200,71,27,0.14)">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8471B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 15px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search products</span>
-            <input type="search" value="brake pads symbol" placeholder="Search name, reference, OEM number, brand or vehicle…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 17px; font-weight: 500; color: #26241F">
-            <kbd style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; color: #625D54; background: #EFECE5; border: 1px solid #D3CEC4; border-radius: 2px; padding: 2px 7px">F2</kbd>
-          </label>
-          <div style="display: flex; align-items: center; gap: 8px">
-            <span style="display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 6px 0 10px; border-radius: 3px; background: #FBE9DE; border: 1px solid #EFC3AA; color: #A93C15; font-size: 13px; font-weight: 500">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
-              Renault Symbol II · 1.2 16V · 2013–2019
-              <button type="button" aria-label="Remove vehicle filter" style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 2px; background: transparent; color: #A93C15; cursor: pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
-            </span>
-            <span style="display: inline-flex; align-items: center; height: 32px; padding: 0 10px; border-radius: 3px; background: #EFECE5; border: 1px solid #D3CEC4; font-size: 13px; font-weight: 500; color: #3A362F">Category: Brakes</span>
-            <span style="display: inline-flex; align-items: center; height: 32px; padding: 0 10px; border-radius: 3px; background: #EFECE5; border: 1px solid #D3CEC4; font-size: 13px; font-weight: 500; color: #3A362F">In stock first</span>
-            <span style="flex-grow: 1"></span>
-            <span style="font-size: 13px; color: #625D54">11 products · 9 fit this vehicle</span>
+    <!-- VEHICLE + PARTS INDEX -->
+    <aside aria-label="Vehicle" style="min-height: 0; background: #EFECE5; border-inline-end: 1px solid #D3CEC4; display: flex; flex-direction: column">
+      <div style="padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #D3CEC4">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+          <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #E8622C"></span>Vehicle</h2>
+          <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; color: #625D54; border: 1px solid #D3CEC4; border-bottom-width: 2px; border-radius: 2px; padding: 0 5px; background: #F7F5F0">F3</kbd>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: #1B1A17">Renault Symbol II</span>
+          <span style="font-size: 14px; color: #26241F">1.2 16V · 75 hp · petrol</span>
+          <span style="display: flex; gap: 6px; margin-top: 4px">
+            <span style="padding: 1px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #F7F5F0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A362F">D4F 732</span>
+            <span style="padding: 1px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #F7F5F0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A362F">2013–2019</span>
+          </span>
+        </div>
+        <div style="display: flex; gap: 8px">
+          <button type="button" style="flex-grow: 1; height: 36px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Change vehicle</button>
+          <button type="button" style="height: 36px; padding: 0 12px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #4F4A42; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Clear</button>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 12px; font-weight: 500; color: #625D54">Recent at this counter</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px">
+            <button type="button" style="height: 28px; padding: 0 8px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer">Logan I 1.5 dCi</button>
+            <button type="button" style="height: 28px; padding: 0 8px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer">Accent RB 1.4</button>
+            <button type="button" style="height: 28px; padding: 0 8px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer">208 1.6 HDi</button>
           </div>
         </div>
+      </div>
 
-        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px 120px 130px 92px; align-items: center; gap: 16px; height: 40px; padding: 0 16px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-          <span>Product · compatibility</span>
-          <span>Brand · reference</span>
-          <span style="text-align: end">Stock</span>
-          <span style="text-align: end">Price</span>
-          <span></span>
-        </div>
+      <div style="padding: 14px 0 0; display: flex; flex-direction: column; min-height: 0">
+        <span style="padding: 0 20px 8px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">Parts for this vehicle</span>
+        <sc-for list="{{cats}}" as="c" hint-placeholder-count="12">
+          <a href="#" style="position: relative; display: flex; align-items: center; justify-content: space-between; height: 40px; padding: 0 20px; background: {{c.bg}}; color: {{c.fg}}; font-size: 14.5px; font-weight: {{c.wt}}; text-decoration: none">
+            <span style="position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 3px; background: {{c.bar}}"></span>
+            <span>{{c.name}}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8F897E">{{c.count}}</span>
+          </a>
+        </sc-for>
+      </div>
+    </aside>
 
-        <div style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <sc-for list="{{results}}" as="p" hint-placeholder-count="8">
-            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 200px 120px 130px 92px; align-items: center; gap: 16px; height: 68px; padding: 0 16px; border-bottom: 1px solid #E2DED6; background: {{p.rowBg}}; box-shadow: {{p.rowRing}}">
-              <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
-                <span style="font-size: 15px; font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{p.name}}</span>
-                <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{p.fitColor}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>
-                  {{p.fit}}
-                </span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
-                <span style="font-size: 14px; font-weight: 600; color: #1B1A17">{{p.brand}}</span>
-                <span style="align-self: flex-start; padding: 1px 5px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; color: #3A362F; white-space: nowrap">{{p.ref}}</span>
-              </div>
-              <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 3px">
-                <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 16px; font-weight: 600; color: {{p.stockColor}}">{{p.stock}}</span>
-                <span style="font-size: 12px; font-weight: 500; color: {{p.stockNoteColor}}">{{p.stockNote}}</span>
-              </div>
-              <span style="text-align: end; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 17px; font-weight: 600; color: #1B1A17; white-space: nowrap">{{p.price}}</span>
-              <div style="display: flex; justify-content: flex-end">
-                <sc-if value="{{p.selected}}" hint-placeholder-val="{{false}}">
-                  <button type="button" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Add <span style="font-size: 12px; color: #F6C9B3">↵</span></button>
-                </sc-if>
-                <sc-if value="{{p.addable}}" hint-placeholder-val="{{true}}">
-                  <button type="button" aria-label="Add {{p.name}}" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #3A362F; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
-                </sc-if>
-                <sc-if value="{{p.unavailable}}" hint-placeholder-val="{{false}}">
-                  <span style="font-size: 12px; font-weight: 500; color: #625D54; text-align: end; line-height: 1.3">Check<br>suppliers</span>
-                </sc-if>
-              </div>
-            </div>
-          </sc-for>
-        </div>
-
-        <div style="height: 46px; display: flex; align-items: center; gap: 20px; padding: 0 16px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
-          <sc-for list="{{keys}}" as="k" hint-placeholder-count="6">
-            <span style="display: inline-flex; align-items: center; gap: 6px"><kbd style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600; color: #3A362F; background: #F7F5F0; border: 1px solid #D3CEC4; border-bottom-width: 2px; border-radius: 2px; padding: 1px 7px">{{k.key}}</kbd>{{k.label}}</span>
-          </sc-for>
-        </div>
-      </section>
-
-      <!-- RIGHT: current sale -->
-      <section aria-label="Current sale" style="min-height: 0; background: #FBF9F4; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="height: 58px; flex-shrink: 0; display: flex; align-items: center; gap: 14px; padding: 0 16px; background: #1E1D1A; color: #F7F5F0">
-          <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #F7F5F0"><span style="width: 7px; height: 7px; background: #E8622C; flex-shrink: 0"></span>Current Sale</h2>
-          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.04em; color: #8F897E">DRAFT · TILL 01 · 17:09</span>
+    <!-- SEARCH + RESULTS -->
+    <section aria-label="Product search" style="min-width: 0; min-height: 0; display: flex; flex-direction: column">
+      <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid #D3CEC4">
+        <label style="position: relative; display: flex; align-items: center; height: 52px; box-sizing: border-box; padding: 0 12px 0 48px; background: #FFFFFF; border: 1.5px solid #C8471B; border-radius: 3px; box-shadow: 0 0 0 4px rgba(200,71,27,0.14)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8471B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 15px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search products</span>
+          <input type="search" value="plaquette avant" placeholder="Name, reference, OEM number or brand…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 17px; font-weight: 500; color: #1B1A17">
+          <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; color: #625D54; border: 1px solid #D3CEC4; border-bottom-width: 2px; border-radius: 2px; padding: 1px 6px">F2</kbd>
+        </label>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px">
+          <span style="display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 4px 0 10px; border-radius: 2px; background: #1B1A17; color: #F7F5F0; font-weight: 600">Brakes
+            <button type="button" aria-label="Remove category filter" style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 0; background: transparent; color: #F7F5F0; cursor: pointer"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+          </span>
+          <span style="display: inline-flex; align-items: center; height: 30px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; color: #3A362F; font-weight: 500">In stock first</span>
+          <span style="display: inline-flex; align-items: center; height: 30px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; color: #3A362F; font-weight: 500">Include supplier listings</span>
           <span style="flex-grow: 1"></span>
-          <button type="button" style="height: 34px; padding: 0 12px; border-radius: 3px; border: 1px solid #45423C; background: transparent; color: #E7E4DD; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Hold</button>
-          <button type="button" style="height: 34px; padding: 0 12px; border-radius: 3px; border: 1px solid #45423C; background: transparent; color: #E7E4DD; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Clear</button>
+          <span style="color: #625D54">11 results · <strong style="color: #1B1A17">9 fit</strong> Symbol II 1.2</span>
         </div>
+      </div>
 
-        <div style="padding: 12px 16px; border-bottom: 1px solid #D3CEC4; display: flex; align-items: center; gap: 12px">
-          <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 3px; background: #DEE7F1; color: #2D5B86; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700">GB</span>
-          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0">
-            <span style="font-size: 15px; font-weight: 600; color: #1B1A17">Garage Benali <span style="font-size: 13px; font-weight: 400; color: #625D54">· Garage · 0550 12 34 56</span></span>
-            <span style="font-size: 13px; color: #625D54">Balance owed <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; color: #2D5B86; font-weight: 600">48 500 DA</span> · limit 100 000 DA</span>
-          </div>
-          <button type="button" style="height: 36px; padding: 0 10px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Change <kbd style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; color: #625D54; border: 1px solid #D3CEC4; border-radius: 2px; padding: 0 4px">F4</kbd></button>
-        </div>
+      <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 16px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+        <span>Part · fit</span><span>Brand · reference</span><span style="text-align: end">Stock</span><span style="text-align: end">Price DA</span><span></span>
+      </div>
 
-        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 112px 100px 110px 28px; align-items: center; gap: 10px; height: 34px; flex-shrink: 0; padding: 0 16px; border-bottom: 1px dashed #C4BEB2; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-          <span>Item</span>
-          <span style="text-align: center">Qty</span>
-          <span style="text-align: end">Unit</span>
-          <span style="text-align: end">Amount</span>
-          <span></span>
-        </div>
-
-        <div style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <sc-for list="{{lines}}" as="l" hint-placeholder-count="5">
-            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 112px 100px 110px 28px; align-items: center; gap: 10px; height: 62px; padding: 0 16px; border-bottom: 1px dashed #DDD8CE; background: {{l.rowBg}}; box-shadow: {{l.ring}}">
-              <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px; align-items: flex-start">
-                <span style="max-width: 100%; font-size: 14.5px; font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{l.name}}</span>
-                <span style="padding: 1px 5px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; font-weight: 500; color: #3A362F; white-space: nowrap">{{l.ref}}</span>
-              </div>
-              <div style="display: flex; align-items: center; height: 34px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; overflow: hidden">
-                <button type="button" aria-label="Decrease quantity" style="width: 32px; height: 100%; border: 0; border-inline-end: 1px solid #E2DED6; background: transparent; color: #3A362F; font-size: 16px; cursor: pointer">−</button>
-                <span style="flex-grow: 1; text-align: center; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 15px; font-weight: 600">{{l.qty}}</span>
-                <button type="button" aria-label="Increase quantity" style="width: 32px; height: 100%; border: 0; border-inline-start: 1px solid #E2DED6; background: transparent; color: #3A362F; font-size: 16px; cursor: pointer">+</button>
-              </div>
-              <span style="text-align: end; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: #4F4A42">{{l.price}}</span>
-              <span style="text-align: end; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 15px; font-weight: 600; color: #1B1A17">{{l.total}}</span>
-              <button type="button" aria-label="Remove line" style="width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 2px; background: transparent; color: #8F897E; cursor: pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+      <div style="flex-grow: 1; min-height: 0; overflow: hidden">
+        <sc-for list="{{results}}" as="p" hint-placeholder-count="11">
+          <div data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 66px; padding: 0 16px; border-bottom: 1px solid #E2DED6; background: {{p.rowBg}}; box-shadow: {{p.rowRing}}">
+            <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 15px; font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{p.name}}</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: {{p.fitColor}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="width: 6px; height: 6px; flex-shrink: 0; background: {{p.fitColor}}"></span>{{p.fit}}</span>
             </div>
-          </sc-for>
-        </div>
-
-        <div style="flex-shrink: 0; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px dashed #C4BEB2">
-          <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="color: #625D54">Subtotal · 5 lines · 8 units</span><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500">16 750 DA</span></div>
-          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px">
-            <span style="display: inline-flex; align-items: center; gap: 8px; color: #625D54">Discount <a href="#" style="font-size: 13px; font-weight: 600">Edit · F8</a></span>
-            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500; color: #226B40">−250 DA</span>
-          </div>
-          <div aria-live="polite" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-top: 4px; padding: 14px 18px; border-radius: 3px; background: #1E1D1A">
-            <div style="display: flex; flex-direction: column; gap: 6px">
-              <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #8F897E">TOTAL TO PAY</span>
-              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #8F897E">CASH · CHANGE DUE ON ENTRY</span>
+            <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0; align-items: flex-start">
+              <span style="font-size: 14px; font-weight: 600; color: #1B1A17">{{p.brand}}</span>
+              <span style="padding: 1px 5px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; color: #3A362F; white-space: nowrap">{{p.ref}}</span>
             </div>
-            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 40px; font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: #F7F5F0">16 500<span style="margin-inline-start: 8px; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; color: #E8622C">DA</span></span>
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 3px">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: {{p.stockColor}}">{{p.stock}}</span>
+              <span style="font-size: 12px; font-weight: 500; color: {{p.stockNoteColor}}; white-space: nowrap">{{p.stockNote}}</span>
+            </div>
+            <span style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 17px; font-weight: 600; color: #1B1A17; white-space: nowrap">{{p.price}}</span>
+            <div style="display: flex; justify-content: flex-end">
+              <sc-if value="{{p.selected}}" hint-placeholder-val="{{false}}">
+                <button type="button" style="height: 36px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Add <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px">↵</span></button>
+              </sc-if>
+              <sc-if value="{{p.addable}}" hint-placeholder-val="{{true}}">
+                <button type="button" aria-label="Add {{p.name}} to the sale" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #1B1A17; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+              </sc-if>
+              <sc-if value="{{p.unavailable}}" hint-placeholder-val="{{false}}">
+                <a href="Suppliers.dc.html" style="font-size: 12.5px; font-weight: 600; text-align: end; line-height: 1.3">2 suppliers<br>list it</a>
+              </sc-if>
+            </div>
           </div>
-          <div role="radiogroup" aria-label="Payment method" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #D3CEC4; border-radius: 3px; overflow: hidden">
-            <button type="button" role="radio" aria-checked="true" style="height: 42px; border: 0; background: #1B1A17; color: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Cash</button>
-            <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Card</button>
-            <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">On account</button>
-            <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Split</button>
-          </div>
-          <button type="button" style="height: 58px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; cursor: pointer">
-            <span>Take payment</span>
-            <span style="display: inline-flex; align-items: center; gap: 12px"><span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 600; letter-spacing: 0">16 500 DA</span><kbd style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.45); border-radius: 2px; padding: 2px 6px">F12</kbd></span>
-          </button>
+        </sc-for>
+      </div>
+
+      <div style="height: 44px; flex-shrink: 0; display: flex; align-items: center; gap: 18px; padding: 0 16px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
+        <sc-for list="{{keys}}" as="k" hint-placeholder-count="7">
+          <span style="display: inline-flex; align-items: center; gap: 6px"><kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; color: #26241F; background: #F7F5F0; border: 1px solid #D3CEC4; border-bottom-width: 2px; border-radius: 2px; padding: 0 6px">{{k.key}}</kbd>{{k.label}}</span>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- RECEIPT -->
+    <section aria-label="Current sale" style="min-height: 0; background: #FBF9F4; border-inline-start: 1px dashed #B9B2A5; display: flex; flex-direction: column">
+      <div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; gap: 14px; padding: 0 18px; background: #1E1D1A; color: #F7F5F0">
+        <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #F7F5F0"><span style="width: 7px; height: 7px; background: #E8622C"></span>Ticket</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #8F897E">DRAFT · 17:09</span>
+        <span style="flex-grow: 1"></span>
+        <button type="button" style="height: 32px; padding: 0 12px; border-radius: 3px; border: 1px solid #45423C; background: transparent; color: #E7E4DD; font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer">Hold</button>
+        <button type="button" style="height: 32px; padding: 0 12px; border-radius: 3px; border: 1px solid #45423C; background: transparent; color: #E7E4DD; font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer">Clear</button>
+      </div>
+
+      <div style="padding: 12px 18px; border-bottom: 1px dashed #C4BEB2; display: flex; align-items: center; gap: 12px">
+        <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 3px; background: #DEE7F1; color: #2D5B86; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 800">GB</span>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0">
+          <span style="font-size: 15px; font-weight: 600; color: #1B1A17">Garage Benali</span>
+          <span style="font-size: 13px; color: #625D54">Owes <span style="font-family: 'IBM Plex Mono', monospace; color: #2D5B86; font-weight: 600">48 500 DA</span> · limit 100 000 DA</span>
         </div>
-      </section>
-    </main>
-  </div>
+        <button type="button" style="height: 34px; padding: 0 10px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer">Customer <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #625D54; border: 1px solid #D3CEC4; border-radius: 2px; padding: 0 4px">F4</kbd></button>
+      </div>
+
+      <div style="flex-grow: 1; min-height: 0; overflow: hidden">
+        <sc-for list="{{lines}}" as="l" hint-placeholder-count="5">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 104px 104px 24px; align-items: center; column-gap: 10px; height: 64px; padding: 0 18px; border-bottom: 1px dashed #DDD8CE; background: {{l.rowBg}}; box-shadow: {{l.ring}}">
+            <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px; align-items: flex-start">
+              <span style="max-width: 100%; font-size: 14.5px; font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{l.name}}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54; white-space: nowrap">{{l.ref}} · {{l.unit}}</span>
+            </div>
+            <div style="display: flex; align-items: center; height: 34px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; overflow: hidden">
+              <button type="button" aria-label="Decrease quantity" style="width: 32px; height: 100%; border: 0; border-inline-end: 1px solid #E2DED6; background: transparent; color: #3A362F; font-size: 16px; cursor: pointer">−</button>
+              <span style="flex-grow: 1; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600">{{l.qty}}</span>
+              <button type="button" aria-label="Increase quantity" style="width: 32px; height: 100%; border: 0; border-inline-start: 1px solid #E2DED6; background: transparent; color: #3A362F; font-size: 16px; cursor: pointer">+</button>
+            </div>
+            <span style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: #1B1A17">{{l.total}}</span>
+            <button type="button" aria-label="Remove line" style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border: 0; background: transparent; color: #8F897E; cursor: pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="flex-shrink: 0; padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 10px; border-top: 1px dashed #C4BEB2">
+        <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="color: #625D54">Subtotal · 5 lines · 8 units</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 500">16 750 DA</span></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px">
+          <span style="display: inline-flex; align-items: center; gap: 8px; color: #625D54">Discount <a href="#" style="font-size: 13px; font-weight: 600">Edit · F8</a></span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: #226B40">−250 DA</span>
+        </div>
+        <div aria-live="polite" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-top: 4px; padding: 16px 18px; border-radius: 3px; background: #1E1D1A">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #8F897E">TOTAL TO PAY</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8F897E">CASH · CHANGE ON ENTRY</span>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 42px; font-weight: 600; line-height: 1; letter-spacing: -0.02em; color: #F7F5F0">16 500<span style="margin-inline-start: 8px; font-size: 16px; letter-spacing: 0.04em; color: #E8622C">DA</span></span>
+        </div>
+        <div role="radiogroup" aria-label="Payment method" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #D3CEC4; border-radius: 3px; overflow: hidden">
+          <button type="button" role="radio" aria-checked="true" style="height: 42px; border: 0; background: #1B1A17; color: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Cash</button>
+          <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Card</button>
+          <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">On account</button>
+          <button type="button" role="radio" aria-checked="false" style="height: 42px; border: 0; border-inline-start: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Split</button>
+        </div>
+        <button type="button" style="height: 58px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; cursor: pointer">
+          <span>Take payment</span>
+          <span style="display: inline-flex; align-items: center; gap: 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; letter-spacing: 0">16 500 DA</span><kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.45); border-radius: 2px; padding: 2px 6px">F12</kbd></span>
+        </button>
+      </div>
+    </section>
+  </main>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    const ok = { stockColor: '#26241F', stockNoteColor: '#625D54' };
+    const ok = { stockColor: '#1B1A17', stockNoteColor: '#625D54' };
     const low = { stockColor: '#7F6000', stockNoteColor: '#7F6000' };
     const out = { stockColor: '#A12A20', stockNoteColor: '#A12A20' };
     const exact = '#226B40';
-    const maybe = '#625D54';
+    const maybe = '#7F6000';
     const rows = [
-      { name: 'Front Brake Pad Set', fit: 'Fits Symbol II 1.2 16V · Clio III 1.2', fitColor: exact, brand: 'Bosch', ref: '0 986 494 186', stock: '14', stockNote: 'Shelf B-04', price: '4 850 DA', ...ok },
-      { name: 'Front Brake Pad Set', fit: 'Fits Symbol II · Logan I · Sandero I', fitColor: exact, brand: 'TRW', ref: 'GDB1550', stock: '6', stockNote: 'Shelf B-04', price: '4 200 DA', ...ok },
-      { name: 'Front Brake Pad Set', fit: 'Fits Symbol II · Clio III', fitColor: exact, brand: 'Valeo', ref: '301 474', stock: '3', stockNote: 'Low stock', price: '3 950 DA', ...low },
-      { name: 'Front Brake Pad Set, ceramic', fit: 'Check axle: fits 1.5 dCi models', fitColor: maybe, brand: 'Brembo', ref: 'P 68 033', stock: '0', stockNote: 'Out of stock', price: '6 300 DA', ...out },
-      { name: 'Rear Brake Shoe Set', fit: 'Fits Symbol II · Logan I', fitColor: exact, brand: 'Ferodo', ref: 'FSB596', stock: '9', stockNote: 'Shelf B-06', price: '3 600 DA', ...ok },
-      { name: 'Front Brake Disc (pair)', fit: 'Fits Symbol II · Clio III 1.2', fitColor: exact, brand: 'Brembo', ref: '09.A727.11', stock: '2', stockNote: 'Low stock', price: '9 800 DA', ...low },
-      { name: 'Brake Pad Wear Sensor', fit: 'Fits Symbol II · Clio III', fitColor: exact, brand: 'Febi Bilstein', ref: '176 45', stock: '11', stockNote: 'Drawer D-12', price: '650 DA', ...ok },
-      { name: 'Brake Fluid DOT 4, 1 L', fit: 'Universal', fitColor: maybe, brand: 'Total', ref: 'HBF 4', stock: '38', stockNote: 'Shelf F-01', price: '1 100 DA', ...ok },
-      { name: 'Front Caliper Repair Kit', fit: 'Fits Symbol II · Logan I', fitColor: exact, brand: 'Autofren Seinsa', ref: 'D4-1052', stock: '4', stockNote: 'Shelf B-07', price: '1 850 DA', ...ok },
-      { name: 'Handbrake Cable, rear', fit: 'Fits Symbol II 2013–2019', fitColor: exact, brand: 'Cofle', ref: '10.6863', stock: '5', stockNote: 'Shelf C-02', price: '2 300 DA', ...ok },
-      { name: 'Brake Cleaner Spray, 500 ml', fit: 'Universal', fitColor: maybe, brand: 'Wurth', ref: '0890 108 7', stock: '24', stockNote: 'Counter', price: '850 DA', ...ok }
+      { name: 'Front Brake Pad Set', fit: 'Fits · Symbol II 1.2 16V, Clio III 1.2', fitColor: exact, brand: 'Bosch', ref: '0 986 494 186', stock: '14', stockNote: 'Shelf B-04', price: '4 850', ...ok },
+      { name: 'Front Brake Pad Set', fit: 'Fits · Symbol II, Logan I, Sandero I', fitColor: exact, brand: 'TRW', ref: 'GDB1550', stock: '6', stockNote: 'Shelf B-04', price: '4 200', ...ok },
+      { name: 'Front Brake Pad Set', fit: 'Fits · Symbol II, Clio III', fitColor: exact, brand: 'Valeo', ref: '301 474', stock: '3', stockNote: 'Low stock', price: '3 950', ...low },
+      { name: 'Front Brake Pad Set, ceramic', fit: 'Check · only with 1.5 dCi calipers', fitColor: maybe, brand: 'Brembo', ref: 'P 68 033', stock: '0', stockNote: 'Out of stock', price: '6 300', ...out },
+      { name: 'Front Brake Disc (pair)', fit: 'Fits · Symbol II, Clio III 1.2', fitColor: exact, brand: 'Brembo', ref: '09.A727.11', stock: '2', stockNote: 'Low stock', price: '9 800', ...low },
+      { name: 'Front Brake Disc (pair)', fit: 'Fits · Symbol II 1.2 16V', fitColor: exact, brand: 'TRW', ref: 'DF4265', stock: '5', stockNote: 'Shelf B-05', price: '8 400', ...ok },
+      { name: 'Brake Pad Wear Sensor', fit: 'Fits · Symbol II, Clio III', fitColor: exact, brand: 'Febi Bilstein', ref: '176 45', stock: '11', stockNote: 'Drawer D-12', price: '650', ...ok },
+      { name: 'Front Caliper Repair Kit', fit: 'Fits · Symbol II, Logan I', fitColor: exact, brand: 'Autofren Seinsa', ref: 'D4-1052', stock: '4', stockNote: 'Shelf B-07', price: '1 850', ...ok },
+      { name: 'Front Brake Hose', fit: 'Fits · Symbol II 2013–2019', fitColor: exact, brand: 'Jurid', ref: '172 895J', stock: '6', stockNote: 'Shelf B-08', price: '1 300', ...ok },
+      { name: 'Brake Fluid DOT 4, 1 L', fit: 'Universal', fitColor: '#625D54', brand: 'Total', ref: 'HBF 4', stock: '38', stockNote: 'Shelf F-01', price: '1 100', ...ok },
+      { name: 'Brake Cleaner Spray, 500 ml', fit: 'Universal', fitColor: '#625D54', brand: 'Würth', ref: '0890 108 7', stock: '24', stockNote: 'Counter', price: '850', ...ok }
     ];
-    const results = rows.map((r, i) => ({
-      ...r,
-      selected: i === 0,
-      addable: i !== 0 && r.stock !== '0',
-      unavailable: r.stock === '0',
-      rowBg: i === 0 ? '#FBE9DE' : '',
-      rowRing: i === 0 ? 'inset 3px 0 0 #E8622C' : 'none'
-    }));
-    const lines = [
-      { name: 'Front Brake Pad Set · Bosch', ref: '0 986 494 186', qty: 1, price: '4 850', total: '4 850 DA' },
-      { name: 'Oil Filter · Mann-Filter', ref: 'W 75/3', qty: 1, price: '950', total: '950 DA' },
-      { name: 'Engine Oil 5W-40, 4 L · Total Quartz 9000', ref: '183 199', qty: 1, price: '6 900', total: '6 900 DA' },
-      { name: 'Spark Plug · NGK', ref: 'BKR6E', qty: 4, price: '650', total: '2 600 DA' },
-      { name: 'Air Filter · Mann-Filter', ref: 'C 2201', qty: 1, price: '1 450', total: '1 450 DA' }
-    ].map((l, i) => ({ ...l, rowBg: i === 0 ? '#FCF3EC' : '', ring: i === 0 ? 'inset 3px 0 0 #E8622C' : 'none' }));
+    const cat = (name, count, on) => ({ name, count, bg: on ? '#F7F5F0' : 'transparent', fg: on ? '#1B1A17' : '#3A362F', wt: on ? 600 : 500, bar: on ? '#E8622C' : 'transparent' });
     return {
-      results,
-      lines,
+      cols: 'minmax(0, 1fr) 180px 96px 104px 84px',
+      results: rows.map((r, i) => ({
+        ...r,
+        selected: i === 0,
+        addable: i !== 0 && r.stock !== '0',
+        unavailable: r.stock === '0',
+        rowBg: i === 0 ? '#FBE9DE' : '',
+        rowRing: i === 0 ? 'inset 3px 0 0 #E8622C' : 'none'
+      })),
+      cats: [
+        cat('Brakes', '42', true), cat('Filters', '18'), cat('Ignition', '12'), cat('Engine', '64'),
+        cat('Suspension & steering', '26'), cat('Cooling', '14'), cat('Belts & chains', '9'), cat('Clutch', '7'),
+        cat('Electrical', '31'), cat('Lighting', '22'), cat('Oils & fluids', '16'), cat('Body', '20')
+      ],
+      lines: [
+        { name: 'Front Brake Pad Set · Bosch', ref: '0 986 494 186', unit: '4 850', qty: 1, total: '4 850' },
+        { name: 'Oil Filter · Mann-Filter', ref: 'W 75/3', unit: '950', qty: 1, total: '950' },
+        { name: 'Engine Oil 5W-40, 4 L · Total', ref: 'Q9000', unit: '6 900', qty: 1, total: '6 900' },
+        { name: 'Spark Plug · NGK', ref: 'BKR6E', unit: '650', qty: 4, total: '2 600' },
+        { name: 'Air Filter · Mann-Filter', ref: 'C 2201', unit: '1 450', qty: 1, total: '1 450' }
+      ].map((l, i) => ({ ...l, rowBg: i === 4 ? '#FCF3EC' : '', ring: i === 4 ? 'inset 3px 0 0 #E8622C' : 'none' })),
       keys: [
-        { key: '↑ ↓', label: 'Move' },
-        { key: '↵', label: 'Add to sale' },
+        { key: '↑↓', label: 'Move' },
+        { key: '↵', label: 'Add' },
         { key: 'F2', label: 'Search' },
+        { key: 'F3', label: 'Vehicle' },
         { key: 'F4', label: 'Customer' },
         { key: 'F8', label: 'Discount' },
-        { key: 'F12', label: 'Pay' },
-        { key: 'Esc', label: 'Clear search' }
+        { key: 'F12', label: 'Pay' }
       ]
     };
   }

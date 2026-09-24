@@ -12,137 +12,152 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
 [data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="stock" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="stock" hint-size="1920px,104px"></dc-import>
+  <div style="flex-grow: 1; min-height: 0; display: flex">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; background: #F7F5F0">
 
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Stock</h1>
-          <span style="font-size: 13px; color: #625D54">Quantities physically in this store. Supplier availability lives under Suppliers.</span>
-        </div>
-        <div style="display: flex; gap: 12px">
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-            Stock Count
-          </button>
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
-            Adjust Stock
-          </button>
-        </div>
-      </div>
-
-      <div role="tablist" aria-label="Stock views" style="display: flex; gap: 4px; border-bottom: 1px solid #D3CEC4">
-        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #C8471B; margin-bottom: -1px; background: transparent; color: #A93C15; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current Stock</button>
-        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock Movements</button>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
-        <sc-for list="{{summary}}" as="k" hint-placeholder-count="4">
-          <div style="background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between">
-            <div style="display: flex; flex-direction: column; gap: 4px">
-              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">{{k.label}}</span>
-              <span style="font-size: 24px; font-weight: 600; color: {{k.color}}">{{k.value}}</span>
+      <section aria-label="Stock levels" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
+          <div style="display: flex; align-items: flex-end; gap: 22px">
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Stock</h1>
+            <div role="tablist" aria-label="Stock views" style="display: flex; gap: 18px; padding-bottom: 4px">
+              <button type="button" role="tab" aria-selected="true" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid #E8622C; background: transparent; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current stock</button>
+              <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock movements</button>
             </div>
-            <span style="font-size: 13px; color: #625D54; text-align: end; max-width: 180px">{{k.meta}}</span>
           </div>
-        </sc-for>
-      </div>
-
-      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
-          <div role="radiogroup" aria-label="Stock status" style="display: flex; padding: 3px; gap: 2px; background: #E7E4DD; border: 1px solid #D3CEC4; border-radius: 4px">
-            <button type="button" role="radio" aria-checked="true" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px rgba(27,26,23,0.06); cursor: pointer">All <span style="font-size: 12px; font-weight: 500; color: #625D54">2 418</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C99A0A"></span>Low Stock <span style="font-size: 12px; color: #625D54">23</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #B83227"></span>Out of Stock <span style="font-size: 12px; color: #625D54">6</span></button>
+          <div style="display: flex; align-items: center; gap: 22px; font-size: 13.5px; color: #625D54">
+            <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">2 418</strong> parts</span>
+            <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">31 540</strong> units</span>
+            <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">18 420 000 DA</strong> at cost</span>
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Stock count</button>
           </div>
-          <label style="position: relative; display: flex; align-items: center; width: 460px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search stock</span>
-            <input type="search" placeholder="Product, reference or shelf…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
-          </label>
-          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Category</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Location</span>All shelves<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
 
-        <div role="table" aria-label="Current stock" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-            <span role="columnheader">Product</span>
-            <span role="columnheader">Reference</span>
-            <span role="columnheader">Location</span>
-            <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px; font-weight: 600; color: #A93C15">Quantity <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
-            <span role="columnheader" style="text-align: end">Min. qty</span>
-            <span role="columnheader">Status</span>
-            <span role="columnheader">Last movement</span>
-            <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
+        <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 14px">
+          <div role="radiogroup" aria-label="Stock status" style="display: flex; border: 1px solid #1B1A17; border-radius: 3px; overflow: hidden">
+            <button type="button" role="radio" aria-checked="true" style="height: 42px; padding: 0 14px; border: 0; background: #1B1A17; color: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">All <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #B9B3A7">2 418</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #C99A0A"></span>Low stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">23</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #B83227"></span>Out of stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">6</span></button>
           </div>
-          <sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px">
+          <label style="position: relative; display: flex; align-items: center; width: 400px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D3CEC4; border-radius: 3px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search stock</span>
+            <input type="search" placeholder="Part, reference or shelf…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
+          </label>
+          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #625D54">Shelf</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+        </div>
+
+        <div role="table" aria-label="Stock levels" style="flex-grow: 1; min-height: 0; overflow: hidden">
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+            <span role="columnheader">Part</span><span role="columnheader">Reference</span><span role="columnheader">Shelf</span><span role="columnheader">Level vs. minimum</span><span role="columnheader" style="text-align: end">Qty</span><span role="columnheader" style="text-align: end">Min</span><span role="columnheader">Last movement</span>
+          </div>
+          <sc-for list="{{rows}}" as="r" hint-placeholder-count="14">
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
               <span role="cell" style="min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.name}}</span><span style="color: #625D54"> · {{r.brand}}</span></span>
-              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
-              <span role="cell" style="color: #4F4A42">{{r.loc}}</span>
-              <span role="cell" style="text-align: end; font-size: 15px; font-weight: 600; color: {{r.qtyFg}}">{{r.qty}}</span>
-              <span role="cell" style="text-align: end; color: #625D54">{{r.min}}</span>
-              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600">{{r.b.label}}</span></span>
+              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4F4A42">{{r.loc}}</span>
+              <span role="cell" title="{{r.tip}}" style="position: relative; display: block; height: 10px; background: #E7E4DD">
+                <span style="position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: {{r.fillW}}; background: {{r.fill}}"></span>
+                <span style="position: absolute; inset-inline-start: {{r.minPos}}; top: -4px; bottom: -4px; width: 2px; background: #1B1A17"></span>
+              </span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: {{r.qtyFg}}">{{r.qty}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #625D54">{{r.min}}</span>
               <span role="cell" style="font-size: 13px; color: #625D54; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.last}}</span>
-              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
             </div>
           </sc-for>
         </div>
-
-        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
-          <span>Showing 1–12 of 2 418 · lowest quantity first</span>
-          <div style="display: flex; align-items: center; gap: 6px">
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #8F897E; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #C8471B; background: #FBE9DE; color: #A93C15; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
-            <span style="padding: 0 4px">…</span>
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
-          </div>
+        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
+          <span>All parts · sorted: furthest below minimum first · 1–14 of 2 418</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 2px; height: 12px; background: #1B1A17"></span>minimum quantity</span>
         </div>
       </section>
+
+      <aside aria-label="Movements for the selected part" style="min-height: 0; background: #FBF9F4; border-inline-start: 1px solid #D3CEC4; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #625D54">STOCK CARD</span>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 22px; font-weight: 700; color: #1B1A17">Oil Filter · Mann-Filter</span>
+          <span style="display: flex; gap: 8px; align-items: center"><span style="padding: 2px 7px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">W 75/3</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #625D54">Shelf F-02</span></span>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 16px; padding: 16px 0; border-top: 1px solid #1B1A17; border-bottom: 1px solid #D3CEC4">
+          <span style="font-family: Archivo, sans-serif; font-size: 64px; font-weight: 700; line-height: 0.85; letter-spacing: -0.03em; color: #7F6000">2</span>
+          <span style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px; font-size: 14px; color: #4F4A42"><span>on hand, minimum 10</span><span>≈ 3 days at this week’s pace</span></span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <button type="button" style="height: 42px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Adjust quantity</button>
+          <button type="button" style="height: 42px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Add to purchase</button>
+        </div>
+        <div role="table" aria-label="Movements" style="display: flex; flex-direction: column">
+          <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 32px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">
+            <span role="columnheader">DATE</span><span role="columnheader">MOVEMENT</span><span role="columnheader" style="text-align: end">±</span><span role="columnheader" style="text-align: end">BAL.</span>
+          </div>
+          <sc-for list="{{moves}}" as="m" hint-placeholder-count="9">
+            <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 40px; border-bottom: 1px dashed #DDD8CE; font-size: 13.5px">
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">{{m.date}}</span>
+              <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{m.what}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">{{m.doc}}</span></span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: {{m.fg}}">{{m.delta}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1B1A17">{{m.bal}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </aside>
     </main>
+    <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
   </div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    const B = {
-      ok: { label: 'In stock', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
-      low: { label: 'Low Stock', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' },
-      out: { label: 'Out of Stock', bg: '#F6DEDA', fg: '#A12A20', dot: '#B83227' }
+    const r = (name, brand, ref, loc, qty, min, last) => {
+      const scale = Math.max(min * 2, qty, 1);
+      const out = qty === 0;
+      return {
+        name, brand, ref, loc, qty: String(qty), min: String(min), last,
+        fillW: Math.round(qty / scale * 100) + '%',
+        minPos: 'calc(' + Math.round(min / scale * 100) + '% - 1px)',
+        fill: out ? '#B83227' : (qty <= min ? '#C99A0A' : '#2E7D4F'),
+        qtyFg: out ? '#A12A20' : (qty <= min ? '#7F6000' : '#1B1A17'),
+        tip: qty + ' on hand, minimum ' + min,
+        bg: '', ring: 'none'
+      };
     };
-    const r = (name, brand, ref, loc, qty, min, b, last) => ({ name, brand, ref, loc, qty, min, b, last, qtyFg: b === B.out ? '#A12A20' : (b === B.low ? '#7F6000' : '#26241F') });
+    const rows = [
+      r('Spark Plug', 'NGK', 'BKR6E', 'D-03', 0, 20, 'Sale S-24062 · 23 Sep'),
+      r('Front Shock Absorber', 'Sachs', '314 876', 'E-11', 0, 4, 'Sale S-24088 · today'),
+      r('Oil Filter', 'Mann-Filter', 'W 75/3', 'F-02', 2, 10, 'Sale S-24091 · today'),
+      r('Wiper Blade 600 mm', 'Valeo', '574 283', 'H-01', 3, 12, 'Sale S-24066 · 23 Sep'),
+      r('Cabin Filter', 'Bosch', '1 987 432 120', 'F-04', 2, 6, 'Sale S-24040 · 23 Sep'),
+      r('Timing Belt Kit', 'Gates', 'K015603XS', 'C-08', 1, 3, 'Sale S-24079 · today'),
+      r('Brake Disc (pair)', 'Brembo', '09.A727.11', 'B-05', 2, 4, 'Sale S-24070 · today'),
+      r('Headlight Bulb H4', 'Osram', '64193', 'L-02', 5, 10, 'Sale S-24058 · 23 Sep'),
+      r('Brake Master Cylinder', 'Bosch', '0 204 123 715', 'B-09', 1, 2, 'Purchase P-1176 · 17 Sep'),
+      r('Air Filter', 'Mann-Filter', 'C 2201', 'F-03', 4, 8, 'Return R-0418 · today'),
+      r('Front Brake Pad Set', 'Valeo', '301 474', 'B-04', 3, 4, 'Count · 20 Sep'),
+      r('Glow Plug', 'Bosch', '0 250 202 132', 'D-05', 3, 4, 'Sale S-23960 · 19 Sep'),
+      r('Coolant G12, 1 L', 'Total', 'GLACELF', 'F-06', 6, 8, 'Sale S-24033 · 22 Sep'),
+      r('Serpentine Belt', 'Gates', '6PK1070', 'C-02', 2, 3, 'Sale S-23941 · 19 Sep')
+    ];
+    rows[2].bg = '#FBE9DE';
+    rows[2].ring = 'inset 3px 0 0 #E8622C';
+    const mv = (date, what, doc, delta, bal) => ({ date, what, doc, delta, bal, fg: delta.startsWith('+') ? '#226B40' : '#26241F' });
     return {
-      cols: 'minmax(0, 1fr) 170px 120px 110px 90px 140px 250px 40px',
-      summary: [
-        { label: 'Products tracked', value: '2 418', meta: '31 540 units on hand', color: '#1B1A17' },
-        { label: 'Stock value at cost', value: '18 420 000 DA', meta: 'Weighted average cost', color: '#1B1A17' },
-        { label: 'Low Stock', value: '23', meta: 'At or below minimum', color: '#7F6000' },
-        { label: 'Out of Stock', value: '6', meta: '2 sold in the last 7 days', color: '#A12A20' }
-      ],
-      rows: [
-        r('Spark Plug', 'NGK', 'BKR6E', 'D-03', '0', '20', B.out, 'Sale S-24062 · 23 Sep, 11:40'),
-        r('Front Shock Absorber', 'Sachs', '314 876', 'E-11', '0', '4', B.out, 'Sale S-24017 · 22 Sep, 16:05'),
-        r('Front Brake Pad Set, ceramic', 'Brembo', 'P 68 033', 'B-04', '0', '2', B.out, 'Sale S-23988 · 21 Sep, 10:12'),
-        r('Timing Belt Kit', 'Gates', 'K015603XS', 'C-08', '1', '3', B.low, 'Sale S-24079 · 24 Sep, 12:31'),
-        r('Brake Master Cylinder', 'Bosch', '0 204 123 715', 'B-09', '1', '2', B.low, 'Purchase P-1176 · 17 Sep'),
-        r('Oil Filter', 'Mann-Filter', 'W 75/3', 'F-02', '2', '10', B.low, 'Sale S-24091 · 24 Sep, 17:04'),
-        r('Front Brake Disc (pair)', 'Brembo', '09.A727.11', 'B-05', '2', '4', B.low, 'Sale S-24070 · 24 Sep, 10:02'),
-        r('Wiper Blade 600 mm', 'Valeo', '574 283', 'H-01', '3', '12', B.low, 'Sale S-24066 · 23 Sep, 17:55'),
-        r('Front Brake Pad Set', 'Valeo', '301 474', 'B-04', '3', '4', B.low, 'Adjustment · 20 Sep · Amina B.'),
-        r('Front Caliper Repair Kit', 'Autofren Seinsa', 'D4-1052', 'B-07', '4', '2', B.ok, 'Purchase P-1180 · 21 Sep'),
-        r('Rear Brake Drum', 'TRW', 'DB4413', 'B-06', '4', '2', B.ok, 'Purchase P-1180 · 21 Sep'),
-        r('Handbrake Cable, rear', 'Cofle', '10.6863', 'C-02', '5', '2', B.ok, 'Return R-0412 · 22 Sep'),
-        r('Front Brake Pad Set', 'TRW', 'GDB1550', 'B-04', '6', '4', B.ok, 'Sale S-24039 · 23 Sep, 09:15')
+      cols: 'minmax(0, 1fr) 150px 60px 170px 44px 40px 190px',
+      rows,
+      moves: [
+        mv('24 Sep 17:04', 'Sale', 'S-24091', '−1', '2'),
+        mv('24 Sep 11:20', 'Sale', 'S-24071', '−2', '3'),
+        mv('23 Sep 16:45', 'Sale', 'S-24060', '−6', '5'),
+        mv('22 Sep 10:02', 'Customer return', 'R-0414', '+6', '11'),
+        mv('21 Sep 15:31', 'Sale', 'S-23990', '−6', '5'),
+        mv('20 Sep 18:10', 'Count adjustment', 'Amina B.', '−1', '11'),
+        mv('18 Sep 12:05', 'Sale', 'S-23920', '−8', '12'),
+        mv('16 Sep 09:40', 'Sale', 'S-23870', '−4', '20'),
+        mv('15 Sep 14:22', 'Purchase received', 'P-1175', '+24', '24')
       ]
     };
   }

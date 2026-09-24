@@ -88,13 +88,6 @@
       "x": 4000,
       "y": 5800
     },
-    "Sidebar.dc.html": {
-      "h": 1080,
-      "title": "Shell · Sidebar",
-      "w": 232,
-      "x": 4000,
-      "y": 0
-    },
     "Stock.dc.html": {
       "h": 1080,
       "is_interactive": true,
@@ -111,13 +104,6 @@
       "x": 2000,
       "y": 4600
     },
-    "TopBar.dc.html": {
-      "h": 60,
-      "title": "Shell · Top Bar",
-      "w": 1688,
-      "x": 4312,
-      "y": 0
-    },
     "Users.dc.html": {
       "h": 1080,
       "is_interactive": true,
@@ -125,6 +111,20 @@
       "w": 1920,
       "x": 2000,
       "y": 5800
+    },
+    "Header.dc.html": {
+      "x": 4000,
+      "y": 0,
+      "w": 1920,
+      "h": 104,
+      "title": "Shell · Header + index tabs"
+    },
+    "Ticket.dc.html": {
+      "x": 4000,
+      "y": 224,
+      "w": 96,
+      "h": 976,
+      "title": "Shell · Ticket"
     }
   },
   "createdOnFiles": {
@@ -156,8 +156,8 @@
   "order": [
     "Main.dc.html",
     "Components.dc.html",
-    "Sidebar.dc.html",
-    "TopBar.dc.html",
+    "Header.dc.html",
+    "Ticket.dc.html",
     "Dashboard.dc.html",
     "Pos.dc.html",
     "Sales.dc.html",

@@ -12,131 +12,132 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
+nav a[aria-current="false"]:hover{background:#F1EDE5}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="settings" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="settings" hint-size="1920px,104px"></dc-import>
+  <div style="flex-grow: 1; min-height: 0; display: flex">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: 320px minmax(0, 1fr); background: #F7F5F0">
+      <nav aria-label="Settings sections" style="min-height: 0; background: #EFECE5; border-inline-end: 1px solid #D3CEC4; padding: 24px 0; display: flex; flex-direction: column">
+        <h1 style="margin: 0 24px 6px; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Settings</h1>
+        <span style="margin: 0 24px 18px; font-size: 13px; color: #625D54">How AutoPartsOS behaves on this computer and in this store.</span>
+        <sc-for list="{{sections}}" as="s" hint-placeholder-count="8">
+          <a href="#" aria-current="{{s.cur}}" style="position: relative; display: grid; grid-template-columns: 34px minmax(0, 1fr); align-items: center; min-height: 56px; padding: 0 24px; border-top: 1px solid #D3CEC4; background: {{s.bg}}; color: #26241F">
+            <span style="position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 3px; background: {{s.bar}}"></span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{s.numFg}}">{{s.n}}</span>
+            <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: {{s.wt}}; color: #1B1A17">{{s.name}}</span><span style="font-size: 12.5px; color: #625D54">{{s.hint}}</span></span>
+          </a>
+        </sc-for>
+      </nav>
 
-      <div style="display: flex; flex-direction: column; gap: 4px">
-        <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Settings</h1>
-        <span style="font-size: 13px; color: #625D54">How AutoPartsOS behaves on this computer and in this store.</span>
-      </div>
-
-      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: grid; grid-template-columns: 280px minmax(0, 1fr)">
-        <nav aria-label="Settings sections" style="background: #EFECE5; border-inline-end: 1px solid #D3CEC4; padding: 16px 12px; display: flex; flex-direction: column; gap: 2px">
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>General</a>
-          <a href="#" aria-current="page" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; background: #FBE9DE; color: #A93C15; font-size: 15px; font-weight: 600">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>Language &amp; Region</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>POS</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"></path><rect x="6" y="14" width="12" height="8" rx="1"></rect></svg>Receipts</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg>Inventory</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>Backup &amp; Data</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"></path></svg>AI / Integrations</a>
-          <a href="#" style="display: flex; align-items: center; gap: 12px; height: 42px; padding: 0 12px; border-radius: 3px; color: #26241F; font-size: 15px; font-weight: 500">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 0 0 20z" fill="#625D54"></path></svg>Appearance</a>
-        </nav>
-
-        <div style="min-width: 0; min-height: 0; display: flex; flex-direction: column">
-          <div style="flex-grow: 1; min-height: 0; overflow: hidden; padding: 28px 32px; display: flex; flex-direction: column; gap: 28px; max-width: 1080px">
+      <div style="min-width: 0; min-height: 0; display: flex; flex-direction: column">
+        <div style="flex-grow: 1; min-height: 0; overflow: hidden; padding: 28px 40px; display: flex; flex-direction: column; gap: 28px; max-width: 1180px">
+          <div style="display: flex; align-items: flex-end; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #1B1A17">
+            <span style="font-family: Archivo, sans-serif; font-size: 48px; font-weight: 700; line-height: 0.85; letter-spacing: -0.03em; color: #E8622C">02</span>
             <div style="display: flex; flex-direction: column; gap: 4px">
-              <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 21px; font-weight: 700; letter-spacing: -0.005em; color: #1B1A17">Language &amp; Region</h2>
-              <span style="font-size: 13px; color: #625D54">Applies to this computer. Each user can override the interface language from their account menu.</span>
+              <h2 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 24px; font-weight: 700; color: #1B1A17">Language &amp; Region</h2>
+              <span style="font-size: 13.5px; color: #625D54">Applies to this computer. Each person can override the interface language from their account menu.</span>
             </div>
-
-            <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
-              <legend style="padding: 0 0 10px; font-size: 13px; font-weight: 600; color: #26241F">Interface language</legend>
-              <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
-                <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1.5px solid #C8471B; border-radius: 4px; background: #FCF3EC; box-shadow: 0 0 0 3px rgba(200,71,27,0.12); cursor: pointer">
-                  <span style="display: flex; align-items: center; gap: 10px">
-                    <input type="radio" name="lang" checked style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
-                    <span style="font-size: 15px; font-weight: 600; color: #1B1A17">English</span>
-                    <span style="margin-inline-start: auto; font-size: 12px; font-weight: 500; color: #625D54">LTR</span>
-                  </span>
-                  <span style="display: flex; justify-content: space-between; padding: 10px 12px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 3px; font-size: 14px"><span style="color: #625D54">Total</span><span style="font-weight: 600">16 500 DA</span></span>
-                </label>
-                <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid #D3CEC4; border-radius: 4px; background: #F7F5F0; cursor: pointer">
-                  <span style="display: flex; align-items: center; gap: 10px">
-                    <input type="radio" name="lang" style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
-                    <span lang="fr" style="font-size: 15px; font-weight: 600; color: #1B1A17">Français</span>
-                    <span style="margin-inline-start: auto; font-size: 12px; font-weight: 500; color: #625D54">LTR</span>
-                  </span>
-                  <span lang="fr" style="display: flex; justify-content: space-between; padding: 10px 12px; background: #EFECE5; border: 1px solid #D3CEC4; border-radius: 3px; font-size: 14px"><span style="color: #625D54">Total</span><span style="font-weight: 600">16 500,00 DA</span></span>
-                </label>
-                <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid #D3CEC4; border-radius: 4px; background: #F7F5F0; cursor: pointer">
-                  <span style="display: flex; align-items: center; gap: 10px">
-                    <input type="radio" name="lang" style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
-                    <span lang="ar" dir="rtl" style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; font-weight: 600; color: #1B1A17">العربية</span>
-                    <span style="margin-inline-start: auto; font-size: 12px; font-weight: 500; color: #625D54">RTL · layout mirrors</span>
-                  </span>
-                  <span lang="ar" dir="rtl" style="display: flex; justify-content: space-between; padding: 10px 12px; background: #EFECE5; border: 1px solid #D3CEC4; border-radius: 3px; font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif; font-size: 14px"><span style="color: #625D54">المجموع</span><span style="font-weight: 600"><bdi dir="ltr">16 500</bdi> دج</span></span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px">
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="receiptLang" style="font-size: 13px; font-weight: 600; color: #26241F">Receipt language</label>
-                <button id="receiptLang" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">French and Arabic (bilingual)<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-                <span style="font-size: 13px; color: #625D54">Printed receipts and invoices can differ from the screen language.</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="currency" style="font-size: 13px; font-weight: 600; color: #26241F">Currency</label>
-                <input id="currency" type="text" value="Algerian dinar (DZD) · shown as DA" readonly style="height: 42px; box-sizing: border-box; padding: 0 12px; border: 1px solid #D3CEC4; border-radius: 3px; background: #EFECE5; font-family: inherit; font-size: 15px; color: #4F4A42">
-                <span style="font-size: 13px; color: #625D54">Set when the store was created.</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="amounts" style="font-size: 13px; font-weight: 600; color: #26241F">Amounts</label>
-                <button id="amounts" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1.5px solid #C8471B; border-radius: 3px; background: #F7F5F0; box-shadow: 0 0 0 3px rgba(200,71,27,0.14); font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">Whole dinars · 16 500 DA<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-                <span style="font-size: 13px; color: #625D54">Thousands are grouped with a narrow no-break space in every language.</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="dateFmt" style="font-size: 13px; font-weight: 600; color: #26241F">Date format</label>
-                <button id="dateFmt" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">24/09/2026 · day / month / year<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="weekStart" style="font-size: 13px; font-weight: 600; color: #26241F">First day of the week</label>
-                <button id="weekStart" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">Sunday<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 6px">
-                <label for="timeFmt" style="font-size: 13px; font-weight: 600; color: #26241F">Time format</label>
-                <button id="timeFmt" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">24-hour · 17:04<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-              </div>
-            </div>
-
-            <label style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: #EFECE5; border: 1px solid #D3CEC4; border-radius: 4px; cursor: pointer">
-              <input type="checkbox" checked style="width: 18px; height: 18px; margin: 2px 0 0; accent-color: #C8471B">
-              <span style="display: flex; flex-direction: column; gap: 2px">
-                <span style="font-size: 15px; font-weight: 500">Search across languages</span>
-                <span style="font-size: 13px; color: #625D54">“plaquette”, “brake pad” and “وسادة فرامل” find the same products.</span>
-              </span>
-            </label>
           </div>
 
-          <div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 0 32px; background: #EFECE5; border-top: 1px solid #D3CEC4">
-            <span style="font-size: 13px; color: #625D54; margin-inline-end: auto">1 unsaved change</span>
-            <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Discard</button>
-            <button type="button" style="height: 44px; padding: 0 18px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Save changes</button>
+          <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 10px">
+            <legend style="padding: 0 0 10px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">Interface language</legend>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+              <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 2px solid #1B1A17; border-radius: 3px; background: #FFFFFF; cursor: pointer">
+                <span style="display: flex; align-items: center; gap: 10px">
+                  <input type="radio" name="lang" checked style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
+                  <span style="font-size: 15px; font-weight: 600; color: #1B1A17">English</span>
+                  <span style="margin-inline-start: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #625D54">LTR</span>
+                </span>
+                <span style="display: flex; justify-content: space-between; padding: 10px 12px; background: #EFECE5; border-radius: 2px; font-size: 14px"><span style="color: #625D54">Total</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">16 500 DA</span></span>
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; cursor: pointer">
+                <span style="display: flex; align-items: center; gap: 10px">
+                  <input type="radio" name="lang" style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
+                  <span lang="fr" style="font-size: 15px; font-weight: 600; color: #1B1A17">Français</span>
+                  <span style="margin-inline-start: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #625D54">LTR</span>
+                </span>
+                <span lang="fr" style="display: flex; justify-content: space-between; padding: 10px 12px; background: #EFECE5; border-radius: 2px; font-size: 14px"><span style="color: #625D54">Total</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">16 500,00 DA</span></span>
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 12px; padding: 16px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; cursor: pointer">
+                <span style="display: flex; align-items: center; gap: 10px">
+                  <input type="radio" name="lang" style="width: 18px; height: 18px; margin: 0; accent-color: #C8471B">
+                  <span lang="ar" dir="rtl" style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; font-weight: 600; color: #1B1A17">العربية</span>
+                  <span style="margin-inline-start: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #625D54">RTL · MIRRORED</span>
+                </span>
+                <span lang="ar" dir="rtl" style="display: flex; justify-content: space-between; padding: 10px 12px; background: #EFECE5; border-radius: 2px; font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif; font-size: 14px"><span style="color: #625D54">المجموع</span><span style="font-weight: 600"><bdi dir="ltr" style="font-family: 'IBM Plex Mono', monospace">16 500</bdi> دج</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="receiptLang" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">Receipt language</label>
+              <button id="receiptLang" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #FFFFFF; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">French and Arabic, side by side<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+              <span style="font-size: 13px; color: #625D54">Receipts and invoices can use a different language from the screen.</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="currency" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">Currency</label>
+              <input id="currency" type="text" value="Algerian dinar (DZD) · shown as DA" readonly style="height: 42px; box-sizing: border-box; padding: 0 12px; border: 1px solid #D3CEC4; border-radius: 3px; background: #EFECE5; font-family: inherit; font-size: 15px; color: #4F4A42">
+              <span style="font-size: 13px; color: #625D54">Set when the store was created.</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="amounts" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">Amounts</label>
+              <button id="amounts" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1.5px solid #C8471B; border-radius: 3px; background: #FFFFFF; box-shadow: 0 0 0 3px rgba(200,71,27,0.14); font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">Whole dinars · 16 500 DA<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+              <span style="font-size: 13px; color: #625D54">Thousands are grouped with a narrow no-break space, so Arabic never splits a number.</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="dateFmt" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">Date format</label>
+              <button id="dateFmt" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #FFFFFF; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">24/09/2026 · day / month / year<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="weekStart" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">First day of the week</label>
+              <button id="weekStart" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #FFFFFF; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">Sunday<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="timeFmt" style="font-size: 13.5px; font-weight: 600; color: #1B1A17">Time format</label>
+              <button id="timeFmt" type="button" style="height: 42px; box-sizing: border-box; padding: 0 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #D3CEC4; border-radius: 3px; background: #FFFFFF; font-family: inherit; font-size: 15px; color: #26241F; cursor: pointer">24-hour · 17:04<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            </div>
           </div>
+
+          <label style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: #EFECE5; border-inline-start: 3px solid #1B1A17; cursor: pointer">
+            <input type="checkbox" checked style="width: 18px; height: 18px; margin: 2px 0 0; accent-color: #C8471B">
+            <span style="display: flex; flex-direction: column; gap: 2px">
+              <span style="font-size: 15px; font-weight: 600">Search across languages</span>
+              <span style="font-size: 13px; color: #625D54">“plaquette”, “brake pad” and “وسادة فرامل” find the same parts.</span>
+            </span>
+          </label>
         </div>
-      </section>
+
+        <div style="height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 0 40px; background: #EFECE5; border-top: 1px solid #D3CEC4">
+          <span style="margin-inline-end: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #7F6000">1 UNSAVED CHANGE</span>
+          <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Discard</button>
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Save changes</button>
+        </div>
+      </div>
     </main>
+    <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
   </div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    return {};
+    const s = (n, name, hint, on) => ({ n, name, hint, cur: on ? 'page' : 'false', bg: on ? '#F7F5F0' : 'transparent', bar: on ? '#E8622C' : 'transparent', numFg: on ? '#C8471B' : '#8F897E', wt: on ? 600 : 500 });
+    return {
+      sections: [
+        s('01', 'General', 'Store name, address, tax numbers'),
+        s('02', 'Language & Region', 'English · DZD · 24-hour', true),
+        s('03', 'POS', 'Shortcuts, rounding, discounts'),
+        s('04', 'Receipts', 'Printer, layout, footer text'),
+        s('05', 'Inventory', 'Minimums, shelves, units'),
+        s('06', 'Backup & Data', 'Last backup today 13:40'),
+        s('07', 'AI / Integrations', 'Invoice reading, catalogs'),
+        s('08', 'Appearance', 'Density, text size, theme')
+      ]
+    };
   }
 }
 </script>

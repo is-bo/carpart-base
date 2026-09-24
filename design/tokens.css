@@ -15,8 +15,8 @@
   --ap-row-hover: #F1EDE5;
 
   /* Graphite */
-  --ap-rail: #1E1D1A;          /* sidebar, till display, POS header */
-  --ap-rail-active: #2D2A25;
+  --ap-rail: #1E1D1A;          /* top bar, till display, ticket header */
+  --ap-rail-active: #2D2A25;   /* search field on the top bar */
   --ap-rail-line: #2E2C28;
   --ap-rail-text: #B9B3A7;
   --ap-ink: #1B1A17;           /* headings, selected segment */
@@ -71,8 +71,9 @@
   --ap-shadow-popover: 0 10px 28px rgba(27, 26, 23, 0.14);
 
   /* Metrics */
-  --ap-sidebar-w: 232px; --ap-sidebar-w-collapsed: 68px;
-  --ap-topbar-h: 60px;
+  --ap-topbar-h: 56px; --ap-tabs-h: 48px;     /* header = 104px */
+  --ap-ticket-w: 96px;                        /* sale ticket strip */
+  --ap-detail-w: 520px;                       /* list + detail pane (470–560) */
   --ap-button-h: 44px; --ap-button-pay-h: 58px;
   --ap-input-h: 42px; --ap-search-h: 48px; --ap-search-pos-h: 52px;
   --ap-grid-header-h: 44px; --ap-grid-row-h: 50px; --ap-grid-row-compact-h: 44px;

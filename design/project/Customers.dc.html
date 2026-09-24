@@ -12,126 +12,157 @@
 <style>
 body{margin:0;background:#E7E4DD}
 a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
-button{transition:background-color .12s,border-color .12s,color .12s}
+button,a{transition:background-color .12s,border-color .12s,color .12s}
 [data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
-  <dc-import name="Sidebar" active="customers" hint-size="232px,1080px"></dc-import>
-  <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
-    <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
-    <main style="flex-grow: 1; min-height: 0; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+  <dc-import name="Header" active="customers" hint-size="1920px,104px"></dc-import>
+  <div style="flex-grow: 1; min-height: 0; display: flex">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 560px; background: #F7F5F0">
 
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Customers</h1>
-          <span style="font-size: 13px; color: #625D54">1 204 customers · 86 with an open balance</span>
+      <section aria-label="Customers" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Customers</h1>
+            <span style="font-size: 13.5px; color: #625D54">1 204 customers · <span style="color: #2D5B86; font-weight: 600">1 284 900 DA</span> owed by 86 of them</span>
+          </div>
+          <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add customer</button>
         </div>
-        <div style="display: flex; gap: 12px">
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
-            Record Payment
-          </button>
-          <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
-            Add Customer
-          </button>
-        </div>
-      </div>
 
-      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
-          <label style="position: relative; display: flex; align-items: center; width: 480px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 14px">
+          <label style="position: relative; display: flex; align-items: center; width: 400px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D3CEC4; border-radius: 3px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search customers</span>
-            <input type="search" placeholder="Name, phone, vehicle plate…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
+            <input type="search" placeholder="Name, phone, plate number…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
-          <div role="radiogroup" aria-label="Balance" style="display: flex; padding: 3px; gap: 2px; background: #E7E4DD; border: 1px solid #D3CEC4; border-radius: 4px">
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">All <span style="font-size: 12px; color: #625D54">1 204</span></button>
-            <button type="button" role="radio" aria-checked="true" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px rgba(27,26,23,0.06); cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2D5B86"></span>With balance <span style="font-size: 12px; font-weight: 500; color: #625D54">86</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer">No balance <span style="font-size: 12px; color: #625D54">1 118</span></button>
+          <div role="radiogroup" aria-label="Balance" style="display: flex; border: 1px solid #1B1A17; border-radius: 3px; overflow: hidden">
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; border: 0; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">All <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">1 204</span></button>
+            <button type="button" role="radio" aria-checked="true" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #1B1A17; color: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #7FA6CC"></span>Owes money <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #B9B3A7">86</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Settled <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">1 118</span></button>
           </div>
-          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Type</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-          <span style="flex-grow: 1"></span>
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
-            <span style="font-size: 15px; font-weight: 600; color: #2D5B86">1 284 900 DA</span>
-            <span style="font-size: 12px; color: #625D54">Total owed by these customers</span>
-          </div>
+          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #625D54">Type</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
 
         <div role="table" aria-label="Customers" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-            <span role="columnheader">Customer</span>
-            <span role="columnheader">Phone</span>
-            <span role="columnheader">City</span>
-            <span role="columnheader">Last purchase</span>
-            <span role="columnheader" style="text-align: end">Purchases · 12 months</span>
-            <span role="columnheader" aria-sort="descending" style="display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px; font-weight: 600; color: #A93C15">Current Balance <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
-            <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+            <span role="columnheader">Customer</span><span role="columnheader">Phone</span><span role="columnheader">Last visit</span><span role="columnheader">Credit used</span><span role="columnheader" aria-sort="descending" style="text-align: end; color: #C8471B">Balance DA ↓</span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="13">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 56px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}">
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 56px; padding: 0 12px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
               <span role="cell" style="display: flex; align-items: center; gap: 12px; min-width: 0">
-                <span style="width: 34px; height: 34px; flex-shrink: 0; border-radius: 3px; background: #EFECE5; border: 1px solid #D3CEC4; box-sizing: border-box; color: #3A362F; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600">{{r.initials}}</span>
+                <span style="width: 34px; height: 34px; flex-shrink: 0; box-sizing: border-box; border-radius: 3px; background: #EFECE5; border: 1px solid #D3CEC4; color: #3A362F; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800">{{r.initials}}</span>
                 <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
                   <span style="font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.name}}</span>
-                  <span style="font-size: 12px; color: #625D54">{{r.type}}</span>
+                  <span style="font-size: 12.5px; color: #625D54">{{r.type}} · {{r.city}}</span>
                 </span>
               </span>
-              <span role="cell" style="color: #4F4A42">{{r.phone}}</span>
-              <span role="cell" style="color: #4F4A42">{{r.city}}</span>
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4F4A42">{{r.phone}}</span>
               <span role="cell" style="color: #4F4A42">{{r.last}}</span>
-              <span role="cell" style="text-align: end">{{r.spent}}</span>
-              <span role="cell" style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
-                <span style="font-size: 15px; font-weight: 600; color: {{r.balFg}}">{{r.balance}}</span>
-                <span style="font-size: 12px; color: #625D54">{{r.balNote}}</span>
+              <span role="cell" title="{{r.limitTip}}" style="display: flex; align-items: center; gap: 8px">
+                <span style="flex-grow: 1; height: 8px; background: #E7E4DD"><span style="display: block; height: 8px; width: {{r.usedW}}; background: {{r.usedFill}}"></span></span>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54; width: 34px; text-align: end">{{r.usedPct}}</span>
               </span>
-              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: #2D5B86">{{r.balance}}</span>
             </div>
           </sc-for>
         </div>
-
-        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
-          <span>Showing 1–13 of 86 with balance · largest first</span>
-          <div style="display: flex; align-items: center; gap: 6px">
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #8F897E; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #C8471B; background: #FBE9DE; color: #A93C15; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
-            <span style="padding: 0 4px">…</span>
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
-          </div>
+        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
+          <span>1–13 of 86 · largest balance first</span>
+          <span style="display: flex; gap: 6px"><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #8F897E; font-family: inherit; font-size: 13px">Previous</button><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #1B1A17; background: transparent; color: #1B1A17; font-family: inherit; font-size: 13px; font-weight: 600">Next</button></span>
         </div>
       </section>
+
+      <aside aria-label="Account statement" style="min-height: 0; background: #FBF9F4; border-inline-start: 1px solid #D3CEC4; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; align-items: center; gap: 14px">
+          <span style="width: 48px; height: 48px; border-radius: 3px; background: #DEE7F1; color: #2D5B86; display: flex; align-items: center; justify-content: center; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 16px; font-weight: 800">GB</span>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+            <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 22px; font-weight: 700; color: #1B1A17">Garage Benali</span>
+            <span style="font-size: 13.5px; color: #625D54">Garage · Blida · <span style="font-family: 'IBM Plex Mono', monospace">0550 12 34 56</span> · since 2019</span>
+          </div>
+          <button type="button" style="height: 32px; padding: 0 10px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Edit</button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px 0; border-top: 1px solid #1B1A17; border-bottom: 1px solid #D3CEC4">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between">
+            <span style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">OWES THE STORE</span><span style="font-family: Archivo, sans-serif; font-size: 48px; font-weight: 700; line-height: 0.9; letter-spacing: -0.03em; color: #2D5B86">48 500<span style="margin-inline-start: 8px; font-size: 20px; letter-spacing: 0">DA</span></span></span>
+            <span style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 13px; color: #625D54"><span>Limit <strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">100 000</strong></span><span>Last paid 12 Sep</span></span>
+          </div>
+          <span style="position: relative; display: block; height: 10px; background: #E7E4DD"><span style="display: block; height: 10px; width: 48.5%; background: #2D5B86"></span></span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px">
+          <button type="button" style="height: 46px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Record a payment</button>
+          <button type="button" style="height: 46px; padding: 0 16px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Print statement</button>
+        </div>
+
+        <div role="table" aria-label="Statement" style="display: flex; flex-direction: column">
+          <div role="row" style="display: grid; grid-template-columns: 60px minmax(0, 1fr) 76px 76px 80px; column-gap: 10px; align-items: center; height: 32px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">
+            <span role="columnheader">DATE</span><span role="columnheader">DOCUMENT</span><span role="columnheader" style="text-align: end">SOLD</span><span role="columnheader" style="text-align: end">PAID</span><span role="columnheader" style="text-align: end">BALANCE</span>
+          </div>
+          <sc-for list="{{statement}}" as="s" hint-placeholder-count="8">
+            <div role="row" style="display: grid; grid-template-columns: 60px minmax(0, 1fr) 76px 76px 80px; column-gap: 10px; align-items: center; height: 40px; border-bottom: 1px dashed #DDD8CE; font-size: 13.5px">
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">{{s.date}}</span>
+              <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 600">{{s.doc}}</span> <span style="color: #625D54">{{s.what}}</span></span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace">{{s.debit}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; color: #226B40">{{s.credit}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #2D5B86">{{s.bal}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </aside>
     </main>
+    <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
   </div>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
 class Component extends DCLogic {
   renderVals() {
-    const c = (name, type, phone, city, last, spent, balance, balNote) => ({
-      name, type, phone, city, last, spent, balance, balNote,
-      initials: name.split(/[\s-]+/).filter((w) => /^[A-ZÀ-Ý]/.test(w)).slice(0, 2).map((w) => w[0]).join(''),
-      balFg: balance === '—' ? '#8F897E' : '#2D5B86',
-      bg: ''
-    });
+    const c = (name, type, city, phone, last, bal, limit) => {
+      const pct = Math.min(100, Math.round(bal / limit * 100));
+      return {
+        name, type, city, phone, last,
+        balance: bal.toLocaleString('fr-FR').replace(/\s/g, ' '),
+        initials: name.split(/[\s-]+/).filter((w) => /^[A-ZÀ-Ý]/.test(w)).slice(0, 2).map((w) => w[0]).join(''),
+        usedW: pct + '%', usedPct: pct + '%',
+        usedFill: pct >= 80 ? '#C99A0A' : '#2D5B86',
+        limitTip: 'Limit ' + limit.toLocaleString('fr-FR') + ' DA',
+        bg: '', ring: 'none'
+      };
+    };
     const rows = [
-      c('Transport Meziane SARL', 'Fleet · 14 vehicles', '0661 48 22 90', 'Blida', '24 Sep 2026', '1 842 000 DA', '212 300 DA', 'Limit 250 000 DA'),
-      c('Garage Benali', 'Garage', '0550 12 34 56', 'Blida', '24 Sep 2026', '1 126 400 DA', '48 500 DA', 'Last paid 12 Sep'),
-      c('Garage Ouled Yaïch', 'Garage', '0772 90 14 03', 'Ouled Yaïch', '24 Sep 2026', '864 200 DA', '41 200 DA', 'Last paid 03 Sep'),
-      c('Taxi Chiffa', 'Fleet · 6 vehicles', '0698 55 71 20', 'Chiffa', '23 Sep 2026', '512 900 DA', '37 800 DA', 'Last paid 18 Sep'),
-      c('Auto-École El Amel', 'Business', '025 41 22 18', 'Boufarik', '24 Sep 2026', '398 600 DA', '26 400 DA', 'Last paid 20 Sep'),
-      c('Mécanique Hamdi', 'Garage', '0555 07 63 81', 'Mouzaïa', '21 Sep 2026', '455 100 DA', '22 950 DA', 'Last paid 01 Sep'),
-      c('Karim Hadj-Ahmed', 'Individual', '0551 38 90 47', 'Blida', '24 Sep 2026', '84 300 DA', '9 850 DA', 'Last paid 24 Aug'),
-      c('Rachid Zerrouki', 'Individual', '0770 21 56 09', 'Soumaâ', '23 Sep 2026', '61 700 DA', '7 200 DA', 'Last paid 15 Sep'),
-      c('Nadia Boukhalfa', 'Individual', '0664 11 83 52', 'Blida', '24 Sep 2026', '42 900 DA', '5 600 DA', 'Last paid 10 Sep'),
-      c('Pneus & Services Larbaâ', 'Business', '0560 73 02 44', 'Larbaâ', '19 Sep 2026', '233 400 DA', '4 900 DA', 'Last paid 19 Sep'),
-      c('Samir Oukaci', 'Individual', '0797 45 12 38', 'El Affroun', '16 Sep 2026', '28 600 DA', '3 150 DA', 'Last paid 16 Aug'),
-      c('Lynda Mansouri', 'Individual', '0541 66 29 71', 'Blida', '14 Sep 2026', '19 800 DA', '2 400 DA', 'Last paid 14 Sep'),
-      c('Hocine Belkacem', 'Individual', '0699 30 58 16', 'Bouinan', '11 Sep 2026', '35 200 DA', '1 750 DA', 'Last paid 28 Aug')
+      c('Transport Meziane SARL', 'Fleet', 'Blida', '0661 48 22 90', 'Today', 212300, 250000),
+      c('Garage Benali', 'Garage', 'Blida', '0550 12 34 56', 'Today', 48500, 100000),
+      c('Garage Ouled Yaïch', 'Garage', 'Ouled Yaïch', '0772 90 14 03', 'Today', 41200, 80000),
+      c('Taxi Chiffa', 'Fleet', 'Chiffa', '0698 55 71 20', 'Yesterday', 37800, 60000),
+      c('Auto-École El Amel', 'Business', 'Boufarik', '025 41 22 18', 'Today', 26400, 50000),
+      c('Mécanique Hamdi', 'Garage', 'Mouzaïa', '0555 07 63 81', '21 Sep', 22950, 50000),
+      c('Karim Hadj-Ahmed', 'Individual', 'Blida', '0551 38 90 47', 'Today', 9850, 20000),
+      c('Rachid Zerrouki', 'Individual', 'Soumaâ', '0770 21 56 09', 'Yesterday', 7200, 20000),
+      c('Nadia Boukhalfa', 'Individual', 'Blida', '0664 11 83 52', 'Today', 5600, 20000),
+      c('Pneus & Services Larbaâ', 'Business', 'Larbaâ', '0560 73 02 44', '19 Sep', 4900, 40000),
+      c('Samir Oukaci', 'Individual', 'El Affroun', '0797 45 12 38', '16 Sep', 3150, 10000),
+      c('Lynda Mansouri', 'Individual', 'Blida', '0541 66 29 71', '14 Sep', 2400, 10000),
+      c('Hocine Belkacem', 'Individual', 'Bouinan', '0699 30 58 16', '11 Sep', 1750, 10000)
     ];
     rows[1].bg = '#FBE9DE';
-    return { cols: 'minmax(0, 1fr) 170px 150px 150px 190px 190px 40px', rows };
+    rows[1].ring = 'inset 3px 0 0 #E8622C';
+    const st = (date, doc, what, debit, credit, bal) => ({ date, doc, what, debit, credit, bal });
+    return {
+      cols: 'minmax(0, 1fr) 130px 96px 150px 120px',
+      rows,
+      statement: [
+        st('24 Sep', 'S-24091', 'sale', '16 500', '', '48 500'),
+        st('12 Sep', 'PAY-0298', 'cash payment', '', '20 000', '32 000'),
+        st('10 Sep', 'S-23880', 'sale', '9 800', '', '52 000'),
+        st('05 Sep', 'S-23801', 'sale', '11 400', '', '42 200'),
+        st('01 Sep', 'PAY-0270', 'cash payment', '', '15 000', '30 800'),
+        st('28 Aug', 'S-23702', 'sale', '7 600', '', '45 800'),
+        st('20 Aug', 'S-23610', 'sale', '13 200', '', '38 200'),
+        st('15 Aug', '—', 'carried forward', '', '', '25 000')
+      ]
+    };
   }
 }
 </script>
