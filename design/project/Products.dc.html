@@ -10,24 +10,24 @@
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 <style>
-body{margin:0;background:#E7E4DD}
-a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
+body{margin:0;background:#E6E5E1}
+a{color:#1F5A5E;text-decoration:none}a:hover{color:#174649}
 button,a{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#F1EDE5}
+[data-row]:hover{background:#F2F1ED}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="products" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: 224px minmax(0, 1fr) 470px; background: #F7F5F0">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: 224px minmax(0, 1fr) 470px; background: #F8F7F4">
 
-      <nav aria-label="Categories" style="min-height: 0; background: #EFECE5; border-inline-end: 1px solid #D3CEC4; padding: 24px 0; display: flex; flex-direction: column">
-        <span style="padding: 0 20px 10px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">Catalog index</span>
+      <nav aria-label="Categories" style="min-height: 0; background: #EFEEEA; border-inline-end: 1px solid #D5D2CB; padding: 24px 0; display: flex; flex-direction: column">
+        <span style="padding: 0 20px 10px; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">Catalog index</span>
         <sc-for list="{{cats}}" as="c" hint-placeholder-count="12">
           <a href="#" style="position: relative; display: flex; align-items: center; justify-content: space-between; height: 40px; padding: 0 20px; background: {{c.bg}}; color: {{c.fg}}; font-size: 14.5px; font-weight: {{c.wt}}">
             <span style="position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: 3px; background: {{c.bar}}"></span>
             <span>{{c.name}}</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8F897E">{{c.count}}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B877F">{{c.count}}</span>
           </a>
         </sc-for>
       </nav>
@@ -35,38 +35,38 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
       <section aria-label="Catalog" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
         <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
           <div style="display: flex; flex-direction: column; gap: 6px">
-            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Products <span style="font-stretch: 100%; font-weight: 500; color: #8F897E">/ Brakes</span></h1>
-            <span style="font-size: 13.5px; color: #625D54">312 of 2 418 parts · 1 960 linked to vehicles</span>
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Products <span style="font-stretch: 100%; font-weight: 500; color: #8B877F">/ Brakes</span></h1>
+            <span style="font-size: 13.5px; color: #5E5B55">312 of 2 418 parts · 1 960 linked to vehicles</span>
           </div>
           <div style="display: flex; gap: 10px">
-            <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Import list</button>
-            <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add product</button>
+            <button type="button" style="height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #D5D2CB; background: #EFEEEA; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Import list</button>
+            <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 0; background: #1F5A5E; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Add product</button>
           </div>
         </div>
 
-        <label style="position: relative; display: flex; align-items: center; height: 50px; box-sizing: border-box; padding: 0 14px 0 48px; background: #FFFFFF; border: 1px solid #B9B2A5; border-radius: 3px">
+        <label style="position: relative; display: flex; align-items: center; height: 50px; box-sizing: border-box; padding: 0 14px 0 48px; background: #FFFFFF; border: 1px solid #B8B5AE; border-radius: 3px">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B1A17" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 16px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
           <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search the catalog</span>
           <input type="search" placeholder="Name, reference, OEM number, brand or vehicle…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 16px; color: #26241F">
-          <span style="font-size: 12.5px; color: #8F897E">try “filtre huile logan” or “W 75/3”</span>
+          <span style="font-size: 12.5px; color: #8B877F">try “filtre huile logan” or “W 75/3”</span>
         </label>
         <div style="display: flex; align-items: center; gap: 8px; padding: 12px 0 14px">
           <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
-            <button type="button" style="height: 32px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; border-radius: 2px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 13.5px; font-weight: 500; cursor: pointer"><span style="color: #625D54">{{f.label}}</span>{{f.value}}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            <button type="button" style="height: 32px; padding: 0 10px; display: inline-flex; align-items: center; gap: 6px; border-radius: 2px; border: 1px solid #D5D2CB; background: transparent; color: #26241F; font-family: inherit; font-size: 13.5px; font-weight: 500; cursor: pointer"><span style="color: #5E5B55">{{f.label}}</span>{{f.value}}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
           </sc-for>
         </div>
 
         <div role="table" aria-label="Products" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
-            <span role="columnheader" aria-sort="ascending" style="color: #C8471B">Part ↑</span><span role="columnheader">Reference</span><span role="columnheader">Brand</span><span role="columnheader" style="text-align: end">Stock</span><span role="columnheader" style="text-align: end">Price DA</span><span role="columnheader">Status</span>
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">
+            <span role="columnheader" aria-sort="ascending" style="color: #1F5A5E">Part ↑</span><span role="columnheader">Reference</span><span role="columnheader">Brand</span><span role="columnheader" style="text-align: end">Stock</span><span role="columnheader" style="text-align: end">Price DA</span><span role="columnheader">Status</span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="13">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 54px; padding: 0 12px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 54px; padding: 0 12px; border-bottom: 1px solid #E4E2DD; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
               <span role="cell" style="min-width: 0; display: flex; flex-direction: column; gap: 2px">
                 <span style="font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.name}}</span>
-                <span style="font-size: 12.5px; color: #625D54; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.fit}}</span>
+                <span style="font-size: 12.5px; color: #5E5B55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.fit}}</span>
               </span>
-              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
+              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D5D2CB; border-radius: 2px; background: #EFEEEA; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
               <span role="cell" style="font-weight: 500">{{r.brand}}</span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: {{r.stockFg}}">{{r.stock}}</span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1B1A17">{{r.price}}</span>
@@ -74,65 +74,65 @@ button,a{transition:background-color .12s,border-color .12s,color .12s}
             </div>
           </sc-for>
         </div>
-        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
+        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D5D2CB; font-size: 13px; color: #5E5B55">
           <span>1–13 of 312 in Brakes</span>
-          <span style="display: flex; gap: 6px"><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #8F897E; font-family: inherit; font-size: 13px">Previous</button><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #1B1A17; background: transparent; color: #1B1A17; font-family: inherit; font-size: 13px; font-weight: 600">Next</button></span>
+          <span style="display: flex; gap: 6px"><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #8B877F; font-family: inherit; font-size: 13px">Previous</button><button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #1B1A17; background: transparent; color: #1B1A17; font-family: inherit; font-size: 13px; font-weight: 600">Next</button></span>
         </div>
       </section>
 
-      <aside aria-label="Part sheet" style="min-height: 0; background: #FBF9F4; border-inline-start: 1px solid #D3CEC4; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px; overflow: hidden">
+      <aside aria-label="Part sheet" style="min-height: 0; background: #FCFBF9; border-inline-start: 1px solid #D5D2CB; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px; overflow: hidden">
         <div style="display: flex; align-items: center; justify-content: space-between">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #625D54">PART SHEET</span>
-          <button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Edit</button>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #5E5B55">PART SHEET</span>
+          <button type="button" style="height: 30px; padding: 0 10px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Edit</button>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px">
           <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 24px; font-weight: 700; letter-spacing: -0.01em; color: #1B1A17; line-height: 1.1">Front Brake Pad Set</span>
           <span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap">
             <span style="font-size: 15px; font-weight: 600">Bosch</span>
             <span style="padding: 3px 8px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; color: #1B1A17">0 986 494 186</span>
-            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8F897E">EAN 4047024 590 718</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B877F">EAN 4047024 590 718</span>
           </span>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #1B1A17; border-bottom: 1px solid #D3CEC4">
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0"><span style="font-size: 12px; color: #625D54">Selling price</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #1B1A17">4 850</span></div>
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E2DED6"><span style="font-size: 12px; color: #625D54">Last cost</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #4F4A42">3 420</span></div>
-          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E2DED6"><span style="font-size: 12px; color: #625D54">Margin</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #226B40">29%</span></div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #1B1A17; border-bottom: 1px solid #D5D2CB">
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0"><span style="font-size: 12px; color: #5E5B55">Selling price</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #1B1A17">4 850</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 12px; color: #5E5B55">Last cost</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #4C4944">3 420</span></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-inline-start: 1px solid #E4E2DD"><span style="font-size: 12px; color: #5E5B55">Margin</span><span style="font-family: Archivo, sans-serif; font-size: 24px; font-weight: 650; color: #226B40">29%</span></div>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">IN THIS STORE · 14 · MIN 4</span>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">IN THIS STORE · 14 · MIN 4</span>
           <div style="display: flex; gap: 8px">
-            <span style="flex-grow: 1; display: flex; justify-content: space-between; padding: 8px 10px; background: #EFECE5; border-radius: 2px; font-size: 13.5px"><span>Shelf B-04</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">12</span></span>
-            <span style="flex-grow: 1; display: flex; justify-content: space-between; padding: 8px 10px; background: #EFECE5; border-radius: 2px; font-size: 13.5px"><span>Counter</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">2</span></span>
+            <span style="flex-grow: 1; display: flex; justify-content: space-between; padding: 8px 10px; background: #EFEEEA; border-radius: 2px; font-size: 13.5px"><span>Shelf B-04</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">12</span></span>
+            <span style="flex-grow: 1; display: flex; justify-content: space-between; padding: 8px 10px; background: #EFEEEA; border-radius: 2px; font-size: 13.5px"><span>Counter</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600">2</span></span>
           </div>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">FITS · 4 VEHICLES</span>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">FITS · 4 VEHICLES</span>
           <sc-for list="{{fits}}" as="v" hint-placeholder-count="4">
-            <div style="display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid #E2DED6; font-size: 13.5px"><span style="font-weight: 500">{{v.car}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54; white-space: nowrap">{{v.spec}}</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid #E4E2DD; font-size: 13.5px"><span style="font-weight: 500">{{v.car}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55; white-space: nowrap">{{v.spec}}</span></div>
           </sc-for>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 8px">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">SAME PART, OTHER NUMBERS</span>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">SAME PART, OTHER NUMBERS</span>
           <div style="display: flex; flex-wrap: wrap; gap: 6px">
             <sc-for list="{{xrefs}}" as="x" hint-placeholder-count="4">
-              <span style="padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #26241F"><span style="color: #8F897E">{{x.brand}}</span> {{x.ref}}</span>
+              <span style="padding: 2px 6px; border: 1px solid #D5D2CB; border-radius: 2px; background: #EFEEEA; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #26241F"><span style="color: #8B877F">{{x.brand}}</span> {{x.ref}}</span>
             </sc-for>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #E3EEEC; border-inline-start: 3px solid #3D7470">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #2F625E">SUPPLIER LISTINGS · NOT IN STOCK HERE</span>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: #E8ECF1; border-inline-start: 3px solid #5A6B80">
+          <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: #465770">SUPPLIER LISTINGS · NOT IN STOCK HERE</span>
           <sc-for list="{{listings}}" as="l" hint-placeholder-count="2">
-            <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #1F4A47"><span><strong>{{l.supplier}}</strong> · {{l.date}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap">{{l.price}}</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #34435A"><span><strong>{{l.supplier}}</strong> · {{l.date}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 600; white-space: nowrap">{{l.price}}</span></div>
           </sc-for>
         </div>
 
         <span style="flex-grow: 1"></span>
-        <a href="Pos.dc.html" style="height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-radius: 3px; background: #C8471B; color: #FFFFFF; font-size: 15px; font-weight: 600">Add to ticket <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 2px; padding: 0 5px">↵</kbd></a>
+        <a href="Pos.dc.html" style="height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-radius: 3px; background: #1F5A5E; color: #FFFFFF; font-size: 15px; font-weight: 600">Add to ticket <kbd style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.5); border-radius: 2px; padding: 0 5px">↵</kbd></a>
       </aside>
     </main>
     <dc-import name="Ticket" hint-size="96px,976px"></dc-import>
@@ -146,7 +146,7 @@ class Component extends DCLogic {
       ok: { label: 'In stock', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
       low: { label: 'Low', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' },
       out: { label: 'Out', bg: '#F6DEDA', fg: '#A12A20', dot: '#B83227' },
-      off: { label: 'Inactive', bg: '#E7E4DD', fg: '#4F4A42', dot: '#8F897E' }
+      off: { label: 'Inactive', bg: '#E6E5E1', fg: '#4C4944', dot: '#8B877F' }
     };
     const p = (name, fit, ref, brand, stock, price, b) => ({ name, fit, ref, brand, stock, price, b, stockFg: b === B.out ? '#A12A20' : (b === B.low ? '#7F6000' : '#1B1A17'), bg: '', ring: 'none' });
     const rows = [
@@ -164,9 +164,9 @@ class Component extends DCLogic {
       p('Brake Master Cylinder', 'Kia Picanto II 1.2', '0 204 123 715', 'Bosch', '1', '14 200', B.low),
       p('Brake Hose, front', 'Hyundai i10 2008–2013', 'BH778226', 'Jurid', '0', '1 300', B.off)
     ];
-    rows[0].bg = '#FBE9DE';
-    rows[0].ring = 'inset 3px 0 0 #E8622C';
-    const cat = (name, count, on) => ({ name, count, bg: on ? '#F7F5F0' : 'transparent', fg: on ? '#1B1A17' : '#3A362F', wt: on ? 600 : 500, bar: on ? '#E8622C' : 'transparent' });
+    rows[0].bg = '#E1ECEB';
+    rows[0].ring = 'inset 3px 0 0 #2F6F73';
+    const cat = (name, count, on) => ({ name, count, bg: on ? '#F8F7F4' : 'transparent', fg: on ? '#1B1A17' : '#383632', wt: on ? 600 : 500, bar: on ? '#2F6F73' : 'transparent' });
     return {
       cols: 'minmax(0, 1fr) 150px 110px 58px 84px 96px',
       rows,

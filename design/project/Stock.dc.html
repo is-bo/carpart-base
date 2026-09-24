@@ -10,95 +10,95 @@
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 <style>
-body{margin:0;background:#E7E4DD}
-a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
+body{margin:0;background:#E6E5E1}
+a{color:#1F5A5E;text-decoration:none}a:hover{color:#174649}
 button,a{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#F1EDE5}
+[data-row]:hover{background:#F2F1ED}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
+<div style="width: 1920px; height: 1080px; display: flex; flex-direction: column; overflow: hidden; background: #E6E5E1; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Header" active="stock" hint-size="1920px,104px"></dc-import>
   <div style="flex-grow: 1; min-height: 0; display: flex">
-    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; background: #F7F5F0">
+    <main style="flex-grow: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) 500px; background: #F8F7F4">
 
       <section aria-label="Stock levels" style="min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 24px 28px 0">
         <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 16px">
           <div style="display: flex; align-items: flex-end; gap: 22px">
             <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Stock</h1>
             <div role="tablist" aria-label="Stock views" style="display: flex; gap: 18px; padding-bottom: 4px">
-              <button type="button" role="tab" aria-selected="true" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid #E8622C; background: transparent; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current stock</button>
-              <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock movements</button>
+              <button type="button" role="tab" aria-selected="true" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid #2F6F73; background: transparent; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current stock</button>
+              <button type="button" role="tab" aria-selected="false" style="height: 30px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #5E5B55; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock movements</button>
             </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 22px; font-size: 13.5px; color: #625D54">
+          <div style="display: flex; align-items: center; gap: 22px; font-size: 13.5px; color: #5E5B55">
             <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">2 418</strong> parts</span>
             <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">31 540</strong> units</span>
             <span><strong style="font-family: 'IBM Plex Mono', monospace; color: #1B1A17">18 420 000 DA</strong> at cost</span>
-            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Stock count</button>
+            <button type="button" style="height: 40px; padding: 0 14px; border-radius: 3px; border: 1px solid #D5D2CB; background: #EFEEEA; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Stock count</button>
           </div>
         </div>
 
         <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 14px">
           <div role="radiogroup" aria-label="Stock status" style="display: flex; border: 1px solid #1B1A17; border-radius: 3px; overflow: hidden">
-            <button type="button" role="radio" aria-checked="true" style="height: 42px; padding: 0 14px; border: 0; background: #1B1A17; color: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">All <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #B9B3A7">2 418</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #C99A0A"></span>Low stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">23</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #B83227"></span>Out of stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">6</span></button>
+            <button type="button" role="radio" aria-checked="true" style="height: 42px; padding: 0 14px; border: 0; background: #1B1A17; color: #F8F7F4; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer">All <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #B9B6AF">2 418</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F8F7F4; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #C99A0A"></span>Low stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">23</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 0; border-inline-start: 1px solid #1B1A17; background: #F8F7F4; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer"><span style="width: 8px; height: 8px; background: #B83227"></span>Out of stock <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">6</span></button>
           </div>
-          <label style="position: relative; display: flex; align-items: center; width: 400px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D3CEC4; border-radius: 3px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <label style="position: relative; display: flex; align-items: center; width: 400px; height: 46px; box-sizing: border-box; padding: 0 14px 0 44px; background: #FFFFFF; border: 1px solid #D5D2CB; border-radius: 3px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5E5B55" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 13px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search stock</span>
             <input type="search" placeholder="Part, reference or shelf…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
-          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D3CEC4; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #625D54">Shelf</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <button type="button" style="height: 40px; padding: 0 12px; display: inline-flex; align-items: center; gap: 6px; border-radius: 3px; border: 1px solid #D5D2CB; background: transparent; color: #26241F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="color: #5E5B55">Shelf</span>All<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
 
         <div role="table" aria-label="Stock levels" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+          <div role="row" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 36px; padding: 0 12px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5E5B55">
             <span role="columnheader">Part</span><span role="columnheader">Reference</span><span role="columnheader">Shelf</span><span role="columnheader">Level vs. minimum</span><span role="columnheader" style="text-align: end">Qty</span><span role="columnheader" style="text-align: end">Min</span><span role="columnheader">Last movement</span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="14">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
-              <span role="cell" style="min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.name}}</span><span style="color: #625D54"> · {{r.brand}}</span></span>
-              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
-              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4F4A42">{{r.loc}}</span>
-              <span role="cell" title="{{r.tip}}" style="position: relative; display: block; height: 10px; background: #E7E4DD">
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px; border-bottom: 1px solid #E4E2DD; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+              <span role="cell" style="min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.name}}</span><span style="color: #5E5B55"> · {{r.brand}}</span></span>
+              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D5D2CB; border-radius: 2px; background: #EFEEEA; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #4C4944">{{r.loc}}</span>
+              <span role="cell" title="{{r.tip}}" style="position: relative; display: block; height: 10px; background: #E6E5E1">
                 <span style="position: absolute; inset-inline-start: 0; top: 0; bottom: 0; width: {{r.fillW}}; background: {{r.fill}}"></span>
                 <span style="position: absolute; inset-inline-start: {{r.minPos}}; top: -4px; bottom: -4px; width: 2px; background: #1B1A17"></span>
               </span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: {{r.qtyFg}}">{{r.qty}}</span>
-              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #625D54">{{r.min}}</span>
-              <span role="cell" style="font-size: 13px; color: #625D54; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.last}}</span>
+              <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5E5B55">{{r.min}}</span>
+              <span role="cell" style="font-size: 13px; color: #5E5B55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.last}}</span>
             </div>
           </sc-for>
         </div>
-        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
+        <div style="height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #D5D2CB; font-size: 13px; color: #5E5B55">
           <span>All parts · sorted: furthest below minimum first · 1–14 of 2 418</span>
           <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 2px; height: 12px; background: #1B1A17"></span>minimum quantity</span>
         </div>
       </section>
 
-      <aside aria-label="Movements for the selected part" style="min-height: 0; background: #FBF9F4; border-inline-start: 1px solid #D3CEC4; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px">
+      <aside aria-label="Movements for the selected part" style="min-height: 0; background: #FCFBF9; border-inline-start: 1px solid #D5D2CB; padding: 24px 26px; display: flex; flex-direction: column; gap: 18px">
         <div style="display: flex; flex-direction: column; gap: 6px">
-          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #625D54">STOCK CARD</span>
+          <span style="font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: #5E5B55">STOCK CARD</span>
           <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 22px; font-weight: 700; color: #1B1A17">Oil Filter · Mann-Filter</span>
-          <span style="display: flex; gap: 8px; align-items: center"><span style="padding: 2px 7px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">W 75/3</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #625D54">Shelf F-02</span></span>
+          <span style="display: flex; gap: 8px; align-items: center"><span style="padding: 2px 7px; border: 1px solid #1B1A17; border-radius: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600">W 75/3</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #5E5B55">Shelf F-02</span></span>
         </div>
-        <div style="display: flex; align-items: flex-end; gap: 16px; padding: 16px 0; border-top: 1px solid #1B1A17; border-bottom: 1px solid #D3CEC4">
+        <div style="display: flex; align-items: flex-end; gap: 16px; padding: 16px 0; border-top: 1px solid #1B1A17; border-bottom: 1px solid #D5D2CB">
           <span style="font-family: Archivo, sans-serif; font-size: 64px; font-weight: 700; line-height: 0.85; letter-spacing: -0.03em; color: #7F6000">2</span>
-          <span style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px; font-size: 14px; color: #4F4A42"><span>on hand, minimum 10</span><span>≈ 3 days at this week’s pace</span></span>
+          <span style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px; font-size: 14px; color: #4C4944"><span>on hand, minimum 10</span><span>≈ 3 days at this week’s pace</span></span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-          <button type="button" style="height: 42px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Adjust quantity</button>
-          <button type="button" style="height: 42px; border-radius: 3px; border: 0; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Add to purchase</button>
+          <button type="button" style="height: 42px; border-radius: 3px; border: 1px solid #1B1A17; background: #F8F7F4; color: #1B1A17; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Adjust quantity</button>
+          <button type="button" style="height: 42px; border-radius: 3px; border: 0; background: #1F5A5E; color: #FFFFFF; font-family: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer">Add to purchase</button>
         </div>
         <div role="table" aria-label="Movements" style="display: flex; flex-direction: column">
-          <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 32px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #625D54">
+          <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 32px; border-bottom: 1px solid #1B1A17; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: #5E5B55">
             <span role="columnheader">DATE</span><span role="columnheader">MOVEMENT</span><span role="columnheader" style="text-align: end">±</span><span role="columnheader" style="text-align: end">BAL.</span>
           </div>
           <sc-for list="{{moves}}" as="m" hint-placeholder-count="9">
-            <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 40px; border-bottom: 1px dashed #DDD8CE; font-size: 13.5px">
-              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">{{m.date}}</span>
-              <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{m.what}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #625D54">{{m.doc}}</span></span>
+            <div role="row" style="display: grid; grid-template-columns: 92px minmax(0, 1fr) 48px 44px; column-gap: 12px; align-items: center; height: 40px; border-bottom: 1px dashed #DEDBD5; font-size: 13.5px">
+              <span role="cell" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">{{m.date}}</span>
+              <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{m.what}} <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5E5B55">{{m.doc}}</span></span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: {{m.fg}}">{{m.delta}}</span>
               <span role="cell" style="text-align: end; font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: #1B1A17">{{m.bal}}</span>
             </div>
@@ -142,8 +142,8 @@ class Component extends DCLogic {
       r('Coolant G12, 1 L', 'Total', 'GLACELF', 'F-06', 6, 8, 'Sale S-24033 · 22 Sep'),
       r('Serpentine Belt', 'Gates', '6PK1070', 'C-02', 2, 3, 'Sale S-23941 · 19 Sep')
     ];
-    rows[2].bg = '#FBE9DE';
-    rows[2].ring = 'inset 3px 0 0 #E8622C';
+    rows[2].bg = '#E1ECEB';
+    rows[2].ring = 'inset 3px 0 0 #2F6F73';
     const mv = (date, what, doc, delta, bal) => ({ date, what, doc, delta, bal, fg: delta.startsWith('+') ? '#226B40' : '#26241F' });
     return {
       cols: 'minmax(0, 1fr) 150px 60px 170px 44px 40px 190px',

@@ -1,41 +1,42 @@
-/* AutoPartsOS design tokens — "Parts Counter" (v0.2).
-   Warm stock-paper surfaces on concrete, a graphite rail, one signal orange.
+/* AutoPartsOS design tokens — "Parts Counter" (v0.3).
+   Stone paper surfaces, a graphite rail, one quiet spruce accent.
    Mirrors the "Design Tokens" and "Core Components" boards in design/project/. */
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
   /* Ground & paper */
-  --ap-ground: #E7E4DD;        /* concrete: app background */
-  --ap-paper: #F7F5F0;         /* stock paper: panels, tables */
-  --ap-kraft: #EFECE5;         /* headers, chips, nested groups */
-  --ap-receipt: #FBF9F4;       /* POS cart, printed documents */
-  --ap-rule: #D3CEC4;
-  --ap-rule-soft: #E2DED6;
-  --ap-row-hover: #F1EDE5;
+  --ap-ground: #E6E5E1;        /* concrete: app background */
+  --ap-paper: #F8F7F4;         /* stock paper: panels, tables */
+  --ap-kraft: #EFEEEA;         /* headers, chips, nested groups */
+  --ap-receipt: #FCFBF9;       /* POS cart, printed documents */
+  --ap-rule: #D5D2CB;
+  --ap-rule-soft: #E4E2DD;
+  --ap-row-hover: #F2F1ED;
 
   /* Graphite */
   --ap-rail: #1E1D1A;          /* top bar, till display, ticket header */
-  --ap-rail-active: #2D2A25;   /* search field on the top bar */
+  --ap-rail-active: #2B2A27;   /* search field on the top bar */
   --ap-rail-line: #2E2C28;
-  --ap-rail-text: #B9B3A7;
+  --ap-rail-text: #B9B6AF;
   --ap-ink: #1B1A17;           /* headings, selected segment */
   --ap-text: #26241F;
-  --ap-text-2: #625D54;
-  --ap-text-muted: #8F897E;
+  --ap-text-2: #5E5B55;
+  --ap-text-muted: #8B877F;
 
-  /* Signal — the only accent */
-  --ap-signal: #E8622C;        /* markers, active bar, current hour */
-  --ap-signal-action: #C8471B; /* primary buttons, links (white text 4.8:1) */
-  --ap-signal-pressed: #A93C15;
-  --ap-signal-soft: #FBE9DE;   /* selected row, focus fill */
-  --ap-focus-ring: 0 0 0 3px rgba(200, 71, 27, 0.14);
+  /* Spruce — the only accent */
+  --ap-accent: #2F6F73;         /* markers, active bar, current hour */
+  --ap-accent-action: #1F5A5E;  /* primary buttons, links (white text 7.8:1) */
+  --ap-accent-pressed: #174649;
+  --ap-accent-soft: #E1ECEB;    /* selected row, focus fill */
+  --ap-accent-on-rail: #86BDB8; /* accent on graphite surfaces */
+  --ap-focus-ring: 0 0 0 3px rgba(31,90,94,0.16);
 
   /* State: base / text / soft */
   --ap-ok: #2E7D4F;     --ap-ok-text: #226B40;     --ap-ok-soft: #E1EEE4;
   --ap-low: #C99A0A;    --ap-low-text: #7F6000;    --ap-low-soft: #F5EBC9;
   --ap-out: #B83227;    --ap-out-text: #A12A20;    --ap-out-soft: #F6DEDA;
-  --ap-info: #3D7470;   --ap-info-text: #2F625E;   --ap-info-soft: #DDEBE9;
+  --ap-info: #5A6B80;   --ap-info-text: #465770;   --ap-info-soft: #E3E8EE;
 
   /* Ledger (customer money owed) & AI */
   --ap-ledger: #2D5B86; --ap-ledger-soft: #DEE7F1;
