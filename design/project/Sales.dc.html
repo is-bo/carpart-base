@@ -8,15 +8,15 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 <style>
-body{margin:0;background:#EEF1F4}
-a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+body{margin:0;background:#E7E4DD}
+a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
 button{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#EDF3FD}
+[data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Sidebar" active="sales" hint-size="232px,1080px"></dc-import>
   <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
     <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
@@ -25,51 +25,51 @@ button{transition:background-color .12s,border-color .12s,color .12s}
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
         <div style="display: flex; flex-direction: column; gap: 4px">
           <div style="display: flex; align-items: center; gap: 12px">
-            <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Sales</h1>
-            <span style="display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 6px; background: #EEF1F4; border: 1px solid #D7DCE3; color: #475467; font-size: 12px; font-weight: 500">
+            <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Sales</h1>
+            <span style="display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 2px; background: #E7E4DD; border: 1px solid #D3CEC4; color: #4F4A42; font-size: 12px; font-weight: 500">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
               History · read-only
             </span>
           </div>
-          <span style="font-size: 13px; color: #667085">Completed sales are locked records. Corrections are made through Returns, never by editing a sale.</span>
+          <span style="font-size: 13px; color: #625D54">Completed sales are locked records. Corrections are made through Returns, never by editing a sale.</span>
         </div>
         <div style="display: flex; gap: 12px">
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path><path d="M12 15V3"></path></svg>
             Export
           </button>
-          <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-size: 15px; font-weight: 600">
+          <a href="Pos.dc.html" style="height: 44px; box-sizing: border-box; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-size: 15px; font-weight: 600">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
             Open POS
           </a>
         </div>
       </div>
 
-      <section style="flex-grow: 1; min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D7DCE3">
-          <label style="position: relative; display: flex; align-items: center; width: 520px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
+          <label style="position: relative; display: flex; align-items: center; width: 520px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search sales</span>
-            <input type="search" placeholder="Sale number, customer, product or reference…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #172033">
+            <input type="search" placeholder="Sale number, customer, product or reference…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
           <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid {{f.border}}; background: {{f.bg}}; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer">
-              <span style="color: #667085">{{f.label}}</span>{{f.value}}
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid {{f.border}}; background: {{f.bg}}; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer">
+              <span style="color: #625D54">{{f.label}}</span>{{f.value}}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
             </button>
           </sc-for>
           <span style="flex-grow: 1"></span>
           <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px">
-            <span style="font-size: 15px; font-weight: 600; color: #14213D">6 412 900 DA</span>
-            <span style="font-size: 12px; color: #667085">1 284 sales in the last 30 days</span>
+            <span style="font-size: 15px; font-weight: 600; color: #1B1A17">6 412 900 DA</span>
+            <span style="font-size: 12px; color: #625D54">1 284 sales in the last 30 days</span>
           </div>
         </div>
 
         <div style="flex-grow: 1; min-height: 0; overflow: hidden">
           <div role="table" aria-label="Completed sales">
-            <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 44px; padding: 0 16px 0 24px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+            <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 44px; padding: 0 16px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
               <span role="columnheader">Sale</span>
-              <span role="columnheader" aria-sort="descending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #1D4ED8">Date <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
+              <span role="columnheader" aria-sort="descending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #A93C15">Date <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></span>
               <span role="columnheader">Customer</span>
               <span role="columnheader" style="text-align: end">Items</span>
               <span role="columnheader">Payment</span>
@@ -79,39 +79,39 @@ button{transition:background-color .12s,border-color .12s,color .12s}
             </div>
             <sc-for list="{{rows}}" as="r" hint-placeholder-count="14">
               <sc-if value="{{r.isGroup}}" hint-placeholder-val="{{false}}">
-                <div role="row" style="display: flex; align-items: center; justify-content: space-between; height: 36px; padding: 0 72px 0 24px; background: #F7F8FA; border-bottom: 1px solid #E3E7ED; font-size: 12px; font-weight: 600; color: #475467">
+                <div role="row" style="display: flex; align-items: center; justify-content: space-between; height: 36px; padding: 0 72px 0 24px; background: #EFECE5; border-bottom: 1px solid #E2DED6; font-size: 12px; font-weight: 600; color: #4F4A42">
                   <span role="cell">{{r.label}}</span>
                   <span role="cell">{{r.sum}}</span>
                 </div>
               </sc-if>
               <sc-if value="{{r.isRow}}" hint-placeholder-val="{{true}}">
-                <div role="row" data-row="1" style="display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 50px; padding: 0 16px 0 24px; border-bottom: 1px solid #E3E7ED; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
-                  <span role="cell" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #14213D">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A94A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <div role="row" data-row="1" style="display: grid; grid-template-columns: 150px 190px minmax(0, 1fr) 70px 290px 150px 150px 40px; align-items: center; column-gap: 16px; height: 50px; padding: 0 16px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}; box-shadow: {{r.ring}}">
+                  <span role="cell" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #1B1A17">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8F897E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                     {{r.id}}
                   </span>
-                  <span role="cell" style="color: #475467">{{r.date}}</span>
+                  <span role="cell" style="color: #4F4A42">{{r.date}}</span>
                   <span role="cell" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.customer}}</span>
                   <span role="cell" style="text-align: end">{{r.items}}</span>
-                  <span role="cell" style="white-space: nowrap"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span><span style="font-size: 13px; color: #667085; margin-inline-start: 8px">{{r.method}}</span></span>
-                  <span role="cell" style="color: #475467">{{r.cashier}}</span>
+                  <span role="cell" style="white-space: nowrap"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600">{{r.b.label}}</span><span style="font-size: 13px; color: #625D54; margin-inline-start: 8px">{{r.method}}</span></span>
+                  <span role="cell" style="color: #4F4A42">{{r.cashier}}</span>
                   <span role="cell" style="text-align: end; font-weight: 600">{{r.total}}</span>
-                  <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions for {{r.id}}" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #667085; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+                  <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions for {{r.id}}" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
                 </div>
               </sc-if>
             </sc-for>
           </div>
         </div>
 
-        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #F7F8FA; border-top: 1px solid #D7DCE3; font-size: 13px; color: #667085">
+        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
           <span>Showing 1–14 of 1 284 · sorted by newest</span>
           <div style="display: flex; align-items: center; gap: 6px">
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #8A94A6; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #2563EB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">3</button>
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #8F897E; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #C8471B; background: #FBE9DE; color: #A93C15; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">3</button>
             <span style="padding: 0 4px">…</span>
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
           </div>
         </div>
       </section>
@@ -123,10 +123,10 @@ button{transition:background-color .12s,border-color .12s,color .12s}
 class Component extends DCLogic {
   renderVals() {
     const B = {
-      paid: { label: 'Paid', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
-      partial: { label: 'Partial', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
-      account: { label: 'On account', bg: '#FBF0E4', fg: '#B45309', dot: '#B45309' },
-      returned: { label: 'Partly returned', bg: '#E3F2FB', fg: '#0369A1', dot: '#0284C7' }
+      paid: { label: 'Paid', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
+      partial: { label: 'Partial', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' },
+      account: { label: 'On account', bg: '#DEE7F1', fg: '#2D5B86', dot: '#2D5B86' },
+      returned: { label: 'Partly returned', bg: '#DDEBE9', fg: '#2F625E', dot: '#3D7470' }
     };
     const sale = (id, date, customer, items, b, method, cashier, total) => ({ isRow: true, isGroup: false, id, date, customer, items, b, method, cashier, total });
     const list = [
@@ -148,12 +148,12 @@ class Component extends DCLogic {
       sale('S-24050', '23 Sep 2026 · 17:26', 'Garage Benali', 7, B.account, '', 'Yacine B.', '28 900 DA')
     ];
     return {
-      rows: list.map((r) => ({ ...r, bg: r.id === 'S-24088' ? '#E8F0FE' : '', ring: r.id === 'S-24088' ? 'inset 3px 0 0 #2563EB' : 'none' })),
+      rows: list.map((r) => ({ ...r, bg: r.id === 'S-24088' ? '#FBE9DE' : '', ring: r.id === 'S-24088' ? 'inset 3px 0 0 #C8471B' : 'none' })),
       filters: [
-        { label: 'Date', value: 'Last 30 days', bg: '#E8F0FE', border: '#BFD3FB' },
-        { label: 'Payment', value: 'All', bg: '#F4F8FF', border: '#D7DCE3' },
-        { label: 'Customer', value: 'All', bg: '#F4F8FF', border: '#D7DCE3' },
-        { label: 'Cashier', value: 'All staff', bg: '#F4F8FF', border: '#D7DCE3' }
+        { label: 'Date', value: 'Last 30 days', bg: '#FBE9DE', border: '#EFC3AA' },
+        { label: 'Payment', value: 'All', bg: '#F7F5F0', border: '#D3CEC4' },
+        { label: 'Customer', value: 'All', bg: '#F7F5F0', border: '#D3CEC4' },
+        { label: 'Cashier', value: 'All staff', bg: '#F7F5F0', border: '#D3CEC4' }
       ]
     };
   }

@@ -8,15 +8,15 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 <style>
-body{margin:0;background:#EEF1F4}
-a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+body{margin:0;background:#E7E4DD}
+a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
 button{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#EDF3FD}
+[data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Sidebar" active="suppliers" hint-size="232px,1080px"></dc-import>
   <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
     <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
@@ -24,41 +24,41 @@ button{transition:background-color .12s,border-color .12s,color .12s}
 
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Suppliers</h1>
-          <span style="font-size: 13px; color: #667085">24 suppliers · 18 with a catalog / availability list</span>
+          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Suppliers</h1>
+          <span style="font-size: 13px; color: #625D54">24 suppliers · 18 with a catalog / availability list</span>
         </div>
         <div style="display: flex; gap: 12px">
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3-3 3 3"></path></svg>
             Upload Catalog
           </button>
-          <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #2563EB; background: #2563EB; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+          <button type="button" style="height: 44px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #C8471B; background: #C8471B; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
             Add Supplier
           </button>
         </div>
       </div>
 
-      <div role="tablist" aria-label="Supplier views" style="display: flex; gap: 4px; border-bottom: 1px solid #D7DCE3">
-        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #2563EB; margin-bottom: -1px; background: transparent; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Suppliers</button>
-        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #667085; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Supplier Catalogs <span style="font-size: 12px; color: #8A94A6">18</span></button>
+      <div role="tablist" aria-label="Supplier views" style="display: flex; gap: 4px; border-bottom: 1px solid #D3CEC4">
+        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #C8471B; margin-bottom: -1px; background: transparent; color: #A93C15; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Suppliers</button>
+        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Supplier Catalogs <span style="font-size: 12px; color: #8F897E">18</span></button>
       </div>
 
       <div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 16px">
-        <section style="min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
-          <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D7DCE3">
-            <label style="position: relative; display: flex; align-items: center; width: 440px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px">
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <section style="min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+          <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
+            <label style="position: relative; display: flex; align-items: center; width: 440px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
               <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search suppliers</span>
-              <input type="search" placeholder="Supplier, contact, or a reference they list…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #172033">
+              <input type="search" placeholder="Supplier, contact, or a reference they list…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
             </label>
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F4F8FF; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer"><span style="color: #667085">Catalog</span>Any age<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F4F8FF; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer"><span style="color: #667085">Wilaya</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Catalog</span>Any age<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+            <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Wilaya</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
           </div>
 
           <div role="table" aria-label="Suppliers" style="flex-grow: 1; min-height: 0; overflow: hidden">
-            <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
-              <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #1D4ED8">Supplier <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
+            <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
+              <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #A93C15">Supplier <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
               <span role="columnheader">Contact</span>
               <span role="columnheader" style="text-align: end">Products listed</span>
               <span role="columnheader">Latest Catalog Date</span>
@@ -66,62 +66,62 @@ button{transition:background-color .12s,border-color .12s,color .12s}
               <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
             </div>
             <sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
-              <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 58px; padding: 0 12px 0 24px; border-bottom: 1px solid #E3E7ED; font-size: 14px; background: {{r.bg}}">
+              <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 58px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px; background: {{r.bg}}">
                 <span role="cell" style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-                  <span style="font-weight: 600; color: #14213D; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.name}}</span>
-                  <span style="font-size: 12px; color: #667085">{{r.city}} · {{r.speciality}}</span>
+                  <span style="font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.name}}</span>
+                  <span style="font-size: 12px; color: #625D54">{{r.city}} · {{r.speciality}}</span>
                 </span>
                 <span role="cell" style="display: flex; flex-direction: column; gap: 2px">
                   <span>{{r.contact}}</span>
-                  <span style="font-size: 12px; color: #667085">{{r.phone}}</span>
+                  <span style="font-size: 12px; color: #625D54">{{r.phone}}</span>
                 </span>
                 <span role="cell" style="text-align: end; font-weight: 500">{{r.products}}</span>
                 <span role="cell" style="display: flex; align-items: center; gap: 8px">
-                  <span style="color: #475467">{{r.catDate}}</span>
+                  <span style="color: #4F4A42">{{r.catDate}}</span>
                   <sc-if value="{{r.old}}" hint-placeholder-val="{{false}}">
-                    <span style="display: inline-flex; align-items: center; gap: 6px; height: 22px; padding: 0 7px; border-radius: 6px; background: #FDF1E1; color: #A15A06; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #D97706"></span>Old catalog</span>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; height: 22px; padding: 0 7px; border-radius: 2px; background: #F5EBC9; color: #7F6000; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: #C99A0A"></span>Old catalog</span>
                   </sc-if>
                   <sc-if value="{{r.none}}" hint-placeholder-val="{{false}}">
-                    <span style="font-size: 12px; color: #8A94A6">No catalog</span>
+                    <span style="font-size: 12px; color: #8F897E">No catalog</span>
                   </sc-if>
                 </span>
                 <span role="cell" style="text-align: end; font-weight: 600">{{r.ytd}}</span>
-                <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #667085; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+                <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
               </div>
             </sc-for>
           </div>
         </section>
 
         <aside style="min-height: 0; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; gap: 12px; padding: 14px 16px; background: #E9F4FB; border: 1px solid #BFE0F3; border-radius: 12px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+          <div style="display: flex; gap: 12px; padding: 14px 16px; background: #E3EEEC; border: 1px solid #BFD9D5; border-radius: 4px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D7470" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
             <div style="display: flex; flex-direction: column; gap: 4px">
-              <span style="font-size: 14px; font-weight: 600; color: #0B4F75">Availability is not stock</span>
-              <span style="font-size: 13px; line-height: 1.45; color: #245D80">Catalogs list what a supplier says they can deliver. These quantities never appear in Stock and cannot be sold until a purchase is received.</span>
+              <span style="font-size: 14px; font-weight: 600; color: #1F4A47">Availability is not stock</span>
+              <span style="font-size: 13px; line-height: 1.45; color: #2F5C58">Catalogs list what a supplier says they can deliver. These quantities never appear in Stock and cannot be sold until a purchase is received.</span>
             </div>
           </div>
 
-          <section style="flex-grow: 1; min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
-            <div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid #D7DCE3">
-              <h2 style="margin: 0; font-size: 17px; font-weight: 600; color: #14213D">Supplier Catalogs</h2>
+          <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+            <div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid #D3CEC4">
+              <h2 style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: Archivo, sans-serif; font-stretch: 112%; font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #1B1A17"><span style="width: 7px; height: 7px; background: #E8622C; flex-shrink: 0"></span>Supplier Catalogs</h2>
               <a href="#" style="font-size: 14px; font-weight: 500">All catalogs</a>
             </div>
             <sc-for list="{{catalogs}}" as="c" hint-placeholder-count="6">
-              <div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid #E3E7ED">
-                <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 8px; background: #F7F8FA; border: 1px solid #D7DCE3; display: flex; align-items: center; justify-content: center; color: #475467">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid #E2DED6">
+                <span style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 3px; background: #EFECE5; border: 1px solid #D3CEC4; display: flex; align-items: center; justify-content: center; color: #4F4A42">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg>
                 </span>
                 <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
-                  <span style="font-size: 14px; font-weight: 600; color: #14213D; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{c.supplier}}</span>
-                  <span style="font-size: 12px; color: #667085; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{c.file}} · {{c.lines}} lines</span>
+                  <span style="font-size: 14px; font-weight: 600; color: #1B1A17; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{c.supplier}}</span>
+                  <span style="font-size: 12px; color: #625D54; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{c.file}} · {{c.lines}} lines</span>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px">
-                  <span style="font-size: 13px; color: #475467; white-space: nowrap">{{c.date}}</span>
-                  <span style="display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 7px; border-radius: 6px; background: {{c.b.bg}}; color: {{c.b.fg}}; font-size: 12px; font-weight: 500; white-space: nowrap"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{c.b.dot}}"></span>{{c.b.label}}</span>
+                  <span style="font-size: 13px; color: #4F4A42; white-space: nowrap">{{c.date}}</span>
+                  <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{c.b.dot}}; background: {{c.b.bg}}; color: {{c.b.fg}}; font-size: 12px; font-weight: 600; white-space: nowrap">{{c.b.label}}</span>
                 </div>
               </div>
             </sc-for>
-            <div style="padding: 14px 18px; font-size: 13px; color: #667085; line-height: 1.45">Search in POS and Products shows supplier listings in their own group, labelled with the supplier and catalog date.</div>
+            <div style="padding: 14px 18px; font-size: 13px; color: #625D54; line-height: 1.45">Search in POS and Products shows supplier listings in their own group, labelled with the supplier and catalog date.</div>
           </section>
         </aside>
       </div>
@@ -146,10 +146,10 @@ class Component extends DCLogic {
       s('Sahel Embrayage', 'Tipaza', 'Clutch & transmission', 'Yassine Haddad', '0552 29 71 03', '860', '05 Sep 2026', 'ok', '421 000 DA'),
       s('Titteri Optique Auto', 'Médéa', 'Lighting, body', 'Omar Seddiki', '0667 81 30 92', '1 302', '11 Sep 2026', 'ok', '198 700 DA')
     ];
-    rows[3].bg = '#E8F0FE';
+    rows[3].bg = '#FBE9DE';
     const B = {
-      current: { label: 'Current', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
-      old: { label: 'Old catalog', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' }
+      current: { label: 'Current', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
+      old: { label: 'Old catalog', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' }
     };
     return {
       cols: 'minmax(0, 1fr) 190px 130px 250px 160px 40px',

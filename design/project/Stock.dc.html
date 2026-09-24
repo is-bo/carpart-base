@@ -8,15 +8,15 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
 <style>
-body{margin:0;background:#EEF1F4}
-a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+body{margin:0;background:#E7E4DD}
+a{color:#C8471B;text-decoration:none}a:hover{color:#A93C15}
 button{transition:background-color .12s,border-color .12s,color .12s}
-[data-row]:hover{background:#EDF3FD}
+[data-row]:hover{background:#F1EDE5}
 </style>
 </helmet>
-<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #EEF1F4; font-family: Inter, 'Noto Sans Arabic', system-ui, sans-serif; color: #172033; font-variant-numeric: tabular-nums">
+<div style="width: 1920px; height: 1080px; display: flex; overflow: hidden; background: #E7E4DD; font-family: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #26241F; font-variant-numeric: tabular-nums">
   <dc-import name="Sidebar" active="stock" hint-size="232px,1080px"></dc-import>
   <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column">
     <dc-import name="TopBar" hint-size="1688px,60px"></dc-import>
@@ -24,87 +24,87 @@ button{transition:background-color .12s,border-color .12s,color .12s}
 
       <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <h1 style="margin: 0; font-size: 26px; font-weight: 600; color: #14213D">Stock</h1>
-          <span style="font-size: 13px; color: #667085">Quantities physically in this store. Supplier availability lives under Suppliers.</span>
+          <h1 style="margin: 0; font-family: Archivo, sans-serif; font-stretch: 115%; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; color: #1B1A17">Stock</h1>
+          <span style="font-size: 13px; color: #625D54">Quantities physically in this store. Supplier availability lives under Suppliers.</span>
         </div>
         <div style="display: flex; gap: 12px">
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F7F8FA; color: #172033; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #EFECE5; color: #26241F; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
             Stock Count
           </button>
-          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #BFD3FB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
+          <button type="button" style="height: 44px; padding: 0 16px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #1B1A17; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
             Adjust Stock
           </button>
         </div>
       </div>
 
-      <div role="tablist" aria-label="Stock views" style="display: flex; gap: 4px; border-bottom: 1px solid #D7DCE3">
-        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #2563EB; margin-bottom: -1px; background: transparent; color: #1D4ED8; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current Stock</button>
-        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #667085; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock Movements</button>
+      <div role="tablist" aria-label="Stock views" style="display: flex; gap: 4px; border-bottom: 1px solid #D3CEC4">
+        <button type="button" role="tab" aria-selected="true" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid #C8471B; margin-bottom: -1px; background: transparent; color: #A93C15; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Current Stock</button>
+        <button type="button" role="tab" aria-selected="false" style="height: 42px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #625D54; font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer">Stock Movements</button>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
         <sc-for list="{{summary}}" as="k" hint-placeholder-count="4">
-          <div style="background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between">
+          <div style="background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between">
             <div style="display: flex; flex-direction: column; gap: 4px">
-              <span style="font-size: 13px; font-weight: 500; color: #667085">{{k.label}}</span>
+              <span style="font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">{{k.label}}</span>
               <span style="font-size: 24px; font-weight: 600; color: {{k.color}}">{{k.value}}</span>
             </div>
-            <span style="font-size: 13px; color: #667085; text-align: end; max-width: 180px">{{k.meta}}</span>
+            <span style="font-size: 13px; color: #625D54; text-align: end; max-width: 180px">{{k.meta}}</span>
           </div>
         </sc-for>
       </div>
 
-      <section style="flex-grow: 1; min-height: 0; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column">
-        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D7DCE3">
-          <div role="radiogroup" aria-label="Stock status" style="display: flex; padding: 3px; gap: 2px; background: #EEF1F4; border: 1px solid #D7DCE3; border-radius: 10px">
-            <button type="button" role="radio" aria-checked="true" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #D7DCE3; border-radius: 8px; background: #F4F8FF; color: #14213D; font-family: inherit; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px rgba(20,33,61,0.06); cursor: pointer">All <span style="font-size: 12px; font-weight: 500; color: #667085">2 418</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: #344054; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #D97706"></span>Low Stock <span style="font-size: 12px; color: #667085">23</span></button>
-            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: #344054; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #DC2626"></span>Out of Stock <span style="font-size: 12px; color: #667085">6</span></button>
+      <section style="flex-grow: 1; min-height: 0; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+        <div style="display: flex; align-items: center; gap: 12px; padding: 16px; border-bottom: 1px solid #D3CEC4">
+          <div role="radiogroup" aria-label="Stock status" style="display: flex; padding: 3px; gap: 2px; background: #E7E4DD; border: 1px solid #D3CEC4; border-radius: 4px">
+            <button type="button" role="radio" aria-checked="true" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #D3CEC4; border-radius: 3px; background: #F7F5F0; color: #1B1A17; font-family: inherit; font-size: 14px; font-weight: 600; box-shadow: 0 1px 2px rgba(27,26,23,0.06); cursor: pointer">All <span style="font-size: 12px; font-weight: 500; color: #625D54">2 418</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #C99A0A"></span>Low Stock <span style="font-size: 12px; color: #625D54">23</span></button>
+            <button type="button" role="radio" aria-checked="false" style="height: 40px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #3A362F; font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer"><span style="width: 7px; height: 7px; border-radius: 50%; background: #B83227"></span>Out of Stock <span style="font-size: 12px; color: #625D54">6</span></button>
           </div>
-          <label style="position: relative; display: flex; align-items: center; width: 460px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F4F8FF; border: 1px solid #D7DCE3; border-radius: 10px">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <label style="position: relative; display: flex; align-items: center; width: 460px; height: 48px; box-sizing: border-box; padding: 0 14px 0 44px; background: #F7F5F0; border: 1px solid #D3CEC4; border-radius: 4px">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; inset-inline-start: 14px; top: 14px"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
             <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search stock</span>
-            <input type="search" placeholder="Product, reference or shelf…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #172033">
+            <input type="search" placeholder="Product, reference or shelf…" style="flex-grow: 1; min-width: 0; height: 100%; border: 0; outline: none; background: transparent; font-family: inherit; font-size: 15px; color: #26241F">
           </label>
-          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F4F8FF; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer"><span style="color: #667085">Category</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
-          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; border: 1px solid #D7DCE3; background: #F4F8FF; font-family: inherit; font-size: 14px; font-weight: 500; color: #172033; cursor: pointer"><span style="color: #667085">Location</span>All shelves<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Category</span>All<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+          <button type="button" style="height: 42px; padding: 0 12px; display: inline-flex; align-items: center; gap: 8px; border-radius: 3px; border: 1px solid #D3CEC4; background: #F7F5F0; font-family: inherit; font-size: 14px; font-weight: 500; color: #26241F; cursor: pointer"><span style="color: #625D54">Location</span>All shelves<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#625D54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
         </div>
 
         <div role="table" aria-label="Current stock" style="flex-grow: 1; min-height: 0; overflow: hidden">
-          <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #F7F8FA; border-bottom: 1px solid #D7DCE3; font-size: 13px; font-weight: 500; color: #667085">
+          <div role="row" style="position: sticky; top: 0; display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 44px; padding: 0 12px 0 24px; background: #EFECE5; border-bottom: 1px solid #D3CEC4; font-family: Archivo, sans-serif; font-stretch: 108%; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #625D54">
             <span role="columnheader">Product</span>
             <span role="columnheader">Reference</span>
             <span role="columnheader">Location</span>
-            <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px; font-weight: 600; color: #1D4ED8">Quantity <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
+            <span role="columnheader" aria-sort="ascending" style="display: inline-flex; align-items: center; justify-content: flex-end; gap: 6px; font-weight: 600; color: #A93C15">Quantity <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></span>
             <span role="columnheader" style="text-align: end">Min. qty</span>
             <span role="columnheader">Status</span>
             <span role="columnheader">Last movement</span>
             <span role="columnheader"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Actions</span></span>
           </div>
           <sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
-            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px 0 24px; border-bottom: 1px solid #E3E7ED; font-size: 14px">
-              <span role="cell" style="min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #14213D">{{r.name}}</span><span style="color: #667085"> · {{r.brand}}</span></span>
-              <span role="cell" style="font-weight: 500">{{r.ref}}</span>
-              <span role="cell" style="color: #475467">{{r.loc}}</span>
+            <div role="row" data-row="1" style="display: grid; grid-template-columns: {{cols}}; align-items: center; column-gap: 16px; height: 50px; padding: 0 12px 0 24px; border-bottom: 1px solid #E2DED6; font-size: 14px">
+              <span role="cell" style="min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span style="font-weight: 600; color: #1B1A17">{{r.name}}</span><span style="color: #625D54"> · {{r.brand}}</span></span>
+              <span role="cell"><span style="display: inline-block; padding: 2px 6px; border: 1px solid #D3CEC4; border-radius: 2px; background: #EFECE5; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #26241F; white-space: nowrap">{{r.ref}}</span></span>
+              <span role="cell" style="color: #4F4A42">{{r.loc}}</span>
               <span role="cell" style="text-align: end; font-size: 15px; font-weight: 600; color: {{r.qtyFg}}">{{r.qty}}</span>
-              <span role="cell" style="text-align: end; color: #667085">{{r.min}}</span>
-              <span role="cell"><span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 8px; border-radius: 6px; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 500"><span style="width: 6px; height: 6px; border-radius: 50%; background: {{r.b.dot}}"></span>{{r.b.label}}</span></span>
-              <span role="cell" style="font-size: 13px; color: #667085; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.last}}</span>
-              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 6px; background: transparent; color: #667085; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
+              <span role="cell" style="text-align: end; color: #625D54">{{r.min}}</span>
+              <span role="cell"><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px; border-radius: 2px; border-inline-start: 3px solid {{r.b.dot}}; background: {{r.b.bg}}; color: {{r.b.fg}}; font-size: 12px; font-weight: 600">{{r.b.label}}</span></span>
+              <span role="cell" style="font-size: 13px; color: #625D54; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.last}}</span>
+              <span role="cell" style="display: flex; justify-content: center"><button type="button" aria-label="More actions" style="width: 32px; height: 32px; border: 0; border-radius: 2px; background: transparent; color: #625D54; font-size: 18px; line-height: 1; cursor: pointer">⋯</button></span>
             </div>
           </sc-for>
         </div>
 
-        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #F7F8FA; border-top: 1px solid #D7DCE3; font-size: 13px; color: #667085">
+        <div style="height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #EFECE5; border-top: 1px solid #D3CEC4; font-size: 13px; color: #625D54">
           <span>Showing 1–12 of 2 418 · lowest quantity first</span>
           <div style="display: flex; align-items: center; gap: 6px">
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #8A94A6; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #2563EB; background: #E8F0FE; color: #1D4ED8; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
-            <button type="button" style="width: 32px; height: 32px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #8F897E; font-family: inherit; font-size: 13px; font-weight: 500">Previous</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #C8471B; background: #FBE9DE; color: #A93C15; font-family: inherit; font-size: 13px; font-weight: 600">1</button>
+            <button type="button" style="width: 32px; height: 32px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">2</button>
             <span style="padding: 0 4px">…</span>
-            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid #D7DCE3; background: #F4F8FF; color: #172033; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
+            <button type="button" style="height: 32px; padding: 0 10px; border-radius: 2px; border: 1px solid #D3CEC4; background: #F7F5F0; color: #26241F; font-family: inherit; font-size: 13px; font-weight: 500">Next</button>
           </div>
         </div>
       </section>
@@ -116,18 +116,18 @@ button{transition:background-color .12s,border-color .12s,color .12s}
 class Component extends DCLogic {
   renderVals() {
     const B = {
-      ok: { label: 'In stock', bg: '#E7F6EC', fg: '#0F7A33', dot: '#16A344' },
-      low: { label: 'Low Stock', bg: '#FDF1E1', fg: '#A15A06', dot: '#D97706' },
-      out: { label: 'Out of Stock', bg: '#FDECEC', fg: '#B91C1C', dot: '#DC2626' }
+      ok: { label: 'In stock', bg: '#E1EEE4', fg: '#226B40', dot: '#2E7D4F' },
+      low: { label: 'Low Stock', bg: '#F5EBC9', fg: '#7F6000', dot: '#C99A0A' },
+      out: { label: 'Out of Stock', bg: '#F6DEDA', fg: '#A12A20', dot: '#B83227' }
     };
-    const r = (name, brand, ref, loc, qty, min, b, last) => ({ name, brand, ref, loc, qty, min, b, last, qtyFg: b === B.out ? '#B91C1C' : (b === B.low ? '#A15A06' : '#172033') });
+    const r = (name, brand, ref, loc, qty, min, b, last) => ({ name, brand, ref, loc, qty, min, b, last, qtyFg: b === B.out ? '#A12A20' : (b === B.low ? '#7F6000' : '#26241F') });
     return {
       cols: 'minmax(0, 1fr) 170px 120px 110px 90px 140px 250px 40px',
       summary: [
-        { label: 'Products tracked', value: '2 418', meta: '31 540 units on hand', color: '#14213D' },
-        { label: 'Stock value at cost', value: '18 420 000 DA', meta: 'Weighted average cost', color: '#14213D' },
-        { label: 'Low Stock', value: '23', meta: 'At or below minimum', color: '#A15A06' },
-        { label: 'Out of Stock', value: '6', meta: '2 sold in the last 7 days', color: '#B91C1C' }
+        { label: 'Products tracked', value: '2 418', meta: '31 540 units on hand', color: '#1B1A17' },
+        { label: 'Stock value at cost', value: '18 420 000 DA', meta: 'Weighted average cost', color: '#1B1A17' },
+        { label: 'Low Stock', value: '23', meta: 'At or below minimum', color: '#7F6000' },
+        { label: 'Out of Stock', value: '6', meta: '2 sold in the last 7 days', color: '#A12A20' }
       ],
       rows: [
         r('Spark Plug', 'NGK', 'BKR6E', 'D-03', '0', '20', B.out, 'Sale S-24062 · 23 Sep, 11:40'),

@@ -1,27 +1,157 @@
 {
   "v": 3,
   "attachments": {},
-  "createdOnFiles": { "at": "2026-09-24T20:30:46.669Z", "v": 1 },
-  "title": "AutoPartsOS Main Pages",
-  "launch": { "view": "canvas" },
-  "pages": [],
   "boards": {
-    "Main.dc.html": { "x": 0, "y": 0, "w": 1920, "h": 1840, "title": "Design Tokens" },
-    "Components.dc.html": { "x": 2000, "y": 0, "w": 1920, "h": 1760, "title": "Core Components" },
-    "Sidebar.dc.html": { "x": 4000, "y": 0, "w": 232, "h": 1080, "title": "Shell · Sidebar" },
-    "TopBar.dc.html": { "x": 4312, "y": 0, "w": 1688, "h": 60, "title": "Shell · Top Bar" },
-    "Dashboard.dc.html": { "x": 0, "y": 2200, "w": 1920, "h": 1080, "title": "01 · Dashboard", "is_interactive": true },
-    "Pos.dc.html": { "x": 2000, "y": 2200, "w": 1920, "h": 1080, "title": "02 · POS", "is_interactive": true },
-    "Sales.dc.html": { "x": 4000, "y": 2200, "w": 1920, "h": 1080, "title": "03 · Sales", "is_interactive": true },
-    "Products.dc.html": { "x": 0, "y": 3400, "w": 1920, "h": 1080, "title": "04 · Products", "is_interactive": true },
-    "Stock.dc.html": { "x": 2000, "y": 3400, "w": 1920, "h": 1080, "title": "05 · Stock", "is_interactive": true },
-    "Purchases.dc.html": { "x": 4000, "y": 3400, "w": 1920, "h": 1080, "title": "06 · Purchases", "is_interactive": true },
-    "Customers.dc.html": { "x": 0, "y": 4600, "w": 1920, "h": 1080, "title": "07 · Customers", "is_interactive": true },
-    "Suppliers.dc.html": { "x": 2000, "y": 4600, "w": 1920, "h": 1080, "title": "08 · Suppliers", "is_interactive": true },
-    "Returns.dc.html": { "x": 4000, "y": 4600, "w": 1920, "h": 1080, "title": "09 · Returns", "is_interactive": true },
-    "Reports.dc.html": { "x": 0, "y": 5800, "w": 1920, "h": 1080, "title": "10 · Reports", "is_interactive": true },
-    "Users.dc.html": { "x": 2000, "y": 5800, "w": 1920, "h": 1080, "title": "11 · Users & Roles", "is_interactive": true },
-    "Settings.dc.html": { "x": 4000, "y": 5800, "w": 1920, "h": 1080, "title": "12 · Settings", "is_interactive": true }
+    "Components.dc.html": {
+      "h": 1760,
+      "title": "Core Components",
+      "w": 1920,
+      "x": 2000,
+      "y": 0
+    },
+    "Customers.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "07 · Customers",
+      "w": 1920,
+      "x": 0,
+      "y": 4600
+    },
+    "Dashboard.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "01 · Dashboard",
+      "w": 1920,
+      "x": 0,
+      "y": 2200
+    },
+    "Main.dc.html": {
+      "h": 1900,
+      "title": "Design Tokens",
+      "w": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "Pos.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "02 · POS",
+      "w": 1920,
+      "x": 2000,
+      "y": 2200
+    },
+    "Products.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "04 · Products",
+      "w": 1920,
+      "x": 0,
+      "y": 3400
+    },
+    "Purchases.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "06 · Purchases",
+      "w": 1920,
+      "x": 4000,
+      "y": 3400
+    },
+    "Reports.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "10 · Reports",
+      "w": 1920,
+      "x": 0,
+      "y": 5800
+    },
+    "Returns.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "09 · Returns",
+      "w": 1920,
+      "x": 4000,
+      "y": 4600
+    },
+    "Sales.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "03 · Sales",
+      "w": 1920,
+      "x": 4000,
+      "y": 2200
+    },
+    "Settings.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "12 · Settings",
+      "w": 1920,
+      "x": 4000,
+      "y": 5800
+    },
+    "Sidebar.dc.html": {
+      "h": 1080,
+      "title": "Shell · Sidebar",
+      "w": 232,
+      "x": 4000,
+      "y": 0
+    },
+    "Stock.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "05 · Stock",
+      "w": 1920,
+      "x": 2000,
+      "y": 3400
+    },
+    "Suppliers.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "08 · Suppliers",
+      "w": 1920,
+      "x": 2000,
+      "y": 4600
+    },
+    "TopBar.dc.html": {
+      "h": 60,
+      "title": "Shell · Top Bar",
+      "w": 1688,
+      "x": 4312,
+      "y": 0
+    },
+    "Users.dc.html": {
+      "h": 1080,
+      "is_interactive": true,
+      "title": "11 · Users & Roles",
+      "w": 1920,
+      "x": 2000,
+      "y": 5800
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-24T20:30:46.669Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "foundations": {
+      "kind": "title1",
+      "maxW": 6000,
+      "text": "Foundations — “Parts Counter” system",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "pages": {
+      "kind": "title1",
+      "maxW": 5920,
+      "text": "Main pages — 1920 × 1080",
+      "w": 240,
+      "x": 0,
+      "y": 1940
+    }
   },
   "order": [
     "Main.dc.html",
@@ -41,9 +171,6 @@
     "Users.dc.html",
     "Settings.dc.html"
   ],
-  "notes": {
-    "foundations": { "x": 0, "y": -300, "text": "Foundations — tokens, components, shell", "kind": "title1", "maxW": 6000 },
-    "pages": { "x": 0, "y": 1940, "text": "Main pages — 1920 × 1080", "kind": "title1", "maxW": 5920 }
-  },
-  "designSystems": []
+  "pages": [],
+  "title": "AutoPartsOS Main Pages"
 }

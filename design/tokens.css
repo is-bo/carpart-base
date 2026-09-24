@@ -1,109 +1,98 @@
-/* AutoPartsOS design tokens — v0.1 (first pass).
-   Source of truth for colours, type, spacing and component metrics.
+/* AutoPartsOS design tokens — "Parts Counter" (v0.2).
+   Warm stock-paper surfaces on concrete, a graphite rail, one signal orange.
    Mirrors the "Design Tokens" and "Core Components" boards in design/project/. */
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 :root {
-  /* Surfaces */
-  --ap-bg-app: #EEF1F4;
-  --ap-surface: #F4F8FF;
-  --ap-surface-2: #F7F8FA;
-  --ap-border: #D7DCE3;
-  --ap-border-subtle: #E3E7ED;
+  /* Ground & paper */
+  --ap-ground: #E7E4DD;        /* concrete: app background */
+  --ap-paper: #F7F5F0;         /* stock paper: panels, tables */
+  --ap-kraft: #EFECE5;         /* headers, chips, nested groups */
+  --ap-receipt: #FBF9F4;       /* POS cart, printed documents */
+  --ap-rule: #D3CEC4;
+  --ap-rule-soft: #E2DED6;
+  --ap-row-hover: #F1EDE5;
 
-  /* Sidebar & selection */
-  --ap-sidebar-bg: #18365A;
-  --ap-sidebar-fg: #C9D6E8;
-  --ap-active: #1D4ED8;
-  --ap-selected: #E8F0FE;
+  /* Graphite */
+  --ap-rail: #1E1D1A;          /* sidebar, till display, POS header */
+  --ap-rail-active: #2D2A25;
+  --ap-rail-line: #2E2C28;
+  --ap-rail-text: #B9B3A7;
+  --ap-ink: #1B1A17;           /* headings, selected segment */
+  --ap-text: #26241F;
+  --ap-text-2: #625D54;
+  --ap-text-muted: #8F897E;
 
-  /* Brand & action */
-  --ap-navy: #14213D;
-  --ap-primary: #2563EB;
-  --ap-primary-hover: #1D4ED8;
-  --ap-ai: #7C3AED;
+  /* Signal — the only accent */
+  --ap-signal: #E8622C;        /* markers, active bar, current hour */
+  --ap-signal-action: #C8471B; /* primary buttons, links (white text 4.8:1) */
+  --ap-signal-pressed: #A93C15;
+  --ap-signal-soft: #FBE9DE;   /* selected row, focus fill */
+  --ap-focus-ring: 0 0 0 3px rgba(200, 71, 27, 0.14);
 
-  /* Text */
-  --ap-text: #172033;
-  --ap-text-2: #667085;
-  --ap-text-muted: #8A94A6;
+  /* State: base / text / soft */
+  --ap-ok: #2E7D4F;     --ap-ok-text: #226B40;     --ap-ok-soft: #E1EEE4;
+  --ap-low: #C99A0A;    --ap-low-text: #7F6000;    --ap-low-soft: #F5EBC9;
+  --ap-out: #B83227;    --ap-out-text: #A12A20;    --ap-out-soft: #F6DEDA;
+  --ap-info: #3D7470;   --ap-info-text: #2F625E;   --ap-info-soft: #DDEBE9;
 
-  /* Semantic: base (dots, icons, fills) */
-  --ap-success: #16A344;
-  --ap-warning: #D97706;
-  --ap-danger: #DC2626;
-  --ap-info: #0284C7;
-  --ap-balance: #B45309;
+  /* Ledger (customer money owed) & AI */
+  --ap-ledger: #2D5B86; --ap-ledger-soft: #DEE7F1;
+  --ap-ai: #6A45D1;     --ap-ai-text: #5634B8;     --ap-ai-soft: #EFEAFB;
 
-  /* Semantic: text on light surfaces (>= 4.5:1) */
-  --ap-success-text: #0F7A33;
-  --ap-warning-text: #A15A06;
-  --ap-danger-text: #B91C1C;
-  --ap-info-text: #0369A1;
-  --ap-ai-text: #6D28D9;
+  /* Type */
+  --ap-font-display: 'Archivo', sans-serif;               /* use font-stretch 108–118% */
+  --ap-font-ui: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --ap-font-arabic: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+  --ap-font-mono: 'IBM Plex Mono', ui-monospace, monospace; /* part numbers, IDs, till */
+  --ap-fs-page-title: 30px;    /* Archivo 115%, 700 */
+  --ap-fs-section: 21px;       /* Archivo 112%, 700 */
+  --ap-fs-panel-label: 13px;   /* Archivo 112%, 700, caps, 0.09em */
+  --ap-fs-col-header: 11.5px;  /* Archivo 108%, 700, caps, 0.08em */
+  --ap-fs-ui: 15px;
+  --ap-fs-table: 14px;
+  --ap-fs-support: 13px;
+  --ap-fs-part-number: 12.5px; /* Plex Mono 500 */
+  --ap-fs-ledger: 32px;        /* Archivo 650 */
+  --ap-fs-till: 40px;          /* Plex Mono 600 */
 
-  /* Semantic: badge backgrounds */
-  --ap-success-soft: #E7F6EC;
-  --ap-warning-soft: #FDF1E1;
-  --ap-danger-soft: #FDECEC;
-  --ap-info-soft: #E3F2FB;
-  --ap-balance-soft: #FBF0E4;
-  --ap-ai-soft: #F3EEFF;
-  --ap-neutral-soft: #EEF1F4;
-
-  /* Typography */
-  --ap-font-latin: 'Inter', system-ui, sans-serif;
-  --ap-font-arabic: 'Noto Sans Arabic', 'Inter', sans-serif;
-  --ap-fs-page-title: 26px;   /* 600 */
-  --ap-fs-section: 20px;      /* 600 */
-  --ap-fs-panel: 17px;        /* 600 */
-  --ap-fs-ui: 15px;           /* 400 */
-  --ap-fs-table: 14px;        /* 400 */
-  --ap-fs-support: 13px;      /* 400 */
-  --ap-fs-label: 12px;        /* 500 */
-  --ap-fs-pos-total: 32px;    /* 700 */
-  --ap-fs-kpi: 28px;          /* 600 */
-
-  /* Spacing (4 / 8 system) */
-  --ap-space-1: 4px;
-  --ap-space-2: 8px;
-  --ap-space-3: 12px;
-  --ap-space-4: 16px;
-  --ap-space-6: 24px;
-  --ap-space-8: 32px;
+  /* Spacing (4 / 8) */
+  --ap-space-1: 4px; --ap-space-2: 8px; --ap-space-3: 12px;
+  --ap-space-4: 16px; --ap-space-6: 24px; --ap-space-8: 32px;
   --ap-page-padding: 24px;
   --ap-pos-padding: 16px;
 
-  /* Radius */
-  --ap-radius-badge: 6px;
-  --ap-radius-control: 8px;
-  --ap-radius-search: 10px;
-  --ap-radius-panel: 12px;
+  /* Geometry: square, industrial */
+  --ap-radius-tag: 2px;
+  --ap-radius-control: 3px;
+  --ap-radius-panel: 4px;
+  --ap-radius-row: 0;
+  --ap-shadow-popover: 0 10px 28px rgba(27, 26, 23, 0.14);
 
-  /* Elevation */
-  --ap-shadow-panel: 0 1px 2px rgba(20, 33, 61, 0.06);
-  --ap-shadow-popover: 0 10px 28px rgba(20, 33, 61, 0.14);
-  --ap-focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.12);
-  --ap-focus-ring-search: 0 0 0 4px rgba(37, 99, 235, 0.12);
-
-  /* Component metrics */
-  --ap-sidebar-w: 232px;
-  --ap-sidebar-w-collapsed: 68px;
+  /* Metrics */
+  --ap-sidebar-w: 232px; --ap-sidebar-w-collapsed: 68px;
   --ap-topbar-h: 60px;
-  --ap-button-h: 44px;
-  --ap-button-pos-h: 56px;
-  --ap-input-h: 42px;
-  --ap-search-h: 48px;
-  --ap-grid-header-h: 44px;
-  --ap-grid-row-h: 50px;
-  --ap-grid-row-compact-h: 44px;
+  --ap-button-h: 44px; --ap-button-pay-h: 58px;
+  --ap-input-h: 42px; --ap-search-h: 48px; --ap-search-pos-h: 52px;
+  --ap-grid-header-h: 44px; --ap-grid-row-h: 50px; --ap-grid-row-compact-h: 44px;
 
   /* Motion */
-  --ap-dur-hover: 120ms;
-  --ap-dur-dialog: 150ms;
-  --ap-dur-drawer: 180ms;
+  --ap-dur-hover: 120ms; --ap-dur-dialog: 150ms; --ap-dur-drawer: 180ms;
+  --ap-ease: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 :lang(ar) { font-family: var(--ap-font-arabic); }
+
+/* Status tag: bin-label stripe + text, never colour alone. */
+.ap-tag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px 0 7px;
+  border-radius: var(--ap-radius-tag); border-inline-start: 3px solid currentColor;
+  font: 600 12px/1 var(--ap-font-ui); }
+
+/* Part number chip. */
+.ap-ref { display: inline-block; padding: 2px 6px; border: 1px solid var(--ap-rule);
+  border-radius: var(--ap-radius-tag); background: var(--ap-kraft);
+  font: 500 var(--ap-fs-part-number) var(--ap-font-mono); letter-spacing: 0.02em; }
 
 /* Numbers: group thousands with U+202F (narrow no-break space), never a plain
    space. In RTL text also isolate amounts and part references:
